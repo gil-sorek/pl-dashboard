@@ -1,0 +1,439 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Premier League xG Dashboard&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://unpkg.com/@babel/standalone/babel.min.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="root"&gt;&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script type="text/babel"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const { useState, useEffect, Fragment } = React;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Lucide React Icons as inline SVGs</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const RefreshCw = ({ className, style }) =&gt; (</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;svg className={className} style={style} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;path d="M21 2v6h-6"&gt;&lt;/path&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;path d="M3 12a9 9 0 0 1 15-6.7L21 8"&gt;&lt;/path&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;path d="M3 22v-6h6"&gt;&lt;/path&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;path d="M21 12a9 9 0 0 1-15 6.7L3 16"&gt;&lt;/path&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const Home = ({ className }) =&gt; (</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;svg className={className} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"&gt;&lt;/path&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;polyline points="9 22 9 12 15 12 15 22"&gt;&lt;/polyline&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const Plane = ({ className }) =&gt; (</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;svg className={className} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"&gt;&lt;/path&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const PremierLeagueDashboard = () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const [teams, setTeams] = useState([]);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const [players, setPlayers] = useState([]);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const [loading, setLoading] = useState(true);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const [activeTab, setActiveTab] = useState('teams');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const [positionFilter, setPositionFilter] = useState('ALL');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const [groupByTeam, setGroupByTeam] = useState(false);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const [lastUpdated, setLastUpdated] = useState(null);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const fetchData = async () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>setLoading(true);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const bootstrapResponse = await fetch('https://fantasy.premierleague.com/api/bootstrap-static/');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const bootstrapData = await bootstrapResponse.json();</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const fixturesResponse = await fetch('https://fantasy.premierleague.com/api/fixtures/');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const fixturesData = await fixturesResponse.json();</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const teamsData = bootstrapData.teams.map(team =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>const teamFixtures = fixturesData</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>.filter(fixture =&gt;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                </span>fixture.finished &amp;&amp;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                </span>(fixture.team_h === team.id || fixture.team_a === team.id)</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>)</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>.sort((a, b) =&gt; b.event - a.event)</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>.slice(0, 6)</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>.reverse()</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>.map(fixture =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>const isHome = fixture.team_h === team.id;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>const opponent = bootstrapData.teams.find(t =&gt;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>t.id === (isHome ? fixture.team_a : fixture.team_h)</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>);</p>
+<p class="p2"><span class="Apple-converted-space">                                </span></p>
+<p class="p1"><span class="Apple-converted-space">                                </span>const xgc = isHome ?<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>(fixture.team_a_xg || 0) :<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>(fixture.team_h_xg || 0);</p>
+<p class="p2"><span class="Apple-converted-space">                                </span></p>
+<p class="p1"><span class="Apple-converted-space">                                </span>return {</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>gameweek: fixture.event,</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>opponent: opponent.short_name,</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>isHome: isHome,</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>xgc: parseFloat(xgc).toFixed(2),</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>score: isHome ?<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>`${fixture.team_h_score}-${fixture.team_a_score}` :</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>`${fixture.team_a_score}-${fixture.team_h_score}`</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>};</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>});</p>
+<p class="p2"><span class="Apple-converted-space">                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>const totalXGC = teamFixtures.reduce((sum, f) =&gt; sum + parseFloat(f.xgc), 0);</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>const avgXGC = teamFixtures.length &gt; 0 ? totalXGC / teamFixtures.length : 0;</p>
+<p class="p2"><span class="Apple-converted-space">                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>return {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>id: team.id,</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>name: team.name,</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>shortName: team.short_name,</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>fixtures: teamFixtures,</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>avgXGC: avgXGC</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>};</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>});</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const playersData = bootstrapData.elements.map(player =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>const team = bootstrapData.teams.find(t =&gt; t.id === player.team);</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>let position = '';</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>switch(player.element_type) {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>case 1: position = 'GK'; break;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>case 2: position = 'DEF'; break;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>case 3: position = 'MID'; break;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>case 4: position = 'FWD'; break;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>return {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>id: player.id,</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>name: player.web_name,</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>fullName: `${player.first_name} ${player.second_name}`,</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>team: team.short_name,</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>teamId: player.team,</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>position: position,</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>xG: parseFloat(player.expected_goals || 0),</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>xA: parseFloat(player.expected_assists || 0),</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>xGI: parseFloat(player.expected_goal_involvements || 0)</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>};</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>setTeams(teamsData);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>setPlayers(playersData);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>setLastUpdated(new Date());</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>} catch (error) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>console.error('Error fetching data:', error);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>setLoading(false);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>useEffect(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>fetchData();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}, []);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const getColorForXGC = (value, min, max) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (max === min) return 'rgb(34, 197, 94)';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const normalized = (value - min) / (max - min);</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (normalized &lt; 0.33) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>return `rgb(34, 197, 94)`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} else if (normalized &lt; 0.66) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>return `rgb(234, 179, 8)`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>return `rgb(239, 68, 68)`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const getColorForValue = (value, min, max) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (max === min) return 'rgb(34, 197, 94)';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const normalized = (value - min) / (max - min);</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (normalized &lt; 0.33) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>return `rgb(239, 68, 68)`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} else if (normalized &lt; 0.66) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>return `rgb(234, 179, 8)`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>return `rgb(34, 197, 94)`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const filteredPlayers = players.filter(player =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (positionFilter === 'ALL') return true;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return player.position === positionFilter;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const sortedPlayers = [...filteredPlayers].sort((a, b) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (groupByTeam) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (a.teamId !== b.teamId) return a.teamId - b.teamId;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>return b.xGI - a.xGI;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return b.xGI - a.xGI;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const xGIValues = filteredPlayers.map(p =&gt; p.xGI);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const minXGI = Math.min(...xGIValues);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const maxXGI = Math.max(...xGIValues);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const allXGCValues = teams.flatMap(team =&gt;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>team.fixtures.map(f =&gt; parseFloat(f.xgc))</p>
+<p class="p1"><span class="Apple-converted-space">            </span>).filter(val =&gt; !isNaN(val));</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const minXGC = Math.min(...allXGCValues);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const maxXGC = Math.max(...allXGCValues);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const avgXGCValues = teams.map(t =&gt; t.avgXGC).filter(val =&gt; !isNaN(val));</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const minAvgXGC = Math.min(...avgXGCValues);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const maxAvgXGC = Math.max(...avgXGCValues);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>return (</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div className="min-h-screen bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 p-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div className="max-w-7xl mx-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div className="bg-white/10 backdrop-blur-md rounded-xl p-6 mb-6 shadow-2xl border border-white/20"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div className="flex justify-between items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;h1 className="text-4xl font-bold text-white mb-2"&gt;Premier League xG Dashboard&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p className="text-purple-200"&gt;Expected Goals Analytics • Powered by FPL API&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>{lastUpdated &amp;&amp; (</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;p className="text-purple-300 text-sm mt-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>Last updated: {lastUpdated.toLocaleString()}</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>)}</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;button</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>onClick={fetchData}</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>disabled={loading}</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>className="bg-white/20 hover:bg-white/30 text-white px-6 py-3 rounded-lg flex items-center gap-2 transition-all disabled:opacity-50"</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;RefreshCw className={`w-5 h-5 ${loading ? 'animate-spin' : ''}`} /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>Refresh Data</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div className="flex gap-4 mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;button</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>onClick={() =&gt; setActiveTab('teams')}</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>className={`px-8 py-4 rounded-lg font-semibold transition-all ${</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>activeTab === 'teams'</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>? 'bg-white text-purple-900 shadow-lg'</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>: 'bg-white/10 text-white hover:bg-white/20'</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>}`}</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>Teams (xGC)</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;button</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>onClick={() =&gt; setActiveTab('players')}</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>className={`px-8 py-4 rounded-lg font-semibold transition-all ${</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>activeTab === 'players'</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>? 'bg-white text-purple-900 shadow-lg'</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>: 'bg-white/10 text-white hover:bg-white/20'</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>}`}</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>Players (xG/xA/xGI)</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>{loading ? (</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div className="bg-white/10 backdrop-blur-md rounded-xl p-12 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;RefreshCw className="w-12 h-12 text-white animate-spin mx-auto mb-4" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p className="text-white text-xl"&gt;Loading Premier League data...&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>) : (</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>{activeTab === 'teams' &amp;&amp; (</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div className="bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-2xl border border-white/20"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;h2 className="text-2xl font-bold text-white mb-6"&gt;Teams - Expected Goals Conceded (Last 6 Matches)&lt;/h2&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;div className="grid grid-cols-1 gap-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>{teams</p>
+<p class="p1"><span class="Apple-converted-space">                                                </span>.filter(team =&gt; team.fixtures.length &gt; 0)</p>
+<p class="p1"><span class="Apple-converted-space">                                                </span>.sort((a, b) =&gt; a.avgXGC - b.avgXGC)</p>
+<p class="p1"><span class="Apple-converted-space">                                                </span>.map(team =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                                                    </span>const avgColor = getColorForXGC(team.avgXGC, minAvgXGC, maxAvgXGC);</p>
+<p class="p2"><span class="Apple-converted-space">                                                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                                                    </span>return (</p>
+<p class="p1"><span class="Apple-converted-space">                                                        </span>&lt;div key={team.id} className="bg-white/5 rounded-lg p-5 border border-white/10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                            </span>&lt;div className="flex justify-between items-center mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                </span>&lt;h3 className="text-white font-bold text-xl"&gt;{team.name}&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                </span>&lt;div className="text-right"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                    </span>&lt;div className="text-purple-200 text-sm"&gt;Avg xGC (Last 6)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                    </span>&lt;div<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                                                        </span>className="text-white font-bold text-2xl px-4 py-1 rounded-lg inline-block"</p>
+<p class="p1"><span class="Apple-converted-space">                                                                        </span>style={{ backgroundColor: avgColor }}</p>
+<p class="p1"><span class="Apple-converted-space">                                                                    </span>&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                        </span>{team.avgXGC.toFixed(2)}</p>
+<p class="p1"><span class="Apple-converted-space">                                                                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                            </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                                                            </span></p>
+<p class="p1"><span class="Apple-converted-space">                                                            </span>&lt;div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                </span>{team.fixtures.map((fixture, idx) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                                                                    </span>const xgcColor = getColorForXGC(parseFloat(fixture.xgc), minXGC, maxXGC);</p>
+<p class="p2"><span class="Apple-converted-space">                                                                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                                                                    </span>return (</p>
+<p class="p1"><span class="Apple-converted-space">                                                                        </span>&lt;div<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                                                            </span>key={idx}<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                                                            </span>className="bg-white/10 rounded-lg p-3 border border-white/20"</p>
+<p class="p1"><span class="Apple-converted-space">                                                                        </span>&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                            </span>&lt;div className="flex items-center gap-2 mb-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                                </span>{fixture.isHome ? (</p>
+<p class="p1"><span class="Apple-converted-space">                                                                                    </span>&lt;Home className="w-4 h-4 text-green-400" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                                </span>) : (</p>
+<p class="p1"><span class="Apple-converted-space">                                                                                    </span>&lt;Plane className="w-4 h-4 text-blue-400" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                                </span>)}</p>
+<p class="p1"><span class="Apple-converted-space">                                                                                </span>&lt;span className="text-white font-semibold text-sm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                                    </span>vs {fixture.opponent}</p>
+<p class="p1"><span class="Apple-converted-space">                                                                                </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                            </span>&lt;div className="text-purple-200 text-xs mb-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                                </span>GW{fixture.gameweek} • {fixture.score}</p>
+<p class="p1"><span class="Apple-converted-space">                                                                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                            </span>&lt;div<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                                                                </span>className="text-white font-bold text-center py-2 rounded"</p>
+<p class="p1"><span class="Apple-converted-space">                                                                                </span>style={{ backgroundColor: xgcColor }}</p>
+<p class="p1"><span class="Apple-converted-space">                                                                            </span>&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                                </span>xGC: {fixture.xgc}</p>
+<p class="p1"><span class="Apple-converted-space">                                                                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                    </span>);</p>
+<p class="p1"><span class="Apple-converted-space">                                                                </span>})}</p>
+<p class="p1"><span class="Apple-converted-space">                                                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                    </span>);</p>
+<p class="p1"><span class="Apple-converted-space">                                                </span>})}</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>)}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                                </span>{activeTab === 'players' &amp;&amp; (</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div className="bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-2xl border border-white/20"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;div className="flex justify-between items-center mb-6 flex-wrap gap-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;h2 className="text-2xl font-bold text-white"&gt;Players - Expected Goals Analytics&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;div className="flex gap-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;select</p>
+<p class="p1"><span class="Apple-converted-space">                                                    </span>value={positionFilter}</p>
+<p class="p1"><span class="Apple-converted-space">                                                    </span>onChange={(e) =&gt; setPositionFilter(e.target.value)}</p>
+<p class="p1"><span class="Apple-converted-space">                                                    </span>className="bg-white/20 text-white px-4 py-2 rounded-lg border border-white/30"</p>
+<p class="p1"><span class="Apple-converted-space">                                                </span>&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;option value="ALL"&gt;All Positions&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;option value="GK"&gt;Goalkeepers&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;option value="DEF"&gt;Defenders&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;option value="MID"&gt;Midfielders&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;option value="FWD"&gt;Forwards&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;button</p>
+<p class="p1"><span class="Apple-converted-space">                                                    </span>onClick={() =&gt; setGroupByTeam(!groupByTeam)}</p>
+<p class="p1"><span class="Apple-converted-space">                                                    </span>className={`px-4 py-2 rounded-lg font-medium transition-all ${</p>
+<p class="p1"><span class="Apple-converted-space">                                                        </span>groupByTeam</p>
+<p class="p1"><span class="Apple-converted-space">                                                            </span>? 'bg-white text-purple-900'</p>
+<p class="p1"><span class="Apple-converted-space">                                                            </span>: 'bg-white/20 text-white hover:bg-white/30'</p>
+<p class="p1"><span class="Apple-converted-space">                                                    </span>}`}</p>
+<p class="p1"><span class="Apple-converted-space">                                                </span>&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                    </span>{groupByTeam ? 'Grouped by Team' : 'Group by Team'}</p>
+<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;div className="overflow-x-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;table className="w-full"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;tr className="border-b border-white/20"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                        </span>&lt;th className="text-left text-white font-semibold p-3"&gt;Player&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                        </span>&lt;th className="text-left text-white font-semibold p-3"&gt;Team&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                        </span>&lt;th className="text-left text-white font-semibold p-3"&gt;Pos&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                        </span>&lt;th className="text-center text-white font-semibold p-3"&gt;xG&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                        </span>&lt;th className="text-center text-white font-semibold p-3"&gt;xA&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                        </span>&lt;th className="text-center text-white font-semibold p-3"&gt;xGI&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;/thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                    </span>{sortedPlayers.map((player, idx) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                                                        </span>const xGIColor = getColorForValue(player.xGI, minXGI, maxXGI);</p>
+<p class="p1"><span class="Apple-converted-space">                                                        </span>const showTeamDivider = groupByTeam &amp;&amp; idx &gt; 0 &amp;&amp;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                                            </span>sortedPlayers[idx - 1].teamId !== player.teamId;</p>
+<p class="p2"><span class="Apple-converted-space">                                                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                                                        </span>return (</p>
+<p class="p1"><span class="Apple-converted-space">                                                            </span>&lt;Fragment key={player.id}&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                </span>{showTeamDivider &amp;&amp; (</p>
+<p class="p1"><span class="Apple-converted-space">                                                                    </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                        </span>&lt;td colSpan="6" className="p-2 bg-white/5"&gt;&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                    </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                </span>)}</p>
+<p class="p1"><span class="Apple-converted-space">                                                                </span>&lt;tr className="border-b border-white/10 hover:bg-white/5 transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                    </span>&lt;td className="text-white p-3"&gt;{player.name}&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                    </span>&lt;td className="text-purple-200 p-3 text-sm"&gt;{player.team}&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                    </span>&lt;td className="text-purple-300 p-3 text-sm font-medium"&gt;{player.position}&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                    </span>&lt;td className="text-center p-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                        </span>&lt;span className="text-white font-semibold"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                            </span>{player.xG.toFixed(2)}</p>
+<p class="p1"><span class="Apple-converted-space">                                                                        </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                    </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                    </span>&lt;td className="text-center p-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                        </span>&lt;span className="text-white font-semibold"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                            </span>{player.xA.toFixed(2)}</p>
+<p class="p1"><span class="Apple-converted-space">                                                                        </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                    </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                    </span>&lt;td className="text-center p-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                        </span>&lt;span<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                                                            </span>className="px-3 py-1 rounded-full font-bold text-white"</p>
+<p class="p1"><span class="Apple-converted-space">                                                                            </span>style={{ backgroundColor: xGIColor }}</p>
+<p class="p1"><span class="Apple-converted-space">                                                                        </span>&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                            </span>{player.xGI.toFixed(2)}</p>
+<p class="p1"><span class="Apple-converted-space">                                                                        </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                    </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                                </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                            </span>&lt;/Fragment&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                        </span>);</p>
+<p class="p1"><span class="Apple-converted-space">                                                    </span>})}</p>
+<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;/tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>)}</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>)}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div className="mt-6 bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p className="text-white text-sm mb-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;strong&gt;Teams (xGC) Color Guide:&lt;/strong&gt; &lt;span className="text-green-400"&gt;Green = Low xGC (Good Defense)&lt;/span&gt; •<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;span className="text-yellow-400 ml-2"&gt;Yellow = Medium xGC&lt;/span&gt; •<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;span className="text-red-400 ml-2"&gt;Red = High xGC (Poor Defense)&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p className="text-white text-sm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;strong&gt;Players (xGI) Color Guide:&lt;/strong&gt; &lt;span className="text-green-400"&gt;Green = High values (Best Performers)&lt;/span&gt; •<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;span className="text-yellow-400 ml-2"&gt;Yellow = Medium values&lt;/span&gt; •<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;span className="text-red-400 ml-2"&gt;Red = Low values&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p className="text-purple-200 text-xs mt-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>xG = Expected Goals | xA = Expected Assists | xGI = Expected Goal Involvements | xGC = Expected Goals Conceded</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const root = ReactDOM.createRoot(document.getElementById('root'));</p>
+<p class="p1"><span class="Apple-converted-space">        </span>root.render(&lt;PremierLeagueDashboard /&gt;);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>

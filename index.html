@@ -310,7 +310,7 @@
                                             Note: FPL API doesn't provide Expected Goals (xG) data for team fixtures. 
                                             Showing actual Goals Conceded (GC) instead - still very useful for defensive analysis!
                                         </p>
-                                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+                                        <div className="grid grid-cols-1 gap-3">
                                             {teams
                                                 .filter(team => team.fixtures.length > 0)
                                                 .sort((a, b) => a.avgXGC - b.avgXGC)
@@ -320,7 +320,15 @@
                                                     return (
                                                         <div key={team.id} className="bg-white/5 rounded-lg p-3 border border-white/10">
                                                             <div className="flex justify-between items-center mb-2">
-                                                                <h3 className="text-white font-bold text-base">{team.shortName}</h3>
+                                                                <div className="flex items-center gap-2">
+                                                                    <img 
+                                                                        src={`https://resources.premierleague.com/premierleague/badges/70/t${team.id}.png`}
+                                                                        alt={team.shortName}
+                                                                        className="w-8 h-8"
+                                                                        onError={(e) => e.target.style.display = 'none'}
+                                                                    />
+                                                                    <h3 className="text-white font-bold text-base">{team.shortName}</h3>
+                                                                </div>
                                                                 <div className="text-right">
                                                                     <div className="text-purple-200 text-xs">Avg GC</div>
                                                                     <div 

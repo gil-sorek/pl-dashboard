@@ -46,6 +46,15 @@
             </svg>
         );
 
+        const ArrowUpDown = ({ className }) => (
+            <svg className={className} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="m21 16-4 4-4-4"></path>
+                <path d="M17 20V4"></path>
+                <path d="m3 8 4-4 4 4"></path>
+                <path d="M7 4v16"></path>
+            </svg>
+        );
+
         const PremierLeagueDashboard = () => {
             const [teams, setTeams] = useState([]);
             const [players, setPlayers] = useState([]);
@@ -55,12 +64,13 @@
             const [positionFilter, setPositionFilter] = useState('ALL');
             const [groupByTeam, setGroupByTeam] = useState(false);
             const [lastUpdated, setLastUpdated] = useState(null);
+            const [xGIThreshold, setXGIThreshold] = useState(0.01);
+            const [sortConfig, setSortConfig] = useState({ key: 'xGI', direction: 'desc' });
 
             const fetchData = async () => {
                 setLoading(true);
                 setError(null);
                 try {
-                    // Using CORS proxy to avoid CORS issues
                     const corsProxy = 'https://corsproxy.io/?';
                     
                     console.log('Fetching bootstrap data...');
@@ -99,15 +109,6 @@
                                     t.id === (isHome ? fixture.team_a : fixture.team_h)
                                 );
                                 
-                                // xGC = expected goals conceded
-                                // If home team, xGC is what away team expected to score
-                                // If away team, xGC is what home team expected to score
-                                const xgc = isHome ? 
-                                    (fixture.team_a_difficulty || fixture.team_a_score || 0) : 
-                                    (fixture.team_h_difficulty || fixture.team_h_score || 0);
-                                
-                                // FPL API doesn't provide xG in fixtures, so we'll use actual goals as proxy
-                                // Or we need to calculate from player stats
                                 const actualXGC = isHome ? fixture.team_a_score : fixture.team_h_score;
                                 
                                 return {
@@ -126,6 +127,7 @@
                         
                         return {
                             id: team.id,
+                            code: team.code,
                             name: team.name,
                             shortName: team.short_name,
                             fixtures: teamFixtures,
@@ -135,34 +137,75 @@
                     
                     console.log('Teams processed:', teamsData.length);
                     
-                    // Process players data
-                    const playersData = bootstrapData.elements.map(player => {
-                        const team = bootstrapData.teams.find(t => t.id === player.team);
-                        let position = '';
-                        switch(player.element_type) {
-                            case 1: position = 'GK'; break;
-                            case 2: position = 'DEF'; break;
-                            case 3: position = 'MID'; break;
-                            case 4: position = 'FWD'; break;
-                        }
-                        
-                        return {
-                            id: player.id,
-                            name: player.web_name,
-                            fullName: `${player.first_name} ${player.second_name}`,
-                            team: team.short_name,
-                            teamId: player.team,
-                            position: position,
-                            xG: parseFloat(player.expected_goals || 0),
-                            xA: parseFloat(player.expected_assists || 0),
-                            xGI: parseFloat(player.expected_goal_involvements || 0)
-                        };
-                    });
-
-                    console.log('Players processed:', playersData.length);
+                    // Process players data - fetch top players with their match history
+                    const topPlayers = bootstrapData.elements
+                        .filter(p => parseFloat(p.expected_goal_involvements || 0) > 0)
+                        .slice(0, 100); // Limit to top 100 to avoid too many API calls
+                    
+                    console.log('Fetching history for top', topPlayers.length, 'players...');
+                    
+                    const playersWithHistory = await Promise.all(
+                        topPlayers.map(async (player) => {
+                            try {
+                                const historyResponse = await fetch(
+                                    corsProxy + encodeURIComponent(`https://fantasy.premierleague.com/api/element-summary/${player.id}/`)
+                                );
+                                const historyData = await historyResponse.json();
+                                
+                                const team = bootstrapData.teams.find(t => t.id === player.team);
+                                let position = '';
+                                switch(player.element_type) {
+                                    case 1: position = 'GK'; break;
+                                    case 2: position = 'DEF'; break;
+                                    case 3: position = 'MID'; break;
+                                    case 4: position = 'FWD'; break;
+                                }
+                                
+                                // Get last 6 matches
+                                const last6Matches = historyData.history
+                                    .slice(-6)
+                                    .map(match => {
+                                        const opponent = bootstrapData.teams.find(t => t.id === match.opponent_team);
+                                        return {
+                                            opponent: opponent.short_name,
+                                            wasHome: match.was_home,
+                                            xGI: parseFloat(match.expected_goal_involvements || 0),
+                                            minutes: match.minutes
+                                        };
+                                    });
+                                
+                                const totalMinutes = last6Matches.reduce((sum, m) => sum + m.minutes, 0);
+                                const totalXGI = last6Matches.reduce((sum, m) => sum + m.xGI, 0);
+                                const xGIPer90 = totalMinutes > 0 ? (totalXGI / totalMinutes) * 90 : 0;
+                                
+                                return {
+                                    id: player.id,
+                                    name: player.web_name,
+                                    fullName: `${player.first_name} ${player.second_name}`,
+                                    team: team.short_name,
+                                    teamId: player.team,
+                                    teamCode: team.code,
+                                    position: position,
+                                    price: player.now_cost / 10,
+                                    xG: parseFloat(player.expected_goals || 0),
+                                    xA: parseFloat(player.expected_assists || 0),
+                                    xGI: parseFloat(player.expected_goal_involvements || 0),
+                                    xGIPer90: xGIPer90,
+                                    last6Matches: last6Matches,
+                                    totalMinutes: totalMinutes
+                                };
+                            } catch (err) {
+                                console.error(`Error fetching history for player ${player.id}:`, err);
+                                return null;
+                            }
+                        })
+                    );
+                    
+                    const validPlayers = playersWithHistory.filter(p => p !== null);
+                    console.log('Players with history loaded:', validPlayers.length);
 
                     setTeams(teamsData);
-                    setPlayers(playersData);
+                    setPlayers(validPlayers);
                     setLastUpdated(new Date());
                     console.log('Data loaded successfully!');
                     
@@ -203,17 +246,31 @@
                 }
             };
 
+            const handleSort = (key) => {
+                setSortConfig(prev => ({
+                    key,
+                    direction: prev.key === key && prev.direction === 'desc' ? 'asc' : 'desc'
+                }));
+            };
+
             const filteredPlayers = players.filter(player => {
-                if (positionFilter === 'ALL') return true;
-                return player.position === positionFilter;
+                if (positionFilter !== 'ALL' && player.position !== positionFilter) return false;
+                if (player.xGI < xGIThreshold) return false;
+                return true;
             });
 
             const sortedPlayers = [...filteredPlayers].sort((a, b) => {
-                if (groupByTeam) {
-                    if (a.teamId !== b.teamId) return a.teamId - b.teamId;
-                    return b.xGI - a.xGI;
+                if (groupByTeam && a.teamId !== b.teamId) {
+                    return a.teamId - b.teamId;
                 }
-                return b.xGI - a.xGI;
+                
+                const aValue = a[sortConfig.key];
+                const bValue = b[sortConfig.key];
+                
+                if (sortConfig.direction === 'desc') {
+                    return bValue - aValue;
+                }
+                return aValue - bValue;
             });
 
             const xGIValues = filteredPlayers.map(p => p.xGI);
@@ -229,6 +286,11 @@
             const avgXGCValues = teams.map(t => t.avgXGC).filter(val => !isNaN(val) && val > 0);
             const minAvgXGC = avgXGCValues.length > 0 ? Math.min(...avgXGCValues) : 0;
             const maxAvgXGC = avgXGCValues.length > 0 ? Math.max(...avgXGCValues) : 0;
+
+            // Get min/max for last 6 matches xGI
+            const allMatchXGI = filteredPlayers.flatMap(p => p.last6Matches.map(m => m.xGI));
+            const minMatchXGI = allMatchXGI.length > 0 ? Math.min(...allMatchXGI) : 0;
+            const maxMatchXGI = allMatchXGI.length > 0 ? Math.max(...allMatchXGI) : 0;
 
             return (
                 <div className="min-h-screen bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 p-6">
@@ -275,7 +337,7 @@
                                         : 'bg-white/10 text-white hover:bg-white/20'
                                 }`}
                             >
-                                Teams (xGC)
+                                Teams (GC)
                             </button>
                             <button
                                 onClick={() => setActiveTab('players')}
@@ -293,7 +355,7 @@
                             <div className="bg-white/10 backdrop-blur-md rounded-xl p-12 text-center">
                                 <RefreshCw className="w-12 h-12 text-white animate-spin mx-auto mb-4" />
                                 <p className="text-white text-xl">Loading Premier League data...</p>
-                                <p className="text-purple-300 text-sm mt-2">This may take a few moments</p>
+                                <p className="text-purple-300 text-sm mt-2">Fetching player match history... this may take a moment</p>
                             </div>
                         ) : teams.length === 0 && players.length === 0 ? (
                             <div className="bg-white/10 backdrop-blur-md rounded-xl p-12 text-center">
@@ -310,6 +372,7 @@
                                             Note: FPL API doesn't provide Expected Goals (xG) data for team fixtures. 
                                             Showing actual Goals Conceded (GC) instead - still very useful for defensive analysis!
                                         </p>
+                                        
                                         <div className="grid grid-cols-1 gap-3">
                                             {teams
                                                 .filter(team => team.fixtures.length > 0)
@@ -383,7 +446,20 @@
                                     <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-2xl border border-white/20">
                                         <div className="flex justify-between items-center mb-6 flex-wrap gap-4">
                                             <h2 className="text-2xl font-bold text-white">Players - Expected Goals Analytics</h2>
-                                            <div className="flex gap-3">
+                                            <div className="flex gap-3 flex-wrap items-center">
+                                                <div className="flex items-center gap-2">
+                                                    <label className="text-white text-sm">Min xGI:</label>
+                                                    <input
+                                                        type="range"
+                                                        min="0"
+                                                        max="5"
+                                                        step="0.1"
+                                                        value={xGIThreshold}
+                                                        onChange={(e) => setXGIThreshold(parseFloat(e.target.value))}
+                                                        className="w-32"
+                                                    />
+                                                    <span className="text-white text-sm font-semibold w-12">{xGIThreshold.toFixed(1)}</span>
+                                                </div>
                                                 <select
                                                     value={positionFilter}
                                                     onChange={(e) => setPositionFilter(e.target.value)}
@@ -408,59 +484,118 @@
                                             </div>
                                         </div>
 
-                                        <div className="overflow-x-auto">
-                                            <table className="w-full">
-                                                <thead>
-                                                    <tr className="border-b border-white/20">
-                                                        <th className="text-left text-white font-semibold p-3">Player</th>
-                                                        <th className="text-left text-white font-semibold p-3">Team</th>
-                                                        <th className="text-left text-white font-semibold p-3">Pos</th>
-                                                        <th className="text-center text-white font-semibold p-3">xG</th>
-                                                        <th className="text-center text-white font-semibold p-3">xA</th>
-                                                        <th className="text-center text-white font-semibold p-3">xGI</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    {sortedPlayers.map((player, idx) => {
-                                                        const xGIColor = getColorForValue(player.xGI, minXGI, maxXGI);
-                                                        const showTeamDivider = groupByTeam && idx > 0 && 
-                                                            sortedPlayers[idx - 1].teamId !== player.teamId;
+                                        <div className="mb-4 bg-white/5 rounded-lg p-2 grid grid-cols-12 gap-3 border border-white/20">
+                                            <div className="col-span-2 text-purple-200 text-xs font-semibold">Player</div>
+                                            
+                                            <button onClick={() => handleSort('price')} className="col-span-1 text-purple-200 text-xs font-semibold hover:text-white flex items-center justify-center gap-1">
+                                                Price <ArrowUpDown className="w-3 h-3" />
+                                            </button>
+                                            
+                                            <button onClick={() => handleSort('xG')} className="col-span-1 text-purple-200 text-xs font-semibold hover:text-white flex items-center justify-center gap-1">
+                                                xG <ArrowUpDown className="w-3 h-3" />
+                                            </button>
+                                            
+                                            <button onClick={() => handleSort('xA')} className="col-span-1 text-purple-200 text-xs font-semibold hover:text-white flex items-center justify-center gap-1">
+                                                xA <ArrowUpDown className="w-3 h-3" />
+                                            </button>
+                                            
+                                            <button onClick={() => handleSort('xGI')} className="col-span-1 text-purple-200 text-xs font-semibold hover:text-white flex items-center justify-center gap-1">
+                                                xGI <ArrowUpDown className="w-3 h-3" />
+                                            </button>
+                                            
+                                            <button onClick={() => handleSort('xGIPer90')} className="col-span-1 text-purple-200 text-xs font-semibold hover:text-white flex items-center justify-center gap-1">
+                                                xGI/90 <ArrowUpDown className="w-3 h-3" />
+                                            </button>
+                                            
+                                            <div className="col-span-5 text-purple-200 text-xs font-semibold text-center">Last 6 Matches</div>
+                                        </div>
+
+                                        <div className="space-y-2">
+                                            {sortedPlayers.map((player, idx) => {
+                                                const showTeamHeader = groupByTeam && (idx === 0 || sortedPlayers[idx - 1].teamId !== player.teamId);
+                                                
+                                                return (
+                                                    <Fragment key={player.id}>
+                                                        {showTeamHeader && (
+                                                            <div className="bg-white/20 rounded-lg p-3 mt-4 flex items-center gap-2">
+                                                                <img 
+                                                                    src={`https://resources.premierleague.com/premierleague/badges/70/t${player.teamCode}.png`}
+                                                                    alt={player.team}
+                                                                    className="w-6 h-6"
+                                                                    onError={(e) => e.target.style.display = 'none'}
+                                                                />
+                                                                <h3 className="text-white font-bold text-lg">{player.team}</h3>
+                                                            </div>
+                                                        )}
                                                         
-                                                        return (
-                                                            <Fragment key={player.id}>
-                                                                {showTeamDivider && (
-                                                                    <tr>
-                                                                        <td colSpan="6" className="p-2 bg-white/5"></td>
-                                                                    </tr>
-                                                                )}
-                                                                <tr className="border-b border-white/10 hover:bg-white/5 transition-colors">
-                                                                    <td className="text-white p-3">{player.name}</td>
-                                                                    <td className="text-purple-200 p-3 text-sm">{player.team}</td>
-                                                                    <td className="text-purple-300 p-3 text-sm font-medium">{player.position}</td>
-                                                                    <td className="text-center p-3">
-                                                                        <span className="text-white font-semibold">
-                                                                            {player.xG.toFixed(2)}
-                                                                        </span>
-                                                                    </td>
-                                                                    <td className="text-center p-3">
-                                                                        <span className="text-white font-semibold">
-                                                                            {player.xA.toFixed(2)}
-                                                                        </span>
-                                                                    </td>
-                                                                    <td className="text-center p-3">
-                                                                        <span 
-                                                                            className="px-3 py-1 rounded-full font-bold text-white"
-                                                                            style={{ backgroundColor: xGIColor }}
-                                                                        >
-                                                                            {player.xGI.toFixed(2)}
-                                                                        </span>
-                                                                    </td>
-                                                                </tr>
-                                                            </Fragment>
-                                                        );
-                                                    })}
-                                                </tbody>
-                                            </table>
+                                                        <div className={`rounded-lg p-3 border transition-colors ${
+                                                            groupByTeam 
+                                                                ? 'bg-white/5 border-white/20 ml-4' 
+                                                                : 'bg-white/5 border-white/10 hover:bg-white/10'
+                                                        }`}>
+                                                            <div className="grid grid-cols-12 gap-3 items-center">
+                                                                {/* Player Info */}
+                                                                <div className="col-span-2">
+                                                                    <div className="text-white font-semibold">{player.name}</div>
+                                                                    <div className="text-purple-300 text-xs">{player.team} • {player.position}</div>
+                                                                </div>
+                                                                
+                                                                {/* Stats */}
+                                                                <div className="col-span-1 text-center">
+                                                                    <div className="text-purple-200 text-xs">Price</div>
+                                                                    <div className="text-white font-semibold">£{player.price.toFixed(1)}</div>
+                                                                </div>
+                                                                
+                                                                <div className="col-span-1 text-center">
+                                                                    <div className="text-purple-200 text-xs">xG</div>
+                                                                    <div className="text-white font-semibold">{player.xG.toFixed(2)}</div>
+                                                                </div>
+                                                                
+                                                                <div className="col-span-1 text-center">
+                                                                    <div className="text-purple-200 text-xs">xA</div>
+                                                                    <div className="text-white font-semibold">{player.xA.toFixed(2)}</div>
+                                                                </div>
+                                                                
+                                                                <div className="col-span-1 text-center">
+                                                                    <div className="text-purple-200 text-xs">xGI</div>
+                                                                    <div className="text-white font-semibold">{player.xGI.toFixed(2)}</div>
+                                                                </div>
+                                                                
+                                                                <div className="col-span-1 text-center">
+                                                                    <div className="text-purple-200 text-xs">xGI/90</div>
+                                                                    <div className="text-white font-semibold">{player.xGIPer90.toFixed(2)}</div>
+                                                                </div>
+                                                                
+                                                                {/* Last 6 Matches */}
+                                                                <div className="col-span-5 flex gap-1">
+                                                                    {player.last6Matches.map((match, matchIdx) => {
+                                                                        const matchColor = getColorForValue(match.xGI, minMatchXGI, maxMatchXGI);
+                                                                        
+                                                                        return (
+                                                                            <div 
+                                                                                key={matchIdx}
+                                                                                className="flex-1 rounded p-1 text-center"
+                                                                                style={{ backgroundColor: matchColor }}
+                                                                            >
+                                                                                <div className="text-white text-xs font-semibold mb-1">
+                                                                                    {match.opponent} ({match.wasHome ? 'H' : 'A'})
+                                                                                </div>
+                                                                                <div className="text-white font-bold text-sm">
+                                                                                    {match.xGI.toFixed(2)}
+                                                                                </div>
+                                                                            </div>
+                                                                        );
+                                                                    })}
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </Fragment>
+                                                );
+                                            })}
+                                        </div>
+                                        
+                                        <div className="mt-4 text-purple-200 text-sm">
+                                            Showing {sortedPlayers.length} of {players.length} players
                                         </div>
                                     </div>
                                 )}
@@ -469,9 +604,9 @@
 
                         <div className="mt-6 bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
                             <p className="text-white text-sm mb-2">
-                                <strong>Teams (xGC) Color Guide:</strong> <span className="text-green-400">Green = Low xGC (Good Defense)</span> • 
-                                <span className="text-yellow-400 ml-2">Yellow = Medium xGC</span> • 
-                                <span className="text-red-400 ml-2">Red = High xGC (Poor Defense)</span>
+                                <strong>Teams (GC) Color Guide:</strong> <span className="text-green-400">Green = Low GC (Good Defense)</span> • 
+                                <span className="text-yellow-400 ml-2">Yellow = Medium GC</span> • 
+                                <span className="text-red-400 ml-2">Red = High GC (Poor Defense)</span>
                             </p>
                             <p className="text-white text-sm">
                                 <strong>Players (xGI) Color Guide:</strong> <span className="text-green-400">Green = High values (Best Performers)</span> • 
@@ -479,7 +614,7 @@
                                 <span className="text-red-400 ml-2">Red = Low values</span>
                             </p>
                             <p className="text-purple-200 text-xs mt-2">
-                                xG = Expected Goals | xA = Expected Assists | xGI = Expected Goal Involvements | xGC = Expected Goals Conceded
+                                xG = Expected Goals | xA = Expected Assists | xGI = Expected Goal Involvements | GC = Goals Conceded | xGI/90 = xGI per 90 minutes
                             </p>
                         </div>
                     </div>

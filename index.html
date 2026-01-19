@@ -65,6 +65,7 @@
             const [groupByTeam, setGroupByTeam] = useState(false);
             const [lastUpdated, setLastUpdated] = useState(null);
             const [xGIThreshold, setXGIThreshold] = useState(0.5);
+            const [minutesThreshold, setMinutesThreshold] = useState(150);
             const [sortConfig, setSortConfig] = useState({ key: 'xGI', direction: 'desc' });
 
             const fetchData = async () => {
@@ -93,8 +94,9 @@
                     const fixturesData = await fixturesResponse.json();
                     console.log('Fixtures data loaded:', fixturesData.length, 'fixtures');
                     
-                    // Process teams data with fixtures
-                    const teamsData = bootstrapData.teams.map(team => {
+                    // Process teams data with fixtures and calculate xGC from opponent xG
+                    console.log('Processing teams with xGC calculation...');
+                    const teamsData = await Promise.all(bootstrapData.teams.map(async (team) => {
                         const teamFixtures = fixturesData
                             .filter(fixture => 
                                 fixture.finished && 
@@ -102,45 +104,91 @@
                             )
                             .sort((a, b) => b.event - a.event)
                             .slice(0, 6)
-                            .reverse()
-                            .map(fixture => {
-                                const isHome = fixture.team_h === team.id;
-                                const opponent = bootstrapData.teams.find(t => 
-                                    t.id === (isHome ? fixture.team_a : fixture.team_h)
-                                );
-                                
-                                const actualXGC = isHome ? fixture.team_a_score : fixture.team_h_score;
-                                
-                                return {
-                                    gameweek: fixture.event,
-                                    opponent: opponent.short_name,
-                                    isHome: isHome,
-                                    xgc: parseFloat(actualXGC || 0).toFixed(2),
-                                    score: isHome ? 
-                                        `${fixture.team_h_score}-${fixture.team_a_score}` :
-                                        `${fixture.team_a_score}-${fixture.team_h_score}`
-                                };
-                            });
+                            .reverse();
                         
-                        const totalXGC = teamFixtures.reduce((sum, f) => sum + parseFloat(f.xgc), 0);
-                        const avgXGC = teamFixtures.length > 0 ? totalXGC / teamFixtures.length : 0;
+                        // Calculate xGC for each fixture by summing opponent players' xG
+                        const fixturesWithXGC = await Promise.all(teamFixtures.map(async (fixture) => {
+                            const isHome = fixture.team_h === team.id;
+                            const opponent = bootstrapData.teams.find(t => 
+                                t.id === (isHome ? fixture.team_a : fixture.team_h)
+                            );
+                            
+                            // Get xGC by summing opponent players' xG from match stats
+                            let xgc = 0;
+                            try {
+                                // Find stats for this fixture
+                                if (fixture.stats) {
+                                    const goalsData = fixture.stats.find(s => s.identifier === 'goals_scored');
+                                    const assistsData = fixture.stats.find(s => s.identifier === 'assists');
+                                    
+                                    // Get opponent players who participated
+                                    const opponentPlayers = isHome ? 
+                                        [...(goalsData?.a || []), ...(assistsData?.a || [])] :
+                                        [...(goalsData?.h || []), ...(assistsData?.h || [])];
+                                    
+                                    // Fetch xG for each player who played
+                                    const playerIds = [...new Set(opponentPlayers.map(p => p.element))];
+                                    
+                                    for (const playerId of playerIds) {
+                                        try {
+                                            const playerHistoryResponse = await fetch(
+                                                corsProxy + encodeURIComponent(`https://fantasy.premierleague.com/api/element-summary/${playerId}/`)
+                                            );
+                                            const playerHistory = await playerHistoryResponse.json();
+                                            
+                                            // Find the match in player history
+                                            const match = playerHistory.history.find(m => 
+                                                m.fixture === fixture.id
+                                            );
+                                            
+                                            if (match) {
+                                                xgc += parseFloat(match.expected_goals || 0);
+                                            }
+                                        } catch (err) {
+                                            console.error(`Error fetching player ${playerId} history:`, err);
+                                        }
+                                    }
+                                }
+                                
+                                // If we couldn't get xG data, use actual goals as fallback
+                                if (xgc === 0) {
+                                    xgc = isHome ? fixture.team_a_score : fixture.team_h_score;
+                                }
+                            } catch (err) {
+                                console.error(`Error calculating xGC for fixture ${fixture.id}:`, err);
+                                xgc = isHome ? fixture.team_a_score : fixture.team_h_score;
+                            }
+                            
+                            return {
+                                gameweek: fixture.event,
+                                opponent: opponent.short_name,
+                                isHome: isHome,
+                                xgc: parseFloat(xgc).toFixed(2),
+                                score: isHome ? 
+                                    `${fixture.team_h_score}-${fixture.team_a_score}` :
+                                    `${fixture.team_a_score}-${fixture.team_h_score}`
+                            };
+                        }));
+                        
+                        const totalXGC = fixturesWithXGC.reduce((sum, f) => sum + parseFloat(f.xgc), 0);
+                        const avgXGC = fixturesWithXGC.length > 0 ? totalXGC / fixturesWithXGC.length : 0;
                         
                         return {
                             id: team.id,
                             code: team.code,
                             name: team.name,
                             shortName: team.short_name,
-                            fixtures: teamFixtures,
+                            fixtures: fixturesWithXGC,
                             avgXGC: avgXGC
                         };
-                    });
+                    }));
                     
                     console.log('Teams processed:', teamsData.length);
                     
                     // Process players data - fetch top players with their match history
                     const topPlayers = bootstrapData.elements
                         .sort((a, b) => parseFloat(b.total_points || 0) - parseFloat(a.total_points || 0))
-                        .slice(0, 150); // Get top 150 by total points to ensure we get all key players
+                        .slice(0, 200); // Get top 200 by total points
                     
                     console.log('Fetching history for top', topPlayers.length, 'players...');
                     
@@ -225,29 +273,23 @@
                 fetchData();
             }, []);
 
-            const getColorForXGC = (value, min, max) => {
-                if (max === min) return 'rgb(34, 197, 94)';
-                const normalized = (value - min) / (max - min);
-                
-                if (normalized < 0.33) {
-                    return `rgb(34, 197, 94)`;
-                } else if (normalized < 0.66) {
-                    return `rgb(234, 179, 8)`;
+            const getColorForXGC = (value) => {
+                if (value < 1) {
+                    return 'rgb(34, 197, 94)'; // green
+                } else if (value < 1.5) {
+                    return 'rgb(234, 179, 8)'; // yellow
                 } else {
-                    return `rgb(239, 68, 68)`;
+                    return 'rgb(239, 68, 68)'; // red
                 }
             };
 
-            const getColorForValue = (value, min, max) => {
-                if (max === min) return 'rgb(34, 197, 94)';
-                const normalized = (value - min) / (max - min);
-                
-                if (normalized < 0.33) {
-                    return `rgb(239, 68, 68)`;
-                } else if (normalized < 0.66) {
-                    return `rgb(234, 179, 8)`;
+            const getColorForValue = (value) => {
+                if (value < 0.3) {
+                    return 'rgb(239, 68, 68)'; // red
+                } else if (value < 1) {
+                    return 'rgb(234, 179, 8)'; // yellow
                 } else {
-                    return `rgb(34, 197, 94)`;
+                    return 'rgb(34, 197, 94)'; // green
                 }
             };
 
@@ -261,6 +303,7 @@
             const filteredPlayers = players.filter(player => {
                 if (positionFilter !== 'ALL' && player.position !== positionFilter) return false;
                 if (player.xGI < xGIThreshold) return false;
+                if (player.totalMinutes < minutesThreshold) return false;
                 return true;
             });
 
@@ -281,12 +324,6 @@
             const xGIValues = filteredPlayers.map(p => p.xGI);
             const minXGI = xGIValues.length > 0 ? Math.min(...xGIValues) : 0;
             const maxXGI = xGIValues.length > 0 ? Math.max(...xGIValues) : 0;
-
-            const allXGCValues = teams.flatMap(team => 
-                team.fixtures.map(f => parseFloat(f.xgc))
-            ).filter(val => !isNaN(val));
-            const minXGC = allXGCValues.length > 0 ? Math.min(...allXGCValues) : 0;
-            const maxXGC = allXGCValues.length > 0 ? Math.max(...allXGCValues) : 0;
 
             const avgXGCValues = teams.map(t => t.avgXGC).filter(val => !isNaN(val) && val > 0);
             const minAvgXGC = avgXGCValues.length > 0 ? Math.min(...avgXGCValues) : 0;
@@ -372,10 +409,9 @@
                             <>
                                 {activeTab === 'teams' && (
                                     <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-2xl border border-white/20">
-                                        <h2 className="text-2xl font-bold text-white mb-4">Teams - Goals Conceded (Last 6 Matches)</h2>
+                                        <h2 className="text-2xl font-bold text-white mb-4">Teams - Expected Goals Conceded (Last 6 Matches)</h2>
                                         <p className="text-purple-200 text-sm mb-4">
-                                            Note: FPL API doesn't provide Expected Goals (xG) data for team fixtures. 
-                                            Showing actual Goals Conceded (GC) instead - still very useful for defensive analysis!
+                                            xGC calculated by summing opponent players' Expected Goals (xG) for each match.
                                         </p>
                                         
                                         <div className="grid grid-cols-1 gap-3">
@@ -398,7 +434,7 @@
                                                                     <h3 className="text-white font-bold text-base">{team.shortName}</h3>
                                                                 </div>
                                                                 <div className="text-right">
-                                                                    <div className="text-purple-200 text-xs">Avg GC</div>
+                                                                    <div className="text-purple-200 text-xs">Avg xGC</div>
                                                                     <div 
                                                                         className="text-white font-bold text-lg px-3 py-1 rounded inline-block"
                                                                         style={{ backgroundColor: avgColor }}
@@ -410,7 +446,7 @@
                                                             
                                                             <div className="grid grid-cols-6 gap-2">
                                                                 {team.fixtures.map((fixture, idx) => {
-                                                                    const xgcColor = getColorForXGC(parseFloat(fixture.xgc), minXGC, maxXGC);
+                                                                    const xgcColor = getColorForXGC(parseFloat(fixture.xgc));
                                                                     
                                                                     return (
                                                                         <div 
@@ -434,7 +470,7 @@
                                                                                 className="text-white font-bold text-xs py-1 rounded"
                                                                                 style={{ backgroundColor: xgcColor }}
                                                                             >
-                                                                                GC: {fixture.xgc}
+                                                                                xGC: {fixture.xgc}
                                                                             </div>
                                                                         </div>
                                                                     );
@@ -464,6 +500,19 @@
                                                         className="w-32"
                                                     />
                                                     <span className="text-white text-sm font-semibold w-12">{xGIThreshold.toFixed(1)}</span>
+                                                </div>
+                                                <div className="flex items-center gap-2">
+                                                    <label className="text-white text-sm">Min Mins:</label>
+                                                    <input
+                                                        type="range"
+                                                        min="0"
+                                                        max="540"
+                                                        step="30"
+                                                        value={minutesThreshold}
+                                                        onChange={(e) => setMinutesThreshold(parseFloat(e.target.value))}
+                                                        className="w-32"
+                                                    />
+                                                    <span className="text-white text-sm font-semibold w-12">{minutesThreshold}</span>
                                                 </div>
                                                 <select
                                                     value={positionFilter}
@@ -574,7 +623,7 @@
                                                                 {/* Last 6 Matches */}
                                                                 <div className="col-span-5 flex gap-1">
                                                                     {player.last6Matches.map((match, matchIdx) => {
-                                                                        const matchColor = getColorForValue(match.xGI, minMatchXGI, maxMatchXGI);
+                                                                        const matchColor = getColorForValue(match.xGI);
                                                                         
                                                                         return (
                                                                             <div 
@@ -609,17 +658,17 @@
 
                         <div className="mt-6 bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
                             <p className="text-white text-sm mb-2">
-                                <strong>Teams (GC) Color Guide:</strong> <span className="text-green-400">Green = Low GC (Good Defense)</span> • 
-                                <span className="text-yellow-400 ml-2">Yellow = Medium GC</span> • 
-                                <span className="text-red-400 ml-2">Red = High GC (Poor Defense)</span>
+                                <strong>Teams (xGC) Color Guide:</strong> <span className="text-green-400">Green = Low xGC (&lt;1, Strong Defense)</span> • 
+                                <span className="text-yellow-400 ml-2">Yellow = Medium xGC (1-1.5)</span> • 
+                                <span className="text-red-400 ml-2">Red = High xGC (&gt;1.5, Weak Defense)</span>
                             </p>
                             <p className="text-white text-sm">
-                                <strong>Players (xGI) Color Guide:</strong> <span className="text-green-400">Green = High values (Best Performers)</span> • 
-                                <span className="text-yellow-400 ml-2">Yellow = Medium values</span> • 
-                                <span className="text-red-400 ml-2">Red = Low values</span>
+                                <strong>Players (xGI) Color Guide:</strong> <span className="text-green-400">Green = High xGI (&gt;1, Excellent)</span> • 
+                                <span className="text-yellow-400 ml-2">Yellow = Medium xGI (0.3-1)</span> • 
+                                <span className="text-red-400 ml-2">Red = Low xGI (&lt;0.3, Poor)</span>
                             </p>
                             <p className="text-purple-200 text-xs mt-2">
-                                xG = Expected Goals | xA = Expected Assists | xGI = Expected Goal Involvements | GC = Goals Conceded | xGI/90 = xGI per 90 minutes
+                                xG = Expected Goals | xA = Expected Assists | xGI = Expected Goal Involvements | xGC = Expected Goals Conceded | xGI/90 = xGI per 90 minutes
                             </p>
                         </div>
                     </div>

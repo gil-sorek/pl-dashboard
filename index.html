@@ -131,12 +131,12 @@
                                 // Calculate xGC: sum xG of all opponent players in this match
                                 // Filter players by opponent team and match home/away status
                                 const opponentPlayersXG = validPlayers
-                                    .filter(p => p.teamId === opponentTeam.id)
-                                    .flatMap(p => p.last6Matches.filter(m => 
-                                        m.opponent === team.short_name && 
+                                    .filter(p => p && p.teamId === opponentTeam.id)
+                                    .flatMap(p => (p.last6Matches || []).filter(m => 
+                                        m && m.opponent === team.short_name && 
                                         m.wasHome === !isHome // opponent's perspective
                                     ))
-                                    .reduce((sum, match) => sum + match.xG, 0);
+                                    .reduce((sum, match) => sum + (match.xG || 0), 0);
                                 
                                 // If no data from our player list, use actual goals as fallback
                                 const xgc = opponentPlayersXG > 0 ? opponentPlayersXG : 

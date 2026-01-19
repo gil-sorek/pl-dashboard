@@ -99,15 +99,22 @@
                                     t.id === (isHome ? fixture.team_a : fixture.team_h)
                                 );
                                 
+                                // xGC = expected goals conceded
+                                // If home team, xGC is what away team expected to score
+                                // If away team, xGC is what home team expected to score
                                 const xgc = isHome ? 
-                                    (fixture.team_a_xg || 0) : 
-                                    (fixture.team_h_xg || 0);
+                                    (fixture.team_a_difficulty || fixture.team_a_score || 0) : 
+                                    (fixture.team_h_difficulty || fixture.team_h_score || 0);
+                                
+                                // FPL API doesn't provide xG in fixtures, so we'll use actual goals as proxy
+                                // Or we need to calculate from player stats
+                                const actualXGC = isHome ? fixture.team_a_score : fixture.team_h_score;
                                 
                                 return {
                                     gameweek: fixture.event,
                                     opponent: opponent.short_name,
                                     isHome: isHome,
-                                    xgc: parseFloat(xgc).toFixed(2),
+                                    xgc: parseFloat(actualXGC || 0).toFixed(2),
                                     score: isHome ? 
                                         `${fixture.team_h_score}-${fixture.team_a_score}` :
                                         `${fixture.team_a_score}-${fixture.team_h_score}`
@@ -298,23 +305,26 @@
                             <>
                                 {activeTab === 'teams' && (
                                     <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-2xl border border-white/20">
-                                        <h2 className="text-2xl font-bold text-white mb-6">Teams - Expected Goals Conceded (Last 6 Matches)</h2>
-                                        
-                                        <div className="grid grid-cols-1 gap-6">
+                                        <h2 className="text-2xl font-bold text-white mb-4">Teams - Goals Conceded (Last 6 Matches)</h2>
+                                        <p className="text-purple-200 text-sm mb-4">
+                                            Note: FPL API doesn't provide Expected Goals (xG) data for team fixtures. 
+                                            Showing actual Goals Conceded (GC) instead - still very useful for defensive analysis!
+                                        </p>
+                                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
                                             {teams
                                                 .filter(team => team.fixtures.length > 0)
                                                 .sort((a, b) => a.avgXGC - b.avgXGC)
-                                                .map(team => {
+                                                .map((team, index) => {
                                                     const avgColor = getColorForXGC(team.avgXGC, minAvgXGC, maxAvgXGC);
                                                     
                                                     return (
-                                                        <div key={team.id} className="bg-white/5 rounded-lg p-5 border border-white/10">
-                                                            <div className="flex justify-between items-center mb-4">
-                                                                <h3 className="text-white font-bold text-xl">{team.name}</h3>
+                                                        <div key={team.id} className="bg-white/5 rounded-lg p-3 border border-white/10">
+                                                            <div className="flex justify-between items-center mb-2">
+                                                                <h3 className="text-white font-bold text-base">{team.shortName}</h3>
                                                                 <div className="text-right">
-                                                                    <div className="text-purple-200 text-sm">Avg xGC (Last 6)</div>
+                                                                    <div className="text-purple-200 text-xs">Avg GC</div>
                                                                     <div 
-                                                                        className="text-white font-bold text-2xl px-4 py-1 rounded-lg inline-block"
+                                                                        className="text-white font-bold text-lg px-3 py-1 rounded inline-block"
                                                                         style={{ backgroundColor: avgColor }}
                                                                     >
                                                                         {team.avgXGC.toFixed(2)}
@@ -322,33 +332,33 @@
                                                                 </div>
                                                             </div>
                                                             
-                                                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+                                                            <div className="grid grid-cols-6 gap-2">
                                                                 {team.fixtures.map((fixture, idx) => {
                                                                     const xgcColor = getColorForXGC(parseFloat(fixture.xgc), minXGC, maxXGC);
                                                                     
                                                                     return (
                                                                         <div 
                                                                             key={idx} 
-                                                                            className="bg-white/10 rounded-lg p-3 border border-white/20"
+                                                                            className="bg-white/10 rounded p-2 border border-white/20 text-center"
                                                                         >
-                                                                            <div className="flex items-center gap-2 mb-2">
+                                                                            <div className="flex items-center justify-center gap-1 mb-1">
                                                                                 {fixture.isHome ? (
-                                                                                    <Home className="w-4 h-4 text-green-400" />
+                                                                                    <Home className="w-3 h-3 text-green-400" />
                                                                                 ) : (
-                                                                                    <Plane className="w-4 h-4 text-blue-400" />
+                                                                                    <Plane className="w-3 h-3 text-blue-400" />
                                                                                 )}
-                                                                                <span className="text-white font-semibold text-sm">
-                                                                                    vs {fixture.opponent}
+                                                                                <span className="text-white font-semibold text-xs">
+                                                                                    {fixture.opponent}
                                                                                 </span>
                                                                             </div>
-                                                                            <div className="text-purple-200 text-xs mb-2">
-                                                                                GW{fixture.gameweek} • {fixture.score}
+                                                                            <div className="text-purple-200 text-xs mb-1">
+                                                                                {fixture.score}
                                                                             </div>
                                                                             <div 
-                                                                                className="text-white font-bold text-center py-2 rounded"
+                                                                                className="text-white font-bold text-xs py-1 rounded"
                                                                                 style={{ backgroundColor: xgcColor }}
                                                                             >
-                                                                                xGC: {fixture.xgc}
+                                                                                GC: {fixture.xgc}
                                                                             </div>
                                                                         </div>
                                                                     );

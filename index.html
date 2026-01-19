@@ -64,7 +64,7 @@
             const [positionFilter, setPositionFilter] = useState('ALL');
             const [groupByTeam, setGroupByTeam] = useState(false);
             const [lastUpdated, setLastUpdated] = useState(null);
-            const [xGIThreshold, setXGIThreshold] = useState(0.01);
+            const [xGIThreshold, setXGIThreshold] = useState(0.5);
             const [sortConfig, setSortConfig] = useState({ key: 'xGI', direction: 'desc' });
 
             const fetchData = async () => {
@@ -139,8 +139,8 @@
                     
                     // Process players data - fetch top players with their match history
                     const topPlayers = bootstrapData.elements
-                        .filter(p => parseFloat(p.expected_goal_involvements || 0) > 0)
-                        .slice(0, 100); // Limit to top 100 to avoid too many API calls
+                        .sort((a, b) => parseFloat(b.total_points || 0) - parseFloat(a.total_points || 0))
+                        .slice(0, 150); // Get top 150 by total points to ensure we get all key players
                     
                     console.log('Fetching history for top', topPlayers.length, 'players...');
                     
@@ -170,12 +170,17 @@
                                             opponent: opponent.short_name,
                                             wasHome: match.was_home,
                                             xGI: parseFloat(match.expected_goal_involvements || 0),
+                                            xG: parseFloat(match.expected_goals || 0),
+                                            xA: parseFloat(match.expected_assists || 0),
                                             minutes: match.minutes
                                         };
                                     });
                                 
+                                // Calculate totals from last 6 matches
                                 const totalMinutes = last6Matches.reduce((sum, m) => sum + m.minutes, 0);
                                 const totalXGI = last6Matches.reduce((sum, m) => sum + m.xGI, 0);
+                                const totalXG = last6Matches.reduce((sum, m) => sum + m.xG, 0);
+                                const totalXA = last6Matches.reduce((sum, m) => sum + m.xA, 0);
                                 const xGIPer90 = totalMinutes > 0 ? (totalXGI / totalMinutes) * 90 : 0;
                                 
                                 return {
@@ -187,9 +192,9 @@
                                     teamCode: team.code,
                                     position: position,
                                     price: player.now_cost / 10,
-                                    xG: parseFloat(player.expected_goals || 0),
-                                    xA: parseFloat(player.expected_assists || 0),
-                                    xGI: parseFloat(player.expected_goal_involvements || 0),
+                                    xG: totalXG,  // Use calculated total from last 6
+                                    xA: totalXA,  // Use calculated total from last 6
+                                    xGI: totalXGI, // Use calculated total from last 6
                                     xGIPer90: xGIPer90,
                                     last6Matches: last6Matches,
                                     totalMinutes: totalMinutes
@@ -451,9 +456,9 @@
                                                     <label className="text-white text-sm">Min xGI:</label>
                                                     <input
                                                         type="range"
-                                                        min="0"
-                                                        max="5"
-                                                        step="0.1"
+                                                        min="0.5"
+                                                        max="10"
+                                                        step="0.5"
                                                         value={xGIThreshold}
                                                         onChange={(e) => setXGIThreshold(parseFloat(e.target.value))}
                                                         className="w-32"

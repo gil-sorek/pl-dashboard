@@ -38,10 +38,19 @@
             </svg>
         );
 
+        const AlertCircle = ({ className }) => (
+            <svg className={className} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+        );
+
         const PremierLeagueDashboard = () => {
             const [teams, setTeams] = useState([]);
             const [players, setPlayers] = useState([]);
             const [loading, setLoading] = useState(true);
+            const [error, setError] = useState(null);
             const [activeTab, setActiveTab] = useState('teams');
             const [positionFilter, setPositionFilter] = useState('ALL');
             const [groupByTeam, setGroupByTeam] = useState(false);
@@ -49,13 +58,32 @@
 
             const fetchData = async () => {
                 setLoading(true);
+                setError(null);
                 try {
-                    const bootstrapResponse = await fetch('https://fantasy.premierleague.com/api/bootstrap-static/');
+                    // Using CORS proxy to avoid CORS issues
+                    const corsProxy = 'https://corsproxy.io/?';
+                    
+                    console.log('Fetching bootstrap data...');
+                    const bootstrapResponse = await fetch(corsProxy + encodeURIComponent('https://fantasy.premierleague.com/api/bootstrap-static/'));
+                    
+                    if (!bootstrapResponse.ok) {
+                        throw new Error(`Bootstrap API failed: ${bootstrapResponse.status}`);
+                    }
+                    
                     const bootstrapData = await bootstrapResponse.json();
+                    console.log('Bootstrap data loaded:', bootstrapData);
                     
-                    const fixturesResponse = await fetch('https://fantasy.premierleague.com/api/fixtures/');
+                    console.log('Fetching fixtures data...');
+                    const fixturesResponse = await fetch(corsProxy + encodeURIComponent('https://fantasy.premierleague.com/api/fixtures/'));
+                    
+                    if (!fixturesResponse.ok) {
+                        throw new Error(`Fixtures API failed: ${fixturesResponse.status}`);
+                    }
+                    
                     const fixturesData = await fixturesResponse.json();
+                    console.log('Fixtures data loaded:', fixturesData.length, 'fixtures');
                     
+                    // Process teams data with fixtures
                     const teamsData = bootstrapData.teams.map(team => {
                         const teamFixtures = fixturesData
                             .filter(fixture => 
@@ -98,6 +126,9 @@
                         };
                     });
                     
+                    console.log('Teams processed:', teamsData.length);
+                    
+                    // Process players data
                     const playersData = bootstrapData.elements.map(player => {
                         const team = bootstrapData.teams.find(t => t.id === player.team);
                         let position = '';
@@ -121,12 +152,16 @@
                         };
                     });
 
+                    console.log('Players processed:', playersData.length);
+
                     setTeams(teamsData);
                     setPlayers(playersData);
                     setLastUpdated(new Date());
+                    console.log('Data loaded successfully!');
                     
                 } catch (error) {
                     console.error('Error fetching data:', error);
+                    setError(error.message);
                 }
                 setLoading(false);
             };
@@ -175,18 +210,18 @@
             });
 
             const xGIValues = filteredPlayers.map(p => p.xGI);
-            const minXGI = Math.min(...xGIValues);
-            const maxXGI = Math.max(...xGIValues);
+            const minXGI = xGIValues.length > 0 ? Math.min(...xGIValues) : 0;
+            const maxXGI = xGIValues.length > 0 ? Math.max(...xGIValues) : 0;
 
             const allXGCValues = teams.flatMap(team => 
                 team.fixtures.map(f => parseFloat(f.xgc))
             ).filter(val => !isNaN(val));
-            const minXGC = Math.min(...allXGCValues);
-            const maxXGC = Math.max(...allXGCValues);
+            const minXGC = allXGCValues.length > 0 ? Math.min(...allXGCValues) : 0;
+            const maxXGC = allXGCValues.length > 0 ? Math.max(...allXGCValues) : 0;
 
-            const avgXGCValues = teams.map(t => t.avgXGC).filter(val => !isNaN(val));
-            const minAvgXGC = Math.min(...avgXGCValues);
-            const maxAvgXGC = Math.max(...avgXGCValues);
+            const avgXGCValues = teams.map(t => t.avgXGC).filter(val => !isNaN(val) && val > 0);
+            const minAvgXGC = avgXGCValues.length > 0 ? Math.min(...avgXGCValues) : 0;
+            const maxAvgXGC = avgXGCValues.length > 0 ? Math.max(...avgXGCValues) : 0;
 
             return (
                 <div className="min-h-screen bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 p-6">
@@ -212,6 +247,17 @@
                                 </button>
                             </div>
                         </div>
+
+                        {error && (
+                            <div className="bg-red-500/20 border border-red-500/50 rounded-xl p-4 mb-6 flex items-center gap-3">
+                                <AlertCircle className="w-6 h-6 text-red-300" />
+                                <div>
+                                    <p className="text-white font-semibold">Error loading data</p>
+                                    <p className="text-red-200 text-sm">{error}</p>
+                                    <p className="text-red-200 text-sm mt-1">Please try refreshing the page or clicking "Refresh Data"</p>
+                                </div>
+                            </div>
+                        )}
 
                         <div className="flex gap-4 mb-6">
                             <button
@@ -240,6 +286,13 @@
                             <div className="bg-white/10 backdrop-blur-md rounded-xl p-12 text-center">
                                 <RefreshCw className="w-12 h-12 text-white animate-spin mx-auto mb-4" />
                                 <p className="text-white text-xl">Loading Premier League data...</p>
+                                <p className="text-purple-300 text-sm mt-2">This may take a few moments</p>
+                            </div>
+                        ) : teams.length === 0 && players.length === 0 ? (
+                            <div className="bg-white/10 backdrop-blur-md rounded-xl p-12 text-center">
+                                <AlertCircle className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
+                                <p className="text-white text-xl mb-2">No data available</p>
+                                <p className="text-purple-300 text-sm">Click "Refresh Data" to load the latest Premier League statistics</p>
                             </div>
                         ) : (
                             <>

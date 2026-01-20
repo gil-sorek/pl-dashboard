@@ -302,23 +302,21 @@
                 return aValue - bValue;
             });
 
-            const sortedTeams = [...teams].filter(team => team.fixtures.length > 0).sort((a, b) => {
-                const aValue = a[teamSortConfig.key];
-                const bValue = b[teamSortConfig.key];
-                
-                if (teamSortConfig.direction === 'desc') {
-                    return bValue - aValue;
-                }
-                return aValue - bValue;
-            });
+            const sortedTeams = teams.length > 0 
+                ? [...teams].filter(team => team.fixtures.length > 0).sort((a, b) => {
+                    const aValue = a[teamSortConfig.key];
+                    const bValue = b[teamSortConfig.key];
+                    
+                    if (teamSortConfig.direction === 'desc') {
+                        return bValue - aValue;
+                    }
+                    return aValue - bValue;
+                })
+                : [];
 
             const xGIValues = filteredPlayers.map(p => p.xGI);
             const minXGI = xGIValues.length > 0 ? Math.min(...xGIValues) : 0;
             const maxXGI = xGIValues.length > 0 ? Math.max(...xGIValues) : 0;
-
-            const avgXGCValues = teams.map(t => t.avgXGC).filter(val => !isNaN(val) && val > 0);
-            const minAvgXGC = avgXGCValues.length > 0 ? Math.min(...avgXGCValues) : 0;
-            const maxAvgXGC = avgXGCValues.length > 0 ? Math.max(...avgXGCValues) : 0;
 
             return (
                 <div className="min-h-screen bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 p-6">
@@ -700,9 +698,14 @@
 
                         <div className="mt-6 bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
                             <p className="text-white text-sm mb-2">
-                                <strong>Teams (GC) Color Guide:</strong> <span className="text-green-400">Green = Low GC (&lt;0.7, Excellent Defense)</span> • 
+                                <strong>Teams Attack Color Guide:</strong> <span className="text-green-400">Green = High Goals (&gt;1.5, Strong Attack)</span> • 
+                                <span className="text-yellow-400 ml-2">Yellow = Medium Goals (0.5-1.5)</span> • 
+                                <span className="text-red-400 ml-2">Red = Low Goals (&lt;0.5, Weak Attack)</span>
+                            </p>
+                            <p className="text-white text-sm mb-2">
+                                <strong>Teams Defense Color Guide:</strong> <span className="text-green-400">Green = Low GC (&lt;0.7, Strong Defense)</span> • 
                                 <span className="text-yellow-400 ml-2">Yellow = Medium GC (0.7-1.2)</span> • 
-                                <span className="text-red-400 ml-2">Red = High GC (&gt;1.2, Poor Defense)</span>
+                                <span className="text-red-400 ml-2">Red = High GC (&gt;1.2, Weak Defense)</span>
                             </p>
                             <p className="text-white text-sm">
                                 <strong>Players (xGI) Color Guide:</strong> <span className="text-green-400">Green = High xGI (&gt;1, Excellent)</span> • 

@@ -99,10 +99,10 @@
                     const teamsData = bootstrapData.teams.map(team => {
                         const teamFixtures = fixturesData
                             .filter(fixture => 
-                                fixture.finished && 
+                                fixture && fixture.finished && 
                                 (fixture.team_h === team.id || fixture.team_a === team.id)
                             )
-                            .sort((a, b) => b.event - a.event)
+                            .sort((a, b) => (b.event || 0) - (a.event || 0))
                             .slice(0, 6)
                             .reverse()
                             .map(fixture => {
@@ -111,29 +111,34 @@
                                     t.id === (isHome ? fixture.team_a : fixture.team_h)
                                 );
                                 
-                                // xG = team's expected goals (attacking)
+                                if (!opponent) return null;
+                                
+                                // xG = team's expected goals (attacking) - using actual goals as placeholder
                                 const xg = isHome ? 
-                                    (fixture.team_h_score || 0) : // Using actual goals as placeholder for xG
+                                    (fixture.team_h_score || 0) :
                                     (fixture.team_a_score || 0);
                                 
                                 // GC = goals conceded (defensive)
-                                const gc = isHome ? fixture.team_a_score : fixture.team_h_score;
+                                const gc = isHome ? 
+                                    (fixture.team_a_score || 0) : 
+                                    (fixture.team_h_score || 0);
                                 
                                 return {
-                                    gameweek: fixture.event,
-                                    opponent: opponent.short_name,
+                                    gameweek: fixture.event || 0,
+                                    opponent: opponent.short_name || 'UNK',
                                     isHome: isHome,
-                                    xg: parseFloat(xg || 0).toFixed(2),
-                                    gc: parseFloat(gc || 0).toFixed(2),
+                                    xg: parseFloat(xg).toFixed(2),
+                                    gc: parseFloat(gc).toFixed(2),
                                     score: isHome ? 
-                                        `${fixture.team_h_score}-${fixture.team_a_score}` :
-                                        `${fixture.team_a_score}-${fixture.team_h_score}`
+                                        `${fixture.team_h_score || 0}-${fixture.team_a_score || 0}` :
+                                        `${fixture.team_a_score || 0}-${fixture.team_h_score || 0}`
                                 };
-                            });
+                            })
+                            .filter(f => f !== null);
                         
-                        const totalXG = teamFixtures.reduce((sum, f) => sum + parseFloat(f.xg), 0);
+                        const totalXG = teamFixtures.reduce((sum, f) => sum + parseFloat(f.xg || 0), 0);
                         const avgXG = teamFixtures.length > 0 ? totalXG / teamFixtures.length : 0;
-                        const totalGC = teamFixtures.reduce((sum, f) => sum + parseFloat(f.gc), 0);
+                        const totalGC = teamFixtures.reduce((sum, f) => sum + parseFloat(f.gc || 0), 0);
                         const avgGC = teamFixtures.length > 0 ? totalGC / teamFixtures.length : 0;
                         
                         return {

@@ -296,26 +296,6 @@
                 }
             };
 
-            const getColorForXGC = (value) => {
-                if (value < 0.7) {
-                    return 'rgb(34, 197, 94)';
-                } else if (value < 1.2) {
-                    return 'rgb(234, 179, 8)';
-                } else {
-                    return 'rgb(239, 68, 68)';
-                }
-            };
-
-            const getColorForValue = (value) => {
-                if (value < 0.3) {
-                    return 'rgb(239, 68, 68)';
-                } else if (value < 1) {
-                    return 'rgb(234, 179, 8)';
-                } else {
-                    return 'rgb(34, 197, 94)';
-                }
-            };
-
             const filteredPlayers = players.filter(player => {
                 if (positionFilter !== 'ALL' && player.position !== positionFilter) return false;
                 if (player.xGI < xGIThreshold) return false;
@@ -694,13 +674,10 @@
                                                                 {/* Last 6 Matches */}
                                                                 <div className="flex-1 flex gap-1">
                                                                     {player.last6Matches.map((match, matchIdx) => {
-                                                                        const matchColor = getColorForValue(match.xGI);
-                                                                        
                                                                         return (
                                                                             <div 
                                                                                 key={matchIdx}
-                                                                                className="flex-1 rounded p-1 text-center"
-                                                                                style={{ backgroundColor: matchColor }}
+                                                                                className="flex-1 rounded p-1 text-center bg-white/20"
                                                                             >
                                                                                 <div className="text-white text-xs font-semibold mb-1">
                                                                                     {match.opponent} ({match.wasHome ? 'H' : 'A'})
@@ -728,16 +705,6 @@
                         )}
 
                         <div className="mt-6 bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
-                            <p className="text-white text-sm mb-2">
-                                <strong>Teams Attack Color Guide:</strong> <span className="text-green-400">Green = High Goals (&gt;1.5, Strong Attack)</span> • 
-                                <span className="text-yellow-400 ml-2">Yellow = Medium Goals (0.5-1.5)</span> • 
-                                <span className="text-red-400 ml-2">Red = Low Goals (&lt;0.5, Weak Attack)</span>
-                            </p>
-                            <p className="text-white text-sm mb-2">
-                                <strong>Teams Defense Color Guide:</strong> <span className="text-green-400">Green = Low GC (&lt;0.7, Strong Defense)</span> • 
-                                <span className="text-yellow-400 ml-2">Yellow = Medium GC (0.7-1.2)</span> • 
-                                <span className="text-red-400 ml-2">Red = High GC (&gt;1.2, Weak Defense)</span>
-                            </p>
                             <p className="text-white text-sm">
                                 <strong>Players (xGI) Color Guide:</strong> <span className="text-green-400">Green = High xGI (&gt;1, Excellent)</span> • 
                                 <span className="text-yellow-400 ml-2">Yellow = Medium xGI (0.3-1)</span> • 

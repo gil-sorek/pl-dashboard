@@ -67,6 +67,7 @@
             const [xGIThreshold, setXGIThreshold] = useState(0.5);
             const [minutesThreshold, setMinutesThreshold] = useState(150);
             const [sortConfig, setSortConfig] = useState({ key: 'xGI', direction: 'desc' });
+            const [teamSortConfig, setTeamSortConfig] = useState({ key: 'avgXG', direction: 'desc' });
 
             const fetchData = async () => {
                 setLoading(true);
@@ -110,21 +111,30 @@
                                     t.id === (isHome ? fixture.team_a : fixture.team_h)
                                 );
                                 
-                                const actualXGC = isHome ? fixture.team_a_score : fixture.team_h_score;
+                                // xG = team's expected goals (attacking)
+                                const xg = isHome ? 
+                                    (fixture.team_h_score || 0) : // Using actual goals as placeholder for xG
+                                    (fixture.team_a_score || 0);
+                                
+                                // GC = goals conceded (defensive)
+                                const gc = isHome ? fixture.team_a_score : fixture.team_h_score;
                                 
                                 return {
                                     gameweek: fixture.event,
                                     opponent: opponent.short_name,
                                     isHome: isHome,
-                                    xgc: parseFloat(actualXGC || 0).toFixed(2),
+                                    xg: parseFloat(xg || 0).toFixed(2),
+                                    gc: parseFloat(gc || 0).toFixed(2),
                                     score: isHome ? 
                                         `${fixture.team_h_score}-${fixture.team_a_score}` :
                                         `${fixture.team_a_score}-${fixture.team_h_score}`
                                 };
                             });
                         
-                        const totalXGC = teamFixtures.reduce((sum, f) => sum + parseFloat(f.xgc), 0);
-                        const avgXGC = teamFixtures.length > 0 ? totalXGC / teamFixtures.length : 0;
+                        const totalXG = teamFixtures.reduce((sum, f) => sum + parseFloat(f.xg), 0);
+                        const avgXG = teamFixtures.length > 0 ? totalXG / teamFixtures.length : 0;
+                        const totalGC = teamFixtures.reduce((sum, f) => sum + parseFloat(f.gc), 0);
+                        const avgGC = teamFixtures.length > 0 ? totalGC / teamFixtures.length : 0;
                         
                         return {
                             id: team.id,
@@ -132,7 +142,10 @@
                             name: team.name,
                             shortName: team.short_name,
                             fixtures: teamFixtures,
-                            avgXGC: avgXGC
+                            totalXG: totalXG,
+                            avgXG: avgXG,
+                            totalGC: totalGC,
+                            avgGC: avgGC
                         };
                     });
                     
@@ -261,6 +274,13 @@
                 }));
             };
 
+            const handleTeamSort = (key) => {
+                setTeamSortConfig(prev => ({
+                    key,
+                    direction: prev.key === key && prev.direction === 'desc' ? 'asc' : 'desc'
+                }));
+            };
+
             const filteredPlayers = players.filter(player => {
                 if (positionFilter !== 'ALL' && player.position !== positionFilter) return false;
                 if (player.xGI < xGIThreshold) return false;
@@ -277,6 +297,16 @@
                 const bValue = b[sortConfig.key];
                 
                 if (sortConfig.direction === 'desc') {
+                    return bValue - aValue;
+                }
+                return aValue - bValue;
+            });
+
+            const sortedTeams = [...teams].filter(team => team.fixtures.length > 0).sort((a, b) => {
+                const aValue = a[teamSortConfig.key];
+                const bValue = b[teamSortConfig.key];
+                
+                if (teamSortConfig.direction === 'desc') {
                     return bValue - aValue;
                 }
                 return aValue - bValue;
@@ -365,70 +395,130 @@
                             <>
                                 {activeTab === 'teams' && (
                                     <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-2xl border border-white/20">
-                                        <h2 className="text-2xl font-bold text-white mb-4">Teams - Goals Conceded (Last 6 Matches)</h2>
+                                        <h2 className="text-2xl font-bold text-white mb-6">Teams - Attack & Defense Analysis (Last 6 Matches)</h2>
                                         
-                                        <div className="grid grid-cols-1 gap-3">
-                                            {teams
-                                                .filter(team => team.fixtures.length > 0)
-                                                .sort((a, b) => a.avgXGC - b.avgXGC)
-                                                .map((team, index) => {
-                                                    const avgColor = getColorForXGC(team.avgXGC);
-                                                    
-                                                    return (
-                                                        <div key={team.id} className="bg-white/5 rounded-lg p-3 border border-white/10">
-                                                            <div className="flex justify-between items-center mb-2">
-                                                                <div className="flex items-center gap-2">
-                                                                    <img 
-                                                                        src={`https://resources.premierleague.com/premierleague/badges/70/t${team.code}.png`}
-                                                                        alt={team.shortName}
-                                                                        className="w-8 h-8"
-                                                                        onError={(e) => e.target.style.display = 'none'}
-                                                                    />
-                                                                    <h3 className="text-white font-bold text-base">{team.shortName}</h3>
-                                                                </div>
-                                                                <div className="text-right">
-                                                                    <div className="text-purple-200 text-xs">Avg GC</div>
-                                                                    <div 
-                                                                        className="text-white font-bold text-lg px-3 py-1 rounded inline-block"
-                                                                        style={{ backgroundColor: avgColor }}
-                                                                    >
-                                                                        {team.avgXGC.toFixed(2)}
+                                        <div className="space-y-3">
+                                            {sortedTeams.map((team) => {
+                                                return (
+                                                    <div key={team.id} className="bg-white/5 rounded-lg p-4 border border-white/10">
+                                                        {/* Team Header */}
+                                                        <div className="flex items-center gap-3 mb-4">
+                                                            <img 
+                                                                src={`https://resources.premierleague.com/premierleague/badges/70/t${team.code}.png`}
+                                                                alt={team.shortName}
+                                                                className="w-10 h-10"
+                                                                onError={(e) => e.target.style.display = 'none'}
+                                                            />
+                                                            <h3 className="text-white font-bold text-lg">{team.name}</h3>
+                                                        </div>
+                                                        
+                                                        {/* Attack & Defense Split */}
+                                                        <div className="grid grid-cols-2 gap-6">
+                                                            {/* ATTACK (Left) */}
+                                                            <div>
+                                                                <h4 className="text-purple-200 font-semibold text-sm mb-3">⚔️ Attack (Goals Scored)</h4>
+                                                                <div className="flex gap-2 items-center">
+                                                                    {/* Last 6 Matches */}
+                                                                    <div className="flex gap-1 flex-1">
+                                                                        {team.fixtures.map((fixture, idx) => {
+                                                                            const xgColor = getColorForXG(parseFloat(fixture.xg));
+                                                                            
+                                                                            return (
+                                                                                <div 
+                                                                                    key={idx}
+                                                                                    className="flex-1 rounded p-2 text-center"
+                                                                                    style={{ backgroundColor: xgColor }}
+                                                                                >
+                                                                                    <div className="text-white text-xs font-semibold mb-1 flex items-center justify-center gap-1">
+                                                                                        {fixture.isHome ? (
+                                                                                            <Home className="w-3 h-3" />
+                                                                                        ) : (
+                                                                                            <Plane className="w-3 h-3" />
+                                                                                        )}
+                                                                                        {fixture.opponent}
+                                                                                    </div>
+                                                                                    <div className="text-white font-bold">
+                                                                                        {fixture.xg}
+                                                                                    </div>
+                                                                                </div>
+                                                                            );
+                                                                        })}
+                                                                    </div>
+                                                                    
+                                                                    {/* Totals */}
+                                                                    <div className="flex gap-2">
+                                                                        <button 
+                                                                            onClick={() => handleTeamSort('totalXG')}
+                                                                            className="bg-white/10 rounded p-2 hover:bg-white/20 transition-colors"
+                                                                        >
+                                                                            <div className="text-purple-200 text-xs">Total</div>
+                                                                            <div className="text-white font-bold">{team.totalXG.toFixed(1)}</div>
+                                                                        </button>
+                                                                        <button 
+                                                                            onClick={() => handleTeamSort('avgXG')}
+                                                                            className="bg-white/10 rounded p-2 hover:bg-white/20 transition-colors"
+                                                                        >
+                                                                            <div className="text-purple-200 text-xs">Avg</div>
+                                                                            <div className="text-white font-bold">{team.avgXG.toFixed(2)}</div>
+                                                                        </button>
                                                                     </div>
                                                                 </div>
-                                                                            </div>
+                                                            </div>
                                                             
-                                                            <div className="grid grid-cols-6 gap-2">
-                                                                {team.fixtures.map((fixture, idx) => {
-                                                                    const xgcColor = getColorForXGC(parseFloat(fixture.xgc));
+                                                            {/* DEFENSE (Right) */}
+                                                            <div>
+                                                                <h4 className="text-purple-200 font-semibold text-sm mb-3">🛡️ Defense (Goals Conceded)</h4>
+                                                                <div className="flex gap-2 items-center">
+                                                                    {/* Last 6 Matches */}
+                                                                    <div className="flex gap-1 flex-1">
+                                                                        {team.fixtures.map((fixture, idx) => {
+                                                                            const gcColor = getColorForXGC(parseFloat(fixture.gc));
+                                                                            
+                                                                            return (
+                                                                                <div 
+                                                                                    key={idx}
+                                                                                    className="flex-1 rounded p-2 text-center"
+                                                                                    style={{ backgroundColor: gcColor }}
+                                                                                >
+                                                                                    <div className="text-white text-xs font-semibold mb-1 flex items-center justify-center gap-1">
+                                                                                        {fixture.isHome ? (
+                                                                                            <Home className="w-3 h-3" />
+                                                                                        ) : (
+                                                                                            <Plane className="w-3 h-3" />
+                                                                                        )}
+                                                                                        {fixture.opponent}
+                                                                                    </div>
+                                                                                    <div className="text-white font-bold">
+                                                                                        {fixture.gc}
+                                                                                    </div>
+                                                                                </div>
+                                                                            );
+                                                                        })}
+                                                                    </div>
                                                                     
-                                                                    return (
-                                                                        <div 
-                                                                            key={idx} 
-                                                                            className="bg-white/10 rounded p-2 border border-white/20 text-center"
+                                                                    {/* Totals */}
+                                                                    <div className="flex gap-2">
+                                                                        <button 
+                                                                            onClick={() => handleTeamSort('totalGC')}
+                                                                            className="bg-white/10 rounded p-2 hover:bg-white/20 transition-colors"
                                                                         >
-                                                                            <div className="flex items-center justify-center gap-1 mb-1">
-                                                                                {fixture.isHome ? (
-                                                                                    <Home className="w-3 h-3 text-green-400" />
-                                                                                ) : (
-                                                                                    <Plane className="w-3 h-3 text-blue-400" />
-                                                                                )}
-                                                                                <span className="text-white font-semibold text-xs">
-                                                                                    {fixture.opponent} ({fixture.score})
-                                                                                </span>
-                                                                            </div>
-                                                                            <div 
-                                                                                className="text-white font-bold text-xs py-1 rounded"
-                                                                                style={{ backgroundColor: xgcColor }}
-                                                                            >
-                                                                                GC: {fixture.xgc}
-                                                                            </div>
-                                                                        </div>
-                                                                    );
-                                                                })}
+                                                                            <div className="text-purple-200 text-xs">Total</div>
+                                                                            <div className="text-white font-bold">{team.totalGC.toFixed(1)}</div>
+                                                                        </button>
+                                                                        <button 
+                                                                            onClick={() => handleTeamSort('avgGC')}
+                                                                            className="bg-white/10 rounded p-2 hover:bg-white/20 transition-colors"
+                                                                        >
+                                                                            <div className="text-purple-200 text-xs">Avg</div>
+                                                                            <div className="text-white font-bold">{team.avgGC.toFixed(2)}</div>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    );
-                                                })}
+                                                    </div>
+                                                );
+                                            })}
                                         </div>
                                     </div>
                                 )}
@@ -610,9 +700,14 @@
 
                         <div className="mt-6 bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
                             <p className="text-white text-sm mb-2">
-                                <strong>Teams (GC) Color Guide:</strong> <span className="text-green-400">Green = Low GC (&lt;0.7, Excellent Defense)</span> • 
+                                <strong>Teams Attack Color Guide:</strong> <span className="text-green-400">Green = High Goals (&gt;1.5, Strong Attack)</span> • 
+                                <span className="text-yellow-400 ml-2">Yellow = Medium Goals (0.5-1.5)</span> • 
+                                <span className="text-red-400 ml-2">Red = Low Goals (&lt;0.5, Weak Attack)</span>
+                            </p>
+                            <p className="text-white text-sm mb-2">
+                                <strong>Teams Defense Color Guide:</strong> <span className="text-green-400">Green = Low GC (&lt;0.7, Strong Defense)</span> • 
                                 <span className="text-yellow-400 ml-2">Yellow = Medium GC (0.7-1.2)</span> • 
-                                <span className="text-red-400 ml-2">Red = High GC (&gt;1.2, Poor Defense)</span>
+                                <span className="text-red-400 ml-2">Red = High GC (&gt;1.2, Weak Defense)</span>
                             </p>
                             <p className="text-white text-sm">
                                 <strong>Players (xGI) Color Guide:</strong> <span className="text-green-400">Green = High xGI (&gt;1, Excellent)</span> • 

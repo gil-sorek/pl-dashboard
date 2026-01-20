@@ -187,7 +187,7 @@
                                 // Calculate DC/90 from full season data
                                 const seasonMinutes = parseFloat(player.minutes || 0);
                                 const seasonDefCon = historyData.history.reduce((sum, m) => 
-                                    sum + parseFloat(m.threat || 0), 0
+                                    sum + parseFloat(m.defensive_contribution || 0), 0
                                 );
                                 const dcPer90 = seasonMinutes > 0 ? (seasonDefCon / seasonMinutes) * 90 : 0;
                                 
@@ -487,34 +487,34 @@
                                             </button>
                                         </div>
 
-                                        <div className="mb-4 bg-white/5 rounded-lg p-2 grid grid-cols-13 gap-2 border border-white/20">
-                                            <div className="col-span-2 text-purple-200 text-xs font-semibold">Player</div>
+                                        <div className="mb-4 bg-white/5 rounded-lg p-2 flex gap-2 border border-white/20">
+                                            <div className="w-48 text-purple-200 text-xs font-semibold">Player</div>
                                             
-                                            <button onClick={() => handleSort('price')} className="col-span-1 text-purple-200 text-xs font-semibold hover:text-white flex items-center justify-center gap-1">
+                                            <button onClick={() => handleSort('price')} className="w-20 text-purple-200 text-xs font-semibold hover:text-white flex items-center justify-center gap-1">
                                                 Price <ArrowUpDown className="w-3 h-3" />
                                             </button>
                                             
-                                            <button onClick={() => handleSort('xG')} className="col-span-1 text-purple-200 text-xs font-semibold hover:text-white flex items-center justify-center gap-1">
+                                            <button onClick={() => handleSort('xG')} className="w-16 text-purple-200 text-xs font-semibold hover:text-white flex items-center justify-center gap-1">
                                                 xG <ArrowUpDown className="w-3 h-3" />
                                             </button>
                                             
-                                            <button onClick={() => handleSort('xA')} className="col-span-1 text-purple-200 text-xs font-semibold hover:text-white flex items-center justify-center gap-1">
+                                            <button onClick={() => handleSort('xA')} className="w-16 text-purple-200 text-xs font-semibold hover:text-white flex items-center justify-center gap-1">
                                                 xA <ArrowUpDown className="w-3 h-3" />
                                             </button>
                                             
-                                            <button onClick={() => handleSort('xGI')} className="col-span-1 text-purple-200 text-xs font-semibold hover:text-white flex items-center justify-center gap-1">
+                                            <button onClick={() => handleSort('xGI')} className="w-16 text-purple-200 text-xs font-semibold hover:text-white flex items-center justify-center gap-1">
                                                 xGI <ArrowUpDown className="w-3 h-3" />
                                             </button>
                                             
-                                            <button onClick={() => handleSort('xGIPer90')} className="col-span-1 text-purple-200 text-xs font-semibold hover:text-white flex items-center justify-center gap-1">
+                                            <button onClick={() => handleSort('xGIPer90')} className="w-20 text-purple-200 text-xs font-semibold hover:text-white flex items-center justify-center gap-1">
                                                 xGI/90 <ArrowUpDown className="w-3 h-3" />
                                             </button>
                                             
-                                            <button onClick={() => handleSort('dcPer90')} className="col-span-1 text-purple-200 text-xs font-semibold hover:text-white flex items-center justify-center gap-1">
+                                            <button onClick={() => handleSort('dcPer90')} className="w-20 text-purple-200 text-xs font-semibold hover:text-white flex items-center justify-center gap-1">
                                                 DC/90 <ArrowUpDown className="w-3 h-3" />
                                             </button>
                                             
-                                            <div className="col-span-5 text-purple-200 text-xs font-semibold text-center">Last 6 Matches</div>
+                                            <div className="flex-1 text-purple-200 text-xs font-semibold text-center">Last 6 Matches</div>
                                         </div>
 
                                         <div className="space-y-2">
@@ -540,46 +540,40 @@
                                                                 ? 'bg-white/5 border-white/20 ml-4' 
                                                                 : 'bg-white/5 border-white/10 hover:bg-white/10'
                                                         }`}>
-                                                            <div className="grid grid-cols-13 gap-2 items-center">
+                                                            <div className="flex gap-2 items-center">
                                                                 {/* Player Info */}
-                                                                <div className="col-span-2">
+                                                                <div className="w-48">
                                                                     <div className="text-white font-semibold">{player.name}</div>
                                                                     <div className="text-purple-300 text-xs">{player.team} • {player.position}</div>
                                                                 </div>
                                                                 
                                                                 {/* Stats */}
-                                                                <div className="col-span-1 text-center">
-                                                                    <div className="text-purple-200 text-xs">Price</div>
+                                                                <div className="w-20 text-center">
                                                                     <div className="text-white font-semibold">£{player.price.toFixed(1)}</div>
                                                                 </div>
                                                                 
-                                                                <div className="col-span-1 text-center">
-                                                                    <div className="text-purple-200 text-xs">xG</div>
+                                                                <div className="w-16 text-center">
                                                                     <div className="text-white font-semibold">{player.xG.toFixed(2)}</div>
                                                                 </div>
                                                                 
-                                                                <div className="col-span-1 text-center">
-                                                                    <div className="text-purple-200 text-xs">xA</div>
+                                                                <div className="w-16 text-center">
                                                                     <div className="text-white font-semibold">{player.xA.toFixed(2)}</div>
                                                                 </div>
                                                                 
-                                                                <div className="col-span-1 text-center">
-                                                                    <div className="text-purple-200 text-xs">xGI</div>
+                                                                <div className="w-16 text-center">
                                                                     <div className="text-white font-semibold">{player.xGI.toFixed(2)}</div>
                                                                 </div>
                                                                 
-                                                                <div className="col-span-1 text-center">
-                                                                    <div className="text-purple-200 text-xs">xGI/90</div>
+                                                                <div className="w-20 text-center">
                                                                     <div className="text-white font-semibold">{player.xGIPer90.toFixed(2)}</div>
                                                                 </div>
                                                                 
-                                                                <div className="col-span-1 text-center">
-                                                                    <div className="text-purple-200 text-xs">DC/90</div>
+                                                                <div className="w-20 text-center">
                                                                     <div className="text-white font-semibold">{player.dcPer90.toFixed(2)}</div>
                                                                 </div>
                                                                 
                                                                 {/* Last 6 Matches */}
-                                                                <div className="col-span-5 flex gap-1">
+                                                                <div className="flex-1 flex gap-1">
                                                                     {player.last6Matches.map((match, matchIdx) => {
                                                                         const matchColor = getColorForValue(match.xGI);
                                                                         

@@ -454,13 +454,11 @@
                                                                     {/* Last 6 Matches */}
                                                                     <div className="flex gap-1 flex-1">
                                                                         {team.fixtures.map((fixture, idx) => {
-                                                                            const xgColor = getColorForXG(parseFloat(fixture.xg));
                                                                             
                                                                             return (
                                                                                 <div 
                                                                                     key={idx}
-                                                                                    className="flex-1 rounded p-2 text-center"
-                                                                                    style={{ backgroundColor: xgColor }}
+                                                                                    className="flex-1 rounded p-2 text-center bg-white/20"
                                                                                 >
                                                                                     <div className="text-white text-xs font-semibold mb-1 flex items-center justify-center gap-1">
                                                                                         {fixture.isHome ? (
@@ -505,13 +503,11 @@
                                                                     {/* Last 6 Matches */}
                                                                     <div className="flex gap-1 flex-1">
                                                                         {team.fixtures.map((fixture, idx) => {
-                                                                            const gcColor = getColorForXGC(parseFloat(fixture.gc));
                                                                             
                                                                             return (
                                                                                 <div 
                                                                                     key={idx}
-                                                                                    className="flex-1 rounded p-2 text-center"
-                                                                                    style={{ backgroundColor: gcColor }}
+                                                                                    className="flex-1 rounded p-2 text-center bg-white/20"
                                                                                 >
                                                                                     <div className="text-white text-xs font-semibold mb-1 flex items-center justify-center gap-1">
                                                                                         {fixture.isHome ? (

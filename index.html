@@ -286,6 +286,36 @@
                 }));
             };
 
+            const getColorForXG = (value) => {
+                if (value < 0.5) {
+                    return 'rgb(239, 68, 68)';
+                } else if (value < 1.5) {
+                    return 'rgb(234, 179, 8)';
+                } else {
+                    return 'rgb(34, 197, 94)';
+                }
+            };
+
+            const getColorForXGC = (value) => {
+                if (value < 0.7) {
+                    return 'rgb(34, 197, 94)';
+                } else if (value < 1.2) {
+                    return 'rgb(234, 179, 8)';
+                } else {
+                    return 'rgb(239, 68, 68)';
+                }
+            };
+
+            const getColorForValue = (value) => {
+                if (value < 0.3) {
+                    return 'rgb(239, 68, 68)';
+                } else if (value < 1) {
+                    return 'rgb(234, 179, 8)';
+                } else {
+                    return 'rgb(34, 197, 94)';
+                }
+            };
+
             const filteredPlayers = players.filter(player => {
                 if (positionFilter !== 'ALL' && player.position !== positionFilter) return false;
                 if (player.xGI < xGIThreshold) return false;

@@ -68,6 +68,7 @@
             const [minutesThreshold, setMinutesThreshold] = useState(150);
             const [sortConfig, setSortConfig] = useState({ key: 'xGI', direction: 'desc' });
             const [teamSortConfig, setTeamSortConfig] = useState({ key: 'avgXG', direction: 'desc' });
+            const [teamSortType, setTeamSortType] = useState('attack'); // 'attack' or 'defense'
 
             const fetchData = async () => {
                 setLoading(true);
@@ -296,6 +297,26 @@
                 }
             };
 
+            const getColorForXGC = (value) => {
+                if (value < 0.7) {
+                    return 'rgb(34, 197, 94)';
+                } else if (value < 1.2) {
+                    return 'rgb(234, 179, 8)';
+                } else {
+                    return 'rgb(239, 68, 68)';
+                }
+            };
+
+            const getColorForValue = (value) => {
+                if (value < 0.3) {
+                    return 'rgb(239, 68, 68)';
+                } else if (value < 1) {
+                    return 'rgb(234, 179, 8)';
+                } else {
+                    return 'rgb(34, 197, 94)';
+                }
+            };
+
             const filteredPlayers = players.filter(player => {
                 if (positionFilter !== 'ALL' && player.position !== positionFilter) return false;
                 if (player.xGI < xGIThreshold) return false;
@@ -328,6 +349,9 @@
                     return aValue - bValue;
                 })
                 : [];
+
+            const sortedTeamsAttack = [...sortedTeams];
+            const sortedTeamsDefense = teamSortType === 'defense' ? sortedTeams : [...teams].filter(team => team.fixtures.length > 0);
 
             const xGIValues = filteredPlayers.map(p => p.xGI);
             const minXGI = xGIValues.length > 0 ? Math.min(...xGIValues) : 0;
@@ -674,10 +698,13 @@
                                                                 {/* Last 6 Matches */}
                                                                 <div className="flex-1 flex gap-1">
                                                                     {player.last6Matches.map((match, matchIdx) => {
+                                                                        const matchColor = getColorForPlayerXGI(match.xGI);
+                                                                        
                                                                         return (
                                                                             <div 
                                                                                 key={matchIdx}
-                                                                                className="flex-1 rounded p-1 text-center bg-white/20"
+                                                                                className="flex-1 rounded p-1 text-center"
+                                                                                style={{ backgroundColor: matchColor }}
                                                                             >
                                                                                 <div className="text-white text-xs font-semibold mb-1">
                                                                                     {match.opponent} ({match.wasHome ? 'H' : 'A'})
@@ -705,13 +732,23 @@
                         )}
 
                         <div className="mt-6 bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
+                            <p className="text-white text-sm mb-2">
+                                <strong>Teams Attack:</strong> <span className="text-green-400">Green = High Goals (&gt;1.5)</span> • 
+                                <span className="text-yellow-400 ml-2">Yellow = Medium (0.5-1.5)</span> • 
+                                <span className="text-red-400 ml-2">Red = Low (&lt;0.5)</span>
+                            </p>
+                            <p className="text-white text-sm mb-2">
+                                <strong>Teams Defense:</strong> <span className="text-green-400">Green = Low GC (&lt;0.7)</span> • 
+                                <span className="text-yellow-400 ml-2">Yellow = Medium (0.7-1.2)</span> • 
+                                <span className="text-red-400 ml-2">Red = High (&gt;1.2)</span>
+                            </p>
                             <p className="text-white text-sm">
-                                <strong>Players (xGI) Color Guide:</strong> <span className="text-green-400">Green = High xGI (&gt;1, Excellent)</span> • 
-                                <span className="text-yellow-400 ml-2">Yellow = Medium xGI (0.3-1)</span> • 
-                                <span className="text-red-400 ml-2">Red = Low xGI (&lt;0.3, Poor)</span>
+                                <strong>Players (xGI):</strong> <span className="text-green-400">Green = High (&gt;1)</span> • 
+                                <span className="text-yellow-400 ml-2">Yellow = Medium (0.3-1)</span> • 
+                                <span className="text-red-400 ml-2">Red = Low (&lt;0.3)</span>
                             </p>
                             <p className="text-purple-200 text-xs mt-2">
-                                xG = Expected Goals | xA = Expected Assists | xGI = Expected Goal Involvements | GC = Goals Conceded | xGI/90 = xGI per 90 minutes | DC/90 = Defensive Contributions per 90 minutes (full season)
+                                xG = Expected Goals | GC = Goals Conceded | xGI = Expected Goal Involvements | DC/90 = Defensive Contributions per 90 minutes
                             </p>
                         </div>
                     </div>

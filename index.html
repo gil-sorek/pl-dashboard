@@ -253,23 +253,34 @@
                 fetchData();
             }, []);
 
-            const getColorForXGC = (value) => {
-                if (value < 0.7) {
-                    return 'rgb(34, 197, 94)';
-                } else if (value < 1.2) {
-                    return 'rgb(234, 179, 8)';
+            // Color functions for visualization
+            const getColorForPlayerXGI = (value) => {
+                if (value < 0.3) {
+                    return 'rgb(239, 68, 68)'; // Red for low
+                } else if (value < 1) {
+                    return 'rgb(234, 179, 8)'; // Yellow for medium
                 } else {
-                    return 'rgb(239, 68, 68)';
+                    return 'rgb(34, 197, 94)'; // Green for high
                 }
             };
 
-            const getColorForValue = (value) => {
-                if (value < 0.3) {
-                    return 'rgb(239, 68, 68)';
-                } else if (value < 1) {
-                    return 'rgb(234, 179, 8)';
+            const getColorForTeamXG = (value) => {
+                if (value < 0.5) {
+                    return 'rgb(239, 68, 68)'; // Red for low goals scored
+                } else if (value < 1.5) {
+                    return 'rgb(234, 179, 8)'; // Yellow for medium
                 } else {
-                    return 'rgb(34, 197, 94)';
+                    return 'rgb(34, 197, 94)'; // Green for high goals scored
+                }
+            };
+
+            const getColorForTeamGC = (value) => {
+                if (value < 0.7) {
+                    return 'rgb(34, 197, 94)'; // Green for low goals conceded (good defense)
+                } else if (value < 1.2) {
+                    return 'rgb(234, 179, 8)'; // Yellow for medium
+                } else {
+                    return 'rgb(239, 68, 68)'; // Red for high goals conceded (bad defense)
                 }
             };
 
@@ -285,36 +296,6 @@
                     key,
                     direction: prev.key === key && prev.direction === 'desc' ? 'asc' : 'desc'
                 }));
-            };
-
-            const getColorForXG = (value) => {
-                if (value < 0.5) {
-                    return 'rgb(239, 68, 68)';
-                } else if (value < 1.5) {
-                    return 'rgb(234, 179, 8)';
-                } else {
-                    return 'rgb(34, 197, 94)';
-                }
-            };
-
-            const getColorForXGC = (value) => {
-                if (value < 0.7) {
-                    return 'rgb(34, 197, 94)';
-                } else if (value < 1.2) {
-                    return 'rgb(234, 179, 8)';
-                } else {
-                    return 'rgb(239, 68, 68)';
-                }
-            };
-
-            const getColorForValue = (value) => {
-                if (value < 0.3) {
-                    return 'rgb(239, 68, 68)';
-                } else if (value < 1) {
-                    return 'rgb(234, 179, 8)';
-                } else {
-                    return 'rgb(34, 197, 94)';
-                }
             };
 
             const filteredPlayers = players.filter(player => {

@@ -14,15 +14,37 @@ function App() {
   const [activeTab, setActiveTab] = useState('teams');
   const [lastUpdated, setLastUpdated] = useState(null);
 
-  const fetchData = async () => {
+  const fetchData = async (isLiveRefresh = false) => {
     setLoading(true);
     setError(null);
     try {
-      const data = await fetchPremierLeagueData();
+      let data;
+
+      if (!isLiveRefresh) {
+        console.log('Attempting to load data from snapshot...');
+        try {
+          // In production, snapshots are relative to the base path
+          const response = await fetch('./data/snapshot.json');
+          if (response.ok) {
+            const snapshot = await response.json();
+            data = snapshot;
+            setLastUpdated(new Date(snapshot.updatedAt));
+            console.log('Snapshot loaded instantly!');
+          }
+        } catch (snapshotErr) {
+          console.warn('Snapshot load failed, falling back to live fetch:', snapshotErr);
+        }
+      }
+
+      if (!data) {
+        console.log('Fetching live data from APIs...');
+        data = await fetchPremierLeagueData();
+        setLastUpdated(new Date());
+      }
+
       setTeams(data.teams);
       setPlayers(data.players);
-      setLastUpdated(new Date());
-      console.log('Data loaded successfully!');
+      console.log('Data ready!');
     } catch (error) {
       console.error('Error fetching data:', error);
       setError(error.message);
@@ -49,12 +71,12 @@ function App() {
               )}
             </div>
             <button
-              onClick={fetchData}
+              onClick={() => fetchData(true)}
               disabled={loading}
               className="bg-white/20 hover:bg-white/30 text-white px-6 py-3 rounded-lg flex items-center gap-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <RefreshCw className={`w-5 h-5 ${loading ? 'animate-spin' : ''}`} />
-              Refresh Data
+              Live Refresh
             </button>
           </div>
         </div>

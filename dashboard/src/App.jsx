@@ -4,7 +4,6 @@ import TeamStats from './components/dashboard/TeamStats';
 import PlayerStats from './components/dashboard/PlayerStats';
 import SuspensionStats from './components/dashboard/SuspensionStats';
 import EOTracker from './components/dashboard/EOTracker';
-import EOTrackerV2 from './components/dashboard/EOTrackerV2';
 import { RefreshCw, AlertCircle } from './components/ui/Icons';
 
 function App() {
@@ -108,15 +107,6 @@ function App() {
           >
             EO Tracker
           </button>
-          <button
-            onClick={() => setActiveTab('eov2')}
-            className={`px-8 py-4 rounded-lg font-semibold transition-all ${activeTab === 'eov2'
-              ? 'bg-white text-purple-900 shadow-lg'
-              : 'bg-white/10 text-white hover:bg-white/20'
-              }`}
-          >
-            EO Tracker v2
-          </button>
         </div>
 
         {loading ? (
@@ -137,7 +127,6 @@ function App() {
             {activeTab === 'players' && <PlayerStats players={players} teams={teams} />}
             {activeTab === 'suspensions' && <SuspensionStats players={players} />}
             {activeTab === 'eo' && <EOTracker players={players} />}
-            {activeTab === 'eov2' && <EOTrackerV2 players={players} />}
           </>
         )}
 

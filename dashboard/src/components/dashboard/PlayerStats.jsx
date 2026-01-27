@@ -78,7 +78,7 @@ const PlayerStats = ({ players, teams }) => {
 
     return (
         <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-2xl border border-white/20">
-            <h2 className="text-2xl font-bold text-white mb-4">Players - Expected Goals Analytics</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">Players - Expected Goals Analytics (Last 6 Matches)</h2>
 
             <div className="flex flex-col gap-4 mb-6">
                 {/* Sliders Row */}

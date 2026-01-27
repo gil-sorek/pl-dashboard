@@ -36,7 +36,7 @@ const TeamStatsTable = ({ teams, type, sortConfig, onSort }) => {
     return (
         <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-2xl border border-white/20 h-full">
             <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                {type === 'attack' ? '⚔️' : '🛡️'} {metrics.label}
+                {type === 'attack' ? '⚔️' : '🛡️'} {metrics.label} (Last 6 Matches)
             </h3>
 
             <div className="overflow-x-auto">

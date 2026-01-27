@@ -106,12 +106,12 @@ const EOTracker = ({ players }) => {
                             type="range"
                             min="0"
                             max="100"
-                            step="5"
+                            step="0.5"
                             value={minEO}
                             onChange={(e) => setMinEO(parseFloat(e.target.value))}
                             className="w-32 accent-purple-500"
                         />
-                        <span className="text-white text-sm font-semibold w-12">{minEO}%</span>
+                        <span className="text-white text-sm font-semibold w-12">{minEO.toFixed(1)}%</span>
                     </div>
 
                     <button

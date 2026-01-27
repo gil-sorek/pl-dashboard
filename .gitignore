@@ -1,0 +1,10 @@
+data/
+dev/
+run/
+__pycache__/
+.venv/
+.cache/
+tmp/
+.DS_Store
+node_modules/
+dist/

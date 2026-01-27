@@ -43,6 +43,7 @@ const EOTracker = ({ players }) => {
         if (positionFilter !== 'ALL' && player.position !== positionFilter) return false;
         if (parseFloat(player.eo10k || 0) < minEO) return false;
         if (parseFloat(player.selectedBy || 0) <= 0) return false;
+        if (parseFloat(player.eo10k || 0) <= 0) return false;
         return true;
     });
 

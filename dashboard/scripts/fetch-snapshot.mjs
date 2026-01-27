@@ -171,13 +171,15 @@ const run = async () => {
                     const matches = history.history.filter(m => m.round === gw);
                     if (matches.length === 0) return { gameweek: gw, opponent: '-', xGI: 0, xG: 0, xA: 0, goals: 0, assists: 0, minutes: 0, isBlank: true };
                     const agg = matches.reduce((acc, m) => {
+                        const opp = bootstrapData.teams.find(t => t.id === m.opponent_team);
+                        if (opp) acc.opponents.push(opp.short_name);
                         acc.xGI += parseFloat(m.expected_goal_involvements || 0);
                         acc.xG += parseFloat(m.expected_goals || 0);
                         acc.xA += parseFloat(m.expected_assists || 0);
                         acc.goals += m.goals_scored; acc.assists += m.assists; acc.minutes += m.minutes;
                         return acc;
-                    }, { xGI: 0, xG: 0, xA: 0, goals: 0, assists: 0, minutes: 0 });
-                    return { ...agg, gameweek: gw, wasHome: matches[0].was_home, isBlank: false };
+                    }, { opponents: [], xGI: 0, xG: 0, xA: 0, goals: 0, assists: 0, minutes: 0 });
+                    return { ...agg, opponent: agg.opponents.join('/'), gameweek: gw, wasHome: matches[0].was_home, isBlank: false };
                 });
 
                 const mins = last6.reduce((s, m) => s + m.minutes, 0);

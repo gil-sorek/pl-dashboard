@@ -44,3 +44,6 @@ jobs:
           folder: dashboard/dist
           branch: gh-pages
           token: ${{ secrets.GITHUB_TOKEN }}
+          clean-exclude: |
+            .nojekyll
+            !.gitignore

@@ -2,7 +2,7 @@ name: Update Dashboard Data
 
 on:
   schedule:
-    - cron: '5 7 * * *' # Every day at 09:05 AM (local time)
+    - cron: '25 7 * * *' # TEST: Run at 09:25 AM local time (07:25 UTC)
   workflow_dispatch: # Allow manual trigger
 
 permissions:

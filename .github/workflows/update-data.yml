@@ -29,6 +29,13 @@ jobs:
         run: |
           git config --global user.name "Github Action"
           git config --global user.email "action@github.com"
-          git add dashboard/public/data/snapshot.json
+          git add -f dashboard/public/data/snapshot.json
           git commit -m "data: automated snapshot update [skip ci]" || echo "No changes to commit"
           git push origin main
+
+      - name: Deploy to GitHub Pages
+        run: |
+          cd dashboard
+          npm run deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

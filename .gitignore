@@ -1,4 +1,5 @@
 data/
+!dashboard/public/data/snapshot.json
 dev/
 run/
 __pycache__/

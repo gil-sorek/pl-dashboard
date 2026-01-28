@@ -33,9 +33,14 @@ jobs:
           git commit -m "data: automated snapshot update [skip ci]" || echo "No changes to commit"
           git push origin main
 
-      - name: Deploy to GitHub Pages
+      - name: Build Dashboard
         run: |
           cd dashboard
-          npm run deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dashboard/dist
+          branch: gh-pages
+          token: ${{ secrets.GITHUB_TOKEN }}

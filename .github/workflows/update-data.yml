@@ -1,0 +1,49 @@
+name: Update Dashboard Data
+
+on:
+  schedule:
+    - cron: '5 7 * * *' # Every day at 09:05 AM (local time)
+  workflow_dispatch: # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch Data Snapshot
+        run: |
+          cd dashboard
+          npm install --no-package-lock
+          node scripts/fetch-snapshot.mjs
+
+      - name: Commit and Push Data
+        run: |
+          git config --global user.name "Github Action"
+          git config --global user.email "action@github.com"
+          git add -f dashboard/public/data/snapshot.json
+          git commit -m "data: automated snapshot update [skip ci]" || echo "No changes to commit"
+          git push origin main
+
+      - name: Build Dashboard
+        run: |
+          cd dashboard
+          npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dashboard/dist
+          branch: gh-pages
+          token: ${{ secrets.GITHUB_TOKEN }}
+          clean-exclude: |
+            .nojekyll
+            !.gitignore

@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premier League xG Dashboard</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        const { useState, useEffect, Fragment } = React;
+
+        // Lucide React Icons as inline SVGs
+        const RefreshCw = ({ className, style }) => (
+            <svg className={className} style={style} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 2v6h-6"></path>
+                <path d="M3 12a9 9 0 0 1 15-6.7L21 8"></path>
+                <path d="M3 22v-6h6"></path>
+                <path d="M21 12a9 9 0 0 1-15 6.7L3 16"></path>
+            </svg>
+        );
+
+        const Home = ({ className }) => (
+            <svg className={className} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+        );
+
+        const Plane = ({ className }) => (
+            <svg className={className} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path>
+            </svg>
+        );
+
+        const AlertCircle = ({ className }) => (
+            <svg className={className} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+        );
+
+        const ArrowUpDown = ({ className }) => (
+            <svg className={className} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="m21 16-4 4-4-4"></path>
+                <path d="M17 20V4"></path>
+                <path d="m3 8 4-4 4 4"></path>
+                <path d="M7 4v16"></path>
+            </svg>
+        );
+
+        const PremierLeagueDashboard = () => {
+            const [teams, setTeams] = useState([]);
+            const [players, setPlayers] = useState([]);
+            const [loading, setLoading] = useState(true);
+            const [error, setError] = useState(null);
+            const [activeTab, setActiveTab] = useState('teams');
+            const [positionFilter, setPositionFilter] = useState('ALL');
+            const [groupByTeam, setGroupByTeam] = useState(false);
+            const [lastUpdated, setLastUpdated] = useState(null);
+            const [xGIThreshold, setXGIThreshold] = useState(0.5);
+            const [minutesThreshold, setMinutesThreshold] = useState(150);
+            const [sortConfig, setSortConfig] = useState({ key: 'xGI', direction: 'desc' });
+            const [teamSortConfig, setTeamSortConfig] = useState({ key: 'avgXG', direction: 'desc' });
+            const [teamSortType, setTeamSortType] = useState('attack'); // 'attack' or 'defense'
+
+            const fetchData = async () => {
+                setLoading(true);
+                setError(null);
+                try {
+                    const corsProxy = 'https://corsproxy.io/?';
+                    
+                    console.log('Fetching bootstrap data...');
+                    const bootstrapResponse = await fetch(corsProxy + encodeURIComponent('https://fantasy.premierleague.com/api/bootstrap-static/'));
+                    
+                    if (!bootstrapResponse.ok) {
+                        throw new Error(`Bootstrap API failed: ${bootstrapResponse.status}`);
+                    }
+                    
+                    const bootstrapData = await bootstrapResponse.json();
+                    console.log('Bootstrap data loaded:', bootstrapData);
+                    
+                    console.log('Fetching fixtures data...');
+                    const fixturesResponse = await fetch(corsProxy + encodeURIComponent('https://fantasy.premierleague.com/api/fixtures/'));
+                    
+                    if (!fixturesResponse.ok) {
+                        throw new Error(`Fixtures API failed: ${fixturesResponse.status}`);
+                    }
+                    
+                    const fixturesData = await fixturesResponse.json();
+                    console.log('Fixtures data loaded:', fixturesData.length, 'fixtures');
+                    
+                    // Process teams data with fixtures
+                    const teamsData = bootstrapData.teams.map(team => {
+                        const teamFixtures = fixturesData
+                            .filter(fixture => 
+                                fixture && fixture.finished && 
+                                (fixture.team_h === team.id || fixture.team_a === team.id)
+                            )
+                            .sort((a, b) => (b.event || 0) - (a.event || 0))
+                            .slice(0, 6)
+                            .reverse()
+                            .map(fixture => {
+                                const isHome = fixture.team_h === team.id;
+                                const opponent = bootstrapData.teams.find(t => 
+                                    t.id === (isHome ? fixture.team_a : fixture.team_h)
+                                );
+                                
+                                if (!opponent) return null;
+                                
+                                // xG = team's expected goals (attacking) - using actual goals as placeholder
+                                const xg = isHome ? 
+                                    (fixture.team_h_score || 0) :
+                                    (fixture.team_a_score || 0);
+                                
+                                // GC = goals conceded (defensive)
+                                const gc = isHome ? 
+                                    (fixture.team_a_score || 0) : 
+                                    (fixture.team_h_score || 0);
+                                
+                                return {
+                                    gameweek: fixture.event || 0,
+                                    opponent: opponent.short_name || 'UNK',
+                                    isHome: isHome,
+                                    xg: parseFloat(xg).toFixed(2),
+                                    gc: parseFloat(gc).toFixed(2),
+                                    score: isHome ? 
+                                        `${fixture.team_h_score || 0}-${fixture.team_a_score || 0}` :
+                                        `${fixture.team_a_score || 0}-${fixture.team_h_score || 0}`
+                                };
+                            })
+                            .filter(f => f !== null);
+                        
+                        const totalXG = teamFixtures.reduce((sum, f) => sum + parseFloat(f.xg || 0), 0);
+                        const avgXG = teamFixtures.length > 0 ? totalXG / teamFixtures.length : 0;
+                        const totalGC = teamFixtures.reduce((sum, f) => sum + parseFloat(f.gc || 0), 0);
+                        const avgGC = teamFixtures.length > 0 ? totalGC / teamFixtures.length : 0;
+                        
+                        return {
+                            id: team.id,
+                            code: team.code,
+                            name: team.name,
+                            shortName: team.short_name,
+                            fixtures: teamFixtures,
+                            totalXG: totalXG,
+                            avgXG: avgXG,
+                            totalGC: totalGC,
+                            avgGC: avgGC
+                        };
+                    });
+                    
+                    console.log('Teams processed:', teamsData.length);
+                    
+                    // Process players data - fetch top players with their match history
+                    const topPlayers = bootstrapData.elements
+                        .sort((a, b) => parseFloat(b.total_points || 0) - parseFloat(a.total_points || 0))
+                        .slice(0, 200);
+                    
+                    console.log('Fetching history for top', topPlayers.length, 'players...');
+                    
+                    const playersWithHistory = await Promise.all(
+                        topPlayers.map(async (player) => {
+                            try {
+                                const historyResponse = await fetch(
+                                    corsProxy + encodeURIComponent(`https://fantasy.premierleague.com/api/element-summary/${player.id}/`)
+                                );
+                                const historyData = await historyResponse.json();
+                                
+                                const team = bootstrapData.teams.find(t => t.id === player.team);
+                                let position = '';
+                                switch(player.element_type) {
+                                    case 1: position = 'GK'; break;
+                                    case 2: position = 'DEF'; break;
+                                    case 3: position = 'MID'; break;
+                                    case 4: position = 'FWD'; break;
+                                }
+                                
+                                // Get last 6 matches
+                                const last6Matches = historyData.history
+                                    .slice(-6)
+                                    .map(match => {
+                                        const opponent = bootstrapData.teams.find(t => t.id === match.opponent_team);
+                                        return {
+                                            opponent: opponent.short_name,
+                                            wasHome: match.was_home,
+                                            xGI: parseFloat(match.expected_goal_involvements || 0),
+                                            xG: parseFloat(match.expected_goals || 0),
+                                            xA: parseFloat(match.expected_assists || 0),
+                                            minutes: match.minutes
+                                        };
+                                    });
+                                
+                                // Calculate totals from last 6 matches
+                                const totalMinutes = last6Matches.reduce((sum, m) => sum + m.minutes, 0);
+                                const totalXGI = last6Matches.reduce((sum, m) => sum + m.xGI, 0);
+                                const totalXG = last6Matches.reduce((sum, m) => sum + m.xG, 0);
+                                const totalXA = last6Matches.reduce((sum, m) => sum + m.xA, 0);
+                                const xGIPer90 = totalMinutes > 0 ? (totalXGI / totalMinutes) * 90 : 0;
+                                
+                                // Calculate DC/90 from full season data
+                                const seasonMinutes = parseFloat(player.minutes || 0);
+                                const seasonDefCon = historyData.history.reduce((sum, m) => 
+                                    sum + parseFloat(m.defensive_contribution || 0), 0
+                                );
+                                const dcPer90 = seasonMinutes > 0 ? (seasonDefCon / seasonMinutes) * 90 : 0;
+                                
+                                return {
+                                    id: player.id,
+                                    name: player.web_name,
+                                    fullName: `${player.first_name} ${player.second_name}`,
+                                    team: team.short_name,
+                                    teamId: player.team,
+                                    teamCode: team.code,
+                                    position: position,
+                                    price: player.now_cost / 10,
+                                    xG: totalXG,
+                                    xA: totalXA,
+                                    xGI: totalXGI,
+                                    xGIPer90: xGIPer90,
+                                    dcPer90: dcPer90,
+                                    last6Matches: last6Matches,
+                                    totalMinutes: totalMinutes
+                                };
+                            } catch (err) {
+                                console.error(`Error fetching history for player ${player.id}:`, err);
+                                return null;
+                            }
+                        })
+                    );
+                    
+                    const validPlayers = playersWithHistory.filter(p => p !== null);
+                    console.log('Players with history loaded:', validPlayers.length);
+
+                    setTeams(teamsData);
+                    setPlayers(validPlayers);
+                    setLastUpdated(new Date());
+                    console.log('Data loaded successfully!');
+                    
+                } catch (error) {
+                    console.error('Error fetching data:', error);
+                    setError(error.message);
+                }
+                setLoading(false);
+            };
+
+            useEffect(() => {
+                fetchData();
+            }, []);
+
+            const getColorForXGC = (value) => {
+                if (value < 0.7) {
+                    return 'rgb(34, 197, 94)';
+                } else if (value < 1.2) {
+                    return 'rgb(234, 179, 8)';
+                } else {
+                    return 'rgb(239, 68, 68)';
+                }
+            };
+
+            const getColorForValue = (value) => {
+                if (value < 0.3) {
+                    return 'rgb(239, 68, 68)';
+                } else if (value < 1) {
+                    return 'rgb(234, 179, 8)';
+                } else {
+                    return 'rgb(34, 197, 94)';
+                }
+            };
+
+            const handleSort = (key) => {
+                setSortConfig(prev => ({
+                    key,
+                    direction: prev.key === key && prev.direction === 'desc' ? 'asc' : 'desc'
+                }));
+            };
+
+            const handleTeamSort = (key) => {
+                setTeamSortConfig(prev => ({
+                    key,
+                    direction: prev.key === key && prev.direction === 'desc' ? 'asc' : 'desc'
+                }));
+            };
+
+            const getColorForXG = (value) => {
+                if (value < 0.5) {
+                    return 'rgb(239, 68, 68)';
+                } else if (value < 1.5) {
+                    return 'rgb(234, 179, 8)';
+                } else {
+                    return 'rgb(34, 197, 94)';
+                }
+            };
+
+            const getColorForXGC = (value) => {
+                if (value < 0.7) {
+                    return 'rgb(34, 197, 94)';
+                } else if (value < 1.2) {
+                    return 'rgb(234, 179, 8)';
+                } else {
+                    return 'rgb(239, 68, 68)';
+                }
+            };
+
+            const getColorForValue = (value) => {
+                if (value < 0.3) {
+                    return 'rgb(239, 68, 68)';
+                } else if (value < 1) {
+                    return 'rgb(234, 179, 8)';
+                } else {
+                    return 'rgb(34, 197, 94)';
+                }
+            };
+
+            const filteredPlayers = players.filter(player => {
+                if (positionFilter !== 'ALL' && player.position !== positionFilter) return false;
+                if (player.xGI < xGIThreshold) return false;
+                if (player.totalMinutes < minutesThreshold) return false;
+                return true;
+            });
+
+            const sortedPlayers = [...filteredPlayers].sort((a, b) => {
+                if (groupByTeam && a.teamId !== b.teamId) {
+                    return a.teamId - b.teamId;
+                }
+                
+                const aValue = a[sortConfig.key];
+                const bValue = b[sortConfig.key];
+                
+                if (sortConfig.direction === 'desc') {
+                    return bValue - aValue;
+                }
+                return aValue - bValue;
+            });
+
+            const sortedTeams = teams.length > 0 
+                ? [...teams].filter(team => team.fixtures.length > 0).sort((a, b) => {
+                    const aValue = a[teamSortConfig.key];
+                    const bValue = b[teamSortConfig.key];
+                    
+                    if (teamSortConfig.direction === 'desc') {
+                        return bValue - aValue;
+                    }
+                    return aValue - bValue;
+                })
+                : [];
+
+            const sortedTeamsAttack = [...sortedTeams];
+            const sortedTeamsDefense = teamSortType === 'defense' ? sortedTeams : [...teams].filter(team => team.fixtures.length > 0);
+
+            const xGIValues = filteredPlayers.map(p => p.xGI);
+            const minXGI = xGIValues.length > 0 ? Math.min(...xGIValues) : 0;
+            const maxXGI = xGIValues.length > 0 ? Math.max(...xGIValues) : 0;
+
+            return (
+                <div className="min-h-screen bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 p-6">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 mb-6 shadow-2xl border border-white/20">
+                            <div className="flex justify-between items-center">
+                                <div>
+                                    <h1 className="text-4xl font-bold text-white mb-2">Premier League Analytics</h1>
+                                    <p className="text-purple-200">Expected Goals Analytics • Powered by FPL API</p>
+                                    {lastUpdated && (
+                                        <p className="text-purple-300 text-sm mt-1">
+                                            Last updated: {lastUpdated.toLocaleString()}
+                                        </p>
+                                    )}
+                                </div>
+                                <button
+                                    onClick={fetchData}
+                                    disabled={loading}
+                                    className="bg-white/20 hover:bg-white/30 text-white px-6 py-3 rounded-lg flex items-center gap-2 transition-all disabled:opacity-50"
+                                >
+                                    <RefreshCw className={`w-5 h-5 ${loading ? 'animate-spin' : ''}`} />
+                                    Refresh Data
+                                </button>
+                            </div>
+                        </div>
+
+                        {error && (
+                            <div className="bg-red-500/20 border border-red-500/50 rounded-xl p-4 mb-6 flex items-center gap-3">
+                                <AlertCircle className="w-6 h-6 text-red-300" />
+                                <div>
+                                    <p className="text-white font-semibold">Error loading data</p>
+                                    <p className="text-red-200 text-sm">{error}</p>
+                                    <p className="text-red-200 text-sm mt-1">Please try refreshing the page or clicking "Refresh Data"</p>
+                                </div>
+                            </div>
+                        )}
+
+                        <div className="flex gap-4 mb-6">
+                            <button
+                                onClick={() => setActiveTab('teams')}
+                                className={`px-8 py-4 rounded-lg font-semibold transition-all ${
+                                    activeTab === 'teams'
+                                        ? 'bg-white text-purple-900 shadow-lg'
+                                        : 'bg-white/10 text-white hover:bg-white/20'
+                                }`}
+                            >
+                                Teams
+                            </button>
+                            <button
+                                onClick={() => setActiveTab('players')}
+                                className={`px-8 py-4 rounded-lg font-semibold transition-all ${
+                                    activeTab === 'players'
+                                        ? 'bg-white text-purple-900 shadow-lg'
+                                        : 'bg-white/10 text-white hover:bg-white/20'
+                                }`}
+                            >
+                                Players
+                            </button>
+                        </div>
+
+                        {loading ? (
+                            <div className="bg-white/10 backdrop-blur-md rounded-xl p-12 text-center">
+                                <RefreshCw className="w-12 h-12 text-white animate-spin mx-auto mb-4" />
+                                <p className="text-white text-xl">Loading Premier League data...</p>
+                                <p className="text-purple-300 text-sm mt-2">Fetching player match history... this may take a moment</p>
+                            </div>
+                        ) : teams.length === 0 && players.length === 0 ? (
+                            <div className="bg-white/10 backdrop-blur-md rounded-xl p-12 text-center">
+                                <AlertCircle className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
+                                <p className="text-white text-xl mb-2">No data available</p>
+                                <p className="text-purple-300 text-sm">Click "Refresh Data" to load the latest Premier League statistics</p>
+                            </div>
+                        ) : (
+                            <>
+                                {activeTab === 'teams' && (
+                                    <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-2xl border border-white/20">
+                                        <h2 className="text-2xl font-bold text-white mb-6">Teams - Attack & Defense Analysis (Last 6 Matches)</h2>
+                                        
+                                        <div className="space-y-3">
+                                            {sortedTeams.map((team) => {
+                                                return (
+                                                    <div key={team.id} className="bg-white/5 rounded-lg p-4 border border-white/10">
+                                                        {/* Team Header */}
+                                                        <div className="flex items-center gap-3 mb-4">
+                                                            <img 
+                                                                src={`https://resources.premierleague.com/premierleague/badges/70/t${team.code}.png`}
+                                                                alt={team.shortName}
+                                                                className="w-10 h-10"
+                                                                onError={(e) => e.target.style.display = 'none'}
+                                                            />
+                                                            <h3 className="text-white font-bold text-lg">{team.name}</h3>
+                                                        </div>
+                                                        
+                                                        {/* Attack & Defense Split */}
+                                                        <div className="grid grid-cols-2 gap-6">
+                                                            {/* ATTACK (Left) */}
+                                                            <div>
+                                                                <h4 className="text-purple-200 font-semibold text-sm mb-3">⚔️ Attack (Goals Scored)</h4>
+                                                                <div className="flex gap-2 items-center">
+                                                                    {/* Last 6 Matches */}
+                                                                    <div className="flex gap-1 flex-1">
+                                                                        {team.fixtures.map((fixture, idx) => {
+                                                                            
+                                                                            return (
+                                                                                <div 
+                                                                                    key={idx}
+                                                                                    className="flex-1 rounded p-2 text-center bg-white/20"
+                                                                                >
+                                                                                    <div className="text-white text-xs font-semibold mb-1 flex items-center justify-center gap-1">
+                                                                                        {fixture.isHome ? (
+                                                                                            <Home className="w-3 h-3" />
+                                                                                        ) : (
+                                                                                            <Plane className="w-3 h-3" />
+                                                                                        )}
+                                                                                        {fixture.opponent}
+                                                                                    </div>
+                                                                                    <div className="text-white font-bold">
+                                                                                        {fixture.xg}
+                                                                                    </div>
+                                                                                </div>
+                                                                            );
+                                                                        })}
+                                                                    </div>
+                                                                    
+                                                                    {/* Totals */}
+                                                                    <div className="flex gap-2">
+                                                                        <button 
+                                                                            onClick={() => handleTeamSort('totalXG')}
+                                                                            className="bg-white/10 rounded p-2 hover:bg-white/20 transition-colors"
+                                                                        >
+                                                                            <div className="text-purple-200 text-xs">Total</div>
+                                                                            <div className="text-white font-bold">{team.totalXG.toFixed(1)}</div>
+                                                                        </button>
+                                                                        <button 
+                                                                            onClick={() => handleTeamSort('avgXG')}
+                                                                            className="bg-white/10 rounded p-2 hover:bg-white/20 transition-colors"
+                                                                        >
+                                                                            <div className="text-purple-200 text-xs">Avg</div>
+                                                                            <div className="text-white font-bold">{team.avgXG.toFixed(2)}</div>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            {/* DEFENSE (Right) */}
+                                                            <div>
+                                                                <h4 className="text-purple-200 font-semibold text-sm mb-3">🛡️ Defense (Goals Conceded)</h4>
+                                                                <div className="flex gap-2 items-center">
+                                                                    {/* Last 6 Matches */}
+                                                                    <div className="flex gap-1 flex-1">
+                                                                        {team.fixtures.map((fixture, idx) => {
+                                                                            
+                                                                            return (
+                                                                                <div 
+                                                                                    key={idx}
+                                                                                    className="flex-1 rounded p-2 text-center bg-white/20"
+                                                                                >
+                                                                                    <div className="text-white text-xs font-semibold mb-1 flex items-center justify-center gap-1">
+                                                                                        {fixture.isHome ? (
+                                                                                            <Home className="w-3 h-3" />
+                                                                                        ) : (
+                                                                                            <Plane className="w-3 h-3" />
+                                                                                        )}
+                                                                                        {fixture.opponent}
+                                                                                    </div>
+                                                                                    <div className="text-white font-bold">
+                                                                                        {fixture.gc}
+                                                                                    </div>
+                                                                                </div>
+                                                                            );
+                                                                        })}
+                                                                    </div>
+                                                                    
+                                                                    {/* Totals */}
+                                                                    <div className="flex gap-2">
+                                                                        <button 
+                                                                            onClick={() => handleTeamSort('totalGC')}
+                                                                            className="bg-white/10 rounded p-2 hover:bg-white/20 transition-colors"
+                                                                        >
+                                                                            <div className="text-purple-200 text-xs">Total</div>
+                                                                            <div className="text-white font-bold">{team.totalGC.toFixed(1)}</div>
+                                                                        </button>
+                                                                        <button 
+                                                                            onClick={() => handleTeamSort('avgGC')}
+                                                                            className="bg-white/10 rounded p-2 hover:bg-white/20 transition-colors"
+                                                                        >
+                                                                            <div className="text-purple-200 text-xs">Avg</div>
+                                                                            <div className="text-white font-bold">{team.avgGC.toFixed(2)}</div>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                );
+                                            })}
+                                        </div>
+                                    </div>
+                                )}
+
+                                {activeTab === 'players' && (
+                                    <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-2xl border border-white/20">
+                                        <h2 className="text-2xl font-bold text-white mb-4">Players - Expected Goals Analytics</h2>
+                                        
+                                        <div className="flex gap-3 flex-wrap items-center mb-6">
+                                            <div className="flex items-center gap-2">
+                                                <label className="text-white text-sm">Min xGI:</label>
+                                                <input
+                                                    type="range"
+                                                    min="0.5"
+                                                    max="10"
+                                                    step="0.5"
+                                                    value={xGIThreshold}
+                                                    onChange={(e) => setXGIThreshold(parseFloat(e.target.value))}
+                                                    className="w-32"
+                                                />
+                                                <span className="text-white text-sm font-semibold w-12">{xGIThreshold.toFixed(1)}</span>
+                                            </div>
+                                            <div className="flex items-center gap-2">
+                                                <label className="text-white text-sm">Min Mins:</label>
+                                                <input
+                                                    type="range"
+                                                    min="0"
+                                                    max="540"
+                                                    step="30"
+                                                    value={minutesThreshold}
+                                                    onChange={(e) => setMinutesThreshold(parseFloat(e.target.value))}
+                                                    className="w-32"
+                                                />
+                                                <span className="text-white text-sm font-semibold w-12">{minutesThreshold}</span>
+                                            </div>
+                                            <select
+                                                value={positionFilter}
+                                                onChange={(e) => setPositionFilter(e.target.value)}
+                                                className="bg-white/20 text-white px-4 py-2 rounded-lg border border-white/30"
+                                            >
+                                                <option value="ALL">All Positions</option>
+                                                <option value="GK">Goalkeepers</option>
+                                                <option value="DEF">Defenders</option>
+                                                <option value="MID">Midfielders</option>
+                                                <option value="FWD">Forwards</option>
+                                            </select>
+                                            <button
+                                                onClick={() => setGroupByTeam(!groupByTeam)}
+                                                className={`px-4 py-2 rounded-lg font-medium transition-all ${
+                                                    groupByTeam
+                                                        ? 'bg-white text-purple-900'
+                                                        : 'bg-white/20 text-white hover:bg-white/30'
+                                                }`}
+                                            >
+                                                {groupByTeam ? 'Grouped by Team' : 'Group by Team'}
+                                            </button>
+                                        </div>
+
+                                        <div className="mb-4 bg-white/5 rounded-lg p-2 flex gap-2 border border-white/20">
+                                            <div className="w-48 text-purple-200 text-xs font-semibold">Player</div>
+                                            
+                                            <button onClick={() => handleSort('price')} className="w-20 text-purple-200 text-xs font-semibold hover:text-white flex items-center justify-center gap-1">
+                                                Price <ArrowUpDown className="w-3 h-3" />
+                                            </button>
+                                            
+                                            <button onClick={() => handleSort('xG')} className="w-16 text-purple-200 text-xs font-semibold hover:text-white flex items-center justify-center gap-1">
+                                                xG <ArrowUpDown className="w-3 h-3" />
+                                            </button>
+                                            
+                                            <button onClick={() => handleSort('xA')} className="w-16 text-purple-200 text-xs font-semibold hover:text-white flex items-center justify-center gap-1">
+                                                xA <ArrowUpDown className="w-3 h-3" />
+                                            </button>
+                                            
+                                            <button onClick={() => handleSort('xGI')} className="w-16 text-purple-200 text-xs font-semibold hover:text-white flex items-center justify-center gap-1">
+                                                xGI <ArrowUpDown className="w-3 h-3" />
+                                            </button>
+                                            
+                                            <button onClick={() => handleSort('xGIPer90')} className="w-20 text-purple-200 text-xs font-semibold hover:text-white flex items-center justify-center gap-1">
+                                                xGI/90 <ArrowUpDown className="w-3 h-3" />
+                                            </button>
+                                            
+                                            <button onClick={() => handleSort('dcPer90')} className="w-20 text-purple-200 text-xs font-semibold hover:text-white flex items-center justify-center gap-1">
+                                                DC/90 <ArrowUpDown className="w-3 h-3" />
+                                            </button>
+                                            
+                                            <div className="flex-1 text-purple-200 text-xs font-semibold text-center">Last 6 Matches</div>
+                                        </div>
+
+                                        <div className="space-y-2">
+                                            {sortedPlayers.map((player, idx) => {
+                                                const showTeamHeader = groupByTeam && (idx === 0 || sortedPlayers[idx - 1].teamId !== player.teamId);
+                                                
+                                                return (
+                                                    <Fragment key={player.id}>
+                                                        {showTeamHeader && (
+                                                            <div className="bg-white/20 rounded-lg p-3 mt-4 flex items-center gap-2">
+                                                                <img 
+                                                                    src={`https://resources.premierleague.com/premierleague/badges/70/t${player.teamCode}.png`}
+                                                                    alt={player.team}
+                                                                    className="w-6 h-6"
+                                                                    onError={(e) => e.target.style.display = 'none'}
+                                                                />
+                                                                <h3 className="text-white font-bold text-lg">{player.team}</h3>
+                                                            </div>
+                                                        )}
+                                                        
+                                                        <div className={`rounded-lg p-3 border transition-colors ${
+                                                            groupByTeam 
+                                                                ? 'bg-white/5 border-white/20 ml-4' 
+                                                                : 'bg-white/5 border-white/10 hover:bg-white/10'
+                                                        }`}>
+                                                            <div className="flex gap-2 items-center">
+                                                                {/* Player Info */}
+                                                                <div className="w-48">
+                                                                    <div className="text-white font-semibold">{player.name}</div>
+                                                                    <div className="text-purple-300 text-xs">{player.team} • {player.position}</div>
+                                                                </div>
+                                                                
+                                                                {/* Stats */}
+                                                                <div className="w-20 text-center">
+                                                                    <div className="text-white font-semibold">£{player.price.toFixed(1)}</div>
+                                                                </div>
+                                                                
+                                                                <div className="w-16 text-center">
+                                                                    <div className="text-white font-semibold">{player.xG.toFixed(2)}</div>
+                                                                </div>
+                                                                
+                                                                <div className="w-16 text-center">
+                                                                    <div className="text-white font-semibold">{player.xA.toFixed(2)}</div>
+                                                                </div>
+                                                                
+                                                                <div className="w-16 text-center">
+                                                                    <div className="text-white font-semibold">{player.xGI.toFixed(2)}</div>
+                                                                </div>
+                                                                
+                                                                <div className="w-20 text-center">
+                                                                    <div className="text-white font-semibold">{player.xGIPer90.toFixed(2)}</div>
+                                                                </div>
+                                                                
+                                                                <div className="w-20 text-center">
+                                                                    <div className="text-white font-semibold">{player.dcPer90.toFixed(2)}</div>
+                                                                </div>
+                                                                
+                                                                {/* Last 6 Matches */}
+                                                                <div className="flex-1 flex gap-1">
+                                                                    {player.last6Matches.map((match, matchIdx) => {
+                                                                        const matchColor = getColorForPlayerXGI(match.xGI);
+                                                                        
+                                                                        return (
+                                                                            <div 
+                                                                                key={matchIdx}
+                                                                                className="flex-1 rounded p-1 text-center"
+                                                                                style={{ backgroundColor: matchColor }}
+                                                                            >
+                                                                                <div className="text-white text-xs font-semibold mb-1">
+                                                                                    {match.opponent} ({match.wasHome ? 'H' : 'A'})
+                                                                                </div>
+                                                                                <div className="text-white font-bold text-sm">
+                                                                                    {match.xGI.toFixed(2)}
+                                                                                </div>
+                                                                            </div>
+                                                                        );
+                                                                    })}
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </Fragment>
+                                                );
+                                            })}
+                                        </div>
+                                        
+                                        <div className="mt-4 text-purple-200 text-sm">
+                                            Showing {sortedPlayers.length} of {players.length} players
+                                        </div>
+                                    </div>
+                                )}
+                            </>
+                        )}
+
+                        <div className="mt-6 bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
+                            <p className="text-white text-sm mb-2">
+                                <strong>Teams Attack:</strong> <span className="text-green-400">Green = High Goals (&gt;1.5)</span> • 
+                                <span className="text-yellow-400 ml-2">Yellow = Medium (0.5-1.5)</span> • 
+                                <span className="text-red-400 ml-2">Red = Low (&lt;0.5)</span>
+                            </p>
+                            <p className="text-white text-sm mb-2">
+                                <strong>Teams Defense:</strong> <span className="text-green-400">Green = Low GC (&lt;0.7)</span> • 
+                                <span className="text-yellow-400 ml-2">Yellow = Medium (0.7-1.2)</span> • 
+                                <span className="text-red-400 ml-2">Red = High (&gt;1.2)</span>
+                            </p>
+                            <p className="text-white text-sm">
+                                <strong>Players (xGI):</strong> <span className="text-green-400">Green = High (&gt;1)</span> • 
+                                <span className="text-yellow-400 ml-2">Yellow = Medium (0.3-1)</span> • 
+                                <span className="text-red-400 ml-2">Red = Low (&lt;0.3)</span>
+                            </p>
+                            <p className="text-purple-200 text-xs mt-2">
+                                xG = Expected Goals | GC = Goals Conceded | xGI = Expected Goal Involvements | DC/90 = Defensive Contributions per 90 minutes
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<PremierLeagueDashboard />);
+    </script>
+</body>
+</html>

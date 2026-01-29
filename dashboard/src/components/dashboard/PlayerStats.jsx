@@ -2,6 +2,18 @@ import React, { useState, Fragment } from 'react';
 import { ArrowUpDown } from '../ui/Icons';
 import clsx from 'clsx';
 
+const normalizeString = (str) => {
+    if (!str) return '';
+    return str
+        .normalize('NFD') // Decompose combined characters (e.g., é -> e + ´)
+        .replace(/[\u0300-\u036f]/g, '') // Remove diacritics
+        .toLowerCase()
+        .replace(/ø/g, 'o')
+        .replace(/æ/g, 'ae')
+        .replace(/ß/g, 'ss')
+        .replace(/ł/g, 'l');
+};
+
 const PlayerStats = ({ players, teams }) => {
     const [teamFilter, setTeamFilter] = useState('ALL');
     const [positionFilter, setPositionFilter] = useState('ALL');
@@ -51,12 +63,12 @@ const PlayerStats = ({ players, teams }) => {
         }
     };
 
-    const normalizedSearch = searchTerm.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    const normalizedSearch = normalizeString(searchTerm);
     const filteredPlayers = players.filter(player => {
         if (teamFilter !== 'ALL' && player.teamId !== parseInt(teamFilter)) return false;
         if (positionFilter !== 'ALL' && player.position !== positionFilter) return false;
         if (searchTerm) {
-            const normalizedName = player.name.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase();
+            const normalizedName = normalizeString(player.name);
             if (!normalizedName.includes(normalizedSearch)) return false;
         }
         if (player.xGI < xGIThreshold) return false;

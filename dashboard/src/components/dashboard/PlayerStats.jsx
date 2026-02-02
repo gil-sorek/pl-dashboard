@@ -19,7 +19,7 @@ const PlayerStats = ({ players, teams }) => {
     const [positionFilter, setPositionFilter] = useState('ALL');
     const [groupByTeam, setGroupByTeam] = useState(false);
     const [xGIThreshold, setXGIThreshold] = useState(1.0);
-    const [minutesThreshold, setMinutesThreshold] = useState(150);
+    const [minutesThreshold, setMinutesThreshold] = useState(300);
     const [priceThreshold, setPriceThreshold] = useState(15.5);
     const [searchTerm, setSearchTerm] = useState('');
     const [sortConfig, setSortConfig] = useState({ key: 'xGI', direction: 'desc' });
@@ -37,7 +37,7 @@ const PlayerStats = ({ players, teams }) => {
         setSearchTerm('');
         setGroupByTeam(false);
         setXGIThreshold(1.0);
-        setMinutesThreshold(150);
+        setMinutesThreshold(300);
         setPriceThreshold(15.5);
         setSortConfig({ key: 'xGI', direction: 'desc' });
     };
@@ -204,6 +204,10 @@ const PlayerStats = ({ players, teams }) => {
                             Price <ArrowUpDown className="w-3 h-3" />
                         </button>
 
+                        <button onClick={() => handleSort('totalMinutes')} className="w-14 shrink-0 md:shrink-0 text-purple-200 text-xs font-semibold hover:text-white flex items-center justify-center gap-1">
+                            Mins <ArrowUpDown className="w-3 h-3" />
+                        </button>
+
                         <button onClick={() => handleSort('xG')} className="w-12 shrink-0 md:shrink-0 text-purple-200 text-xs font-semibold hover:text-white flex items-center justify-center gap-1">
                             xG <ArrowUpDown className="w-3 h-3" />
                         </button>
@@ -264,6 +268,10 @@ const PlayerStats = ({ players, teams }) => {
                                             {/* Stats */}
                                             <div className="w-14 text-center shrink-0">
                                                 <div className="text-white font-semibold">£{player.price.toFixed(1)}</div>
+                                            </div>
+
+                                            <div className="w-14 text-center shrink-0">
+                                                <div className="text-white font-semibold">{player.totalMinutes}</div>
                                             </div>
 
                                             <div className="w-12 text-center shrink-0">

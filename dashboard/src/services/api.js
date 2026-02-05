@@ -8,6 +8,15 @@ const PROXIES = [
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 const fetchWithFallback = async (url) => {
+    // If running in Node/Server-side, fetch directly
+    if (typeof window === 'undefined') {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Direct fetch failed: ${response.status}`);
+        }
+        return await response.json();
+    }
+
     let lastError;
     for (const proxy of PROXIES) {
         try {
@@ -27,6 +36,15 @@ const fetchWithFallback = async (url) => {
 };
 
 const fetchTextWithFallback = async (url) => {
+    // If running in Node/Server-side, fetch directly
+    if (typeof window === 'undefined') {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Direct fetch failed: ${response.status}`);
+        }
+        return await response.text();
+    }
+
     let lastError;
     for (const proxy of PROXIES) {
         try {
@@ -341,12 +359,13 @@ export const fetchPremierLeagueData = async () => {
                                 acc.xGI += parseFloat(match.expected_goal_involvements || 0);
                                 acc.xG += parseFloat(match.expected_goals || 0);
                                 acc.xA += parseFloat(match.expected_assists || 0);
+                                acc.DC += parseFloat(match.defensive_contribution || 0);
                                 acc.goals += match.goals_scored;
                                 acc.assists += match.assists;
                                 acc.minutes += match.minutes;
                                 acc.points += match.total_points;
                                 return acc;
-                            }, { opponents: [], xGI: 0, xG: 0, xA: 0, goals: 0, assists: 0, minutes: 0, points: 0 });
+                            }, { opponents: [], xGI: 0, xG: 0, xA: 0, DC: 0, goals: 0, assists: 0, minutes: 0, points: 0 });
 
                             // If team played but player has 0 minutes, it's NOT a blank (it's a bench/0-pointer)
                             // isBlank is only true if NO finished fixtures for the team in this GW.
@@ -357,6 +376,7 @@ export const fetchPremierLeagueData = async () => {
                                 xGI: aggregated.xGI,
                                 xG: aggregated.xG,
                                 xA: aggregated.xA,
+                                DC: aggregated.DC,
                                 goals: aggregated.goals,
                                 assists: aggregated.assists,
                                 minutes: aggregated.minutes,
@@ -370,6 +390,7 @@ export const fetchPremierLeagueData = async () => {
                         const totalXGI = last6Matches.reduce((sum, m) => sum + m.xGI, 0);
                         const totalXG = last6Matches.reduce((sum, m) => sum + m.xG, 0);
                         const totalXA = last6Matches.reduce((sum, m) => sum + m.xA, 0);
+                        const totalDC = last6Matches.reduce((sum, m) => sum + (m.DC || 0), 0);
                         const xGIPer90 = totalMinutes > 0 ? (totalXGI / totalMinutes) * 90 : 0;
 
                         // Calculate DC/90 from full season data
@@ -393,6 +414,7 @@ export const fetchPremierLeagueData = async () => {
                             xG: totalXG,
                             xA: totalXA,
                             xGI: totalXGI,
+                            DC: totalDC,
                             xGIPer90: xGIPer90,
                             dcPer90: dcPer90,
                             last6Matches: last6Matches,

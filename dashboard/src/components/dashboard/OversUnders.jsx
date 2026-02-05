@@ -38,13 +38,20 @@ const getPositionColor = (position) => {
 const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
         const data = payload[0].payload;
+
+        const formatValue = (name, value) => {
+            if (name === 'Price') return `£${value.toFixed(1)}`;
+            if (['Goals', 'Assists', 'Actual Goals', 'Actual Assists'].includes(name)) return value.toFixed(0);
+            return value.toFixed(2);
+        };
+
         return (
             <div className="bg-purple-900/90 backdrop-blur-md border border-white/20 p-3 rounded-lg shadow-xl text-white">
                 <p className="font-bold border-b border-white/10 pb-1 mb-1">{data.name}</p>
                 <p className="text-xs text-purple-200">{data.team} • {data.position}</p>
                 <div className="mt-2 space-y-1 text-sm">
-                    <p>{data.yName}: <span className="font-semibold">{data.y.toFixed(2)}</span></p>
-                    <p>{data.xName}: <span className="font-semibold">{data.x.toFixed(2)}</span></p>
+                    <p>{data.yName}: <span className="font-semibold">{formatValue(data.yName, data.y)}</span></p>
+                    <p>{data.xName}: <span className="font-semibold">{formatValue(data.xName, data.x)}</span></p>
                     {data.diff !== undefined && (
                         <p>Diff: <span className={clsx("font-bold", data.diff >= 0 ? "text-green-400" : "text-red-400")}>
                             {data.diff >= 0 ? '+' : ''}{data.diff.toFixed(2)}
@@ -72,12 +79,16 @@ const OversUnders = ({ players, teams, currentGameweek }) => {
         return timeRange === 'last6' ? 540 : (currentGameweek || 38) * 90;
     }, [timeRange, currentGameweek]);
 
-    // Clamp minutesThreshold when maxMins changes
+    // Set default minutes threshold when timeRange changes
     useEffect(() => {
-        if (minutesThreshold > maxMins) {
-            setMinutesThreshold(maxMins);
+        if (timeRange === 'season') {
+            // Default season filter: 70% of possible minutes
+            setMinutesThreshold(Math.ceil(maxMins * 0.7));
+        } else {
+            // Default Last 6 filter: ~55% of 540 (300 mins) to match previous default
+            setMinutesThreshold(300);
         }
-    }, [maxMins, minutesThreshold]);
+    }, [timeRange, maxMins]);
 
     const filteredData = useMemo(() => {
         const normalizedSearch = normalizeString(searchTerm);
@@ -94,10 +105,10 @@ const OversUnders = ({ players, teams, currentGameweek }) => {
         });
     }, [players, teamFilter, positionFilter, minutesThreshold, priceThreshold, searchTerm, timeRange]);
 
-    const goalsData = useMemo(() => {
-        return filteredData.map(p => {
+    const chartData = useMemo(() => {
+        const goalsXgData = filteredData.map(p => {
             const x = timeRange === 'last6' ? p.xG : p.seasonXG;
-            const y = timeRange === 'last6' ? p.last6Matches.reduce((sum, m) => sum + m.goals, 0) : p.seasonGoals;
+            const y = timeRange === 'last6' ? (p.last6Matches || []).reduce((sum, m) => sum + m.goals, 0) : p.seasonGoals;
             return {
                 x, y,
                 id: p.id,
@@ -109,12 +120,10 @@ const OversUnders = ({ players, teams, currentGameweek }) => {
                 diff: y - x
             };
         });
-    }, [filteredData, timeRange]);
 
-    const assistsData = useMemo(() => {
-        return filteredData.map(p => {
+        const assistsXaData = filteredData.map(p => {
             const x = timeRange === 'last6' ? p.xA : p.seasonXA;
-            const y = timeRange === 'last6' ? p.last6Matches.reduce((sum, m) => sum + m.assists, 0) : p.seasonAssists;
+            const y = timeRange === 'last6' ? (p.last6Matches || []).reduce((sum, m) => sum + m.assists, 0) : p.seasonAssists;
             return {
                 x, y,
                 id: p.id,
@@ -126,12 +135,10 @@ const OversUnders = ({ players, teams, currentGameweek }) => {
                 diff: y - x
             };
         });
-    }, [filteredData, timeRange]);
 
-    const ppmData = useMemo(() => {
-        return filteredData.map(p => {
+        const pricePpmData = filteredData.map(p => {
             const x = p.price;
-            const points = timeRange === 'last6' ? p.last6Matches.reduce((sum, m) => sum + (m.points || 0), 0) : (p.totalPoints || 0);
+            const points = timeRange === 'last6' ? (p.last6Matches || []).reduce((sum, m) => sum + (m.points || 0), 0) : (p.totalPoints || 0);
             const y = x > 0 ? points / x : 0;
             return {
                 x, y,
@@ -143,16 +150,50 @@ const OversUnders = ({ players, teams, currentGameweek }) => {
                 yName: 'PPM'
             };
         });
+
+        const impactData = filteredData.map(p => {
+            let x, y;
+            if (timeRange === 'season') {
+                x = p.dcPer90 || 0;
+                const seasonXGI = (p.seasonXG || 0) + (p.seasonXA || 0);
+                y = (p.seasonMinutes && p.seasonMinutes > 0) ? (seasonXGI / p.seasonMinutes) * 90 : 0;
+            } else {
+                // Last 6
+                // p.totalMinutes is Last 6 minutes
+                // p.DC is Last 6 DC
+                // p.xGI is Last 6 xGI
+                x = (p.totalMinutes && p.totalMinutes > 0) ? ((p.DC || 0) / p.totalMinutes) * 90 : 0;
+                y = (p.totalMinutes && p.totalMinutes > 0) ? ((p.xGI || 0) / p.totalMinutes) * 90 : 0;
+            }
+            return {
+                id: p.id,
+                name: p.name,
+                team: p.team,
+                position: p.position,
+                x: x,
+                y: y,
+                xName: 'DC/90',
+                yName: 'xGI/90'
+            };
+        });
+
+        return { goalsXgData, assistsXaData, pricePpmData, impactData };
     }, [filteredData, timeRange]);
 
-    const renderChart = (data, title, xLabel, yLabel, xDomain = [0, 'auto']) => {
+    const renderChart = (data, title, xLabel, yLabel, xDomain = [0, 'auto'], showDiagonal = true, yLabelOffset = -20) => {
         const maxX = Math.max(...data.map(d => d.x), 1);
         const maxY = Math.max(...data.map(d => d.y), 1);
-        const maxVal = Math.max(maxX, maxY);
-        const activeId = selectedPlayerId || hoveredPlayerId;
 
-        // For Goals and Assists, we want square axes to keep the diagonal line meaningful
-        const chartDomain = xDomain[0] === 0 ? [0, Math.ceil(maxVal)] : xDomain;
+        // Apply distinct domains for X and Y axes
+        const xChartDomain = xDomain[0] === 0 ? [0, Math.ceil(maxX)] : xDomain;
+        const yChartDomain = xDomain[0] === 0 ? [0, Math.ceil(maxY)] : ['auto', 'auto'];
+
+        // Calculate the endpoint for the efficiency line (y=x)
+        // It must stop at the edge of the visible area, which is determined by the smaller of the two max domains
+        // (since y=x, the line hits the boundary when the value reaches the smaller limit)
+        const lineLimit = Math.min(Math.ceil(maxX), Math.ceil(maxY));
+
+        const activeId = selectedPlayerId || hoveredPlayerId;
 
         return (
             <div className="bg-white/5 rounded-xl p-6 border border-white/10 flex-1 min-w-[400px]">
@@ -175,7 +216,7 @@ const OversUnders = ({ players, teams, currentGameweek }) => {
                                 dataKey="x"
                                 name={xLabel}
                                 stroke="#a78bfa"
-                                domain={chartDomain}
+                                domain={xChartDomain}
                                 label={{ value: xLabel, position: 'insideBottom', offset: -10, fill: '#a78bfa' }}
                             />
                             <YAxis
@@ -183,14 +224,14 @@ const OversUnders = ({ players, teams, currentGameweek }) => {
                                 dataKey="y"
                                 name={yLabel}
                                 stroke="#a78bfa"
-                                domain={chartDomain}
-                                label={{ value: yLabel, angle: -90, position: 'center', fill: '#a78bfa' }}
+                                domain={yChartDomain}
+                                label={{ value: yLabel, angle: -90, position: 'center', fill: '#a78bfa', dx: yLabelOffset }}
                             />
                             <ZAxis type="number" range={[50, 400]} />
                             <Tooltip content={<CustomTooltip />} cursor={{ strokeDasharray: '3 3' }} />
                             {/* Only show diagonal line if both axes start at 0 (Goals/Assists) */}
-                            {xDomain[0] === 0 && (
-                                <ReferenceLine segment={[{ x: 0, y: 0 }, { x: Math.ceil(maxVal), y: Math.ceil(maxVal) }]} stroke="#6366f1" strokeDasharray="5 5" />
+                            {showDiagonal && xDomain[0] === 0 && (
+                                <ReferenceLine segment={[{ x: 0, y: 0 }, { x: lineLimit, y: lineLimit }]} stroke="#6366f1" strokeDasharray="5 5" />
                             )}
 
                             {/* Persistent ReferenceLines for Selected Player */}
@@ -257,7 +298,7 @@ const OversUnders = ({ players, teams, currentGameweek }) => {
                         <span className="text-yellow-300">Goalkeepers</span>
                     </div>
                 </div>
-                {xDomain[0] === 0 && (
+                {showDiagonal && xDomain[0] === 0 && (
                     <div className="mt-4 pt-4 border-t border-white/10 flex justify-between text-xs text-purple-300 px-4">
                         <span>Underperforming (Expected &gt; Actual)</span>
                         <span>Overperforming (Actual &gt; Expected)</span>
@@ -338,24 +379,25 @@ const OversUnders = ({ players, teams, currentGameweek }) => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
-                {renderChart(goalsData, "Goals vs Expected Goals (xG)", "Expected Goals (xG)", "Actual Goals")}
-                {renderChart(assistsData, "Assists vs Expected Assists (xA)", "Expected Assists (xA)", "Actual Assists")}
-                {renderChart(ppmData, "Value (PPM) vs Price", "Price (£m)", "Points Per Million", [3.5, 'auto'])}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                {renderChart(chartData.goalsXgData, "Goals vs Expected Goals (xG)", "Expected Goals (xG)", "Actual Goals")}
+                {renderChart(chartData.assistsXaData, "Assists vs Expected Assists (xA)", "Expected Assists (xA)", "Actual Assists")}
+                {renderChart(chartData.pricePpmData, "Value (PPM) vs Price", "Price (£m)", "Points Per Million", [3.5, 'auto'])}
+                {renderChart(chartData.impactData, "Impact: Attacking vs Defending", "Defensive Contribution / 90", "Expected Goals + Assists / 90", [0, 'auto'], false, -40)}
             </div>
 
             <div className="mt-6 p-4 bg-white/5 rounded-lg border border-white/10">
                 <p className="text-purple-200 text-sm">
-                    <strong>How to read:</strong> Points above the dashed diagonal line represent players who are
+                    <strong>How to read:</strong> Players above the dashed diagonal line are
                     <span className="text-green-400 font-semibold ml-1 mr-1">overperforming</span>
-                    (scoring more than their xG/xA suggest). Points below the line are
+                    (scoring more than their xG/xA suggest). Players below the line are
                     <span className="text-red-400 font-semibold ml-1">underperforming</span>.
                 </p>
                 <p className="text-purple-300 text-xs mt-2 italic">
                     * Data based on {timeRange === 'last6' ? 'the last 6 matches played by each player' : 'the entire season to date'}.
                 </p>
             </div>
-        </div>
+        </div >
     );
 };
 

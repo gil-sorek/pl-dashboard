@@ -8,3 +8,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Remove default focus outline for Recharts interactive elements */
+.recharts-wrapper *:focus,
+.recharts-surface *:focus,
+.recharts-wrapper:focus,
+.recharts-surface:focus {
+  outline: none !important;
+}

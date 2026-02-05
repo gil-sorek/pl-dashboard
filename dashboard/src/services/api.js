@@ -344,8 +344,9 @@ export const fetchPremierLeagueData = async () => {
                                 acc.goals += match.goals_scored;
                                 acc.assists += match.assists;
                                 acc.minutes += match.minutes;
+                                acc.points += match.total_points;
                                 return acc;
-                            }, { opponents: [], xGI: 0, xG: 0, xA: 0, goals: 0, assists: 0, minutes: 0 });
+                            }, { opponents: [], xGI: 0, xG: 0, xA: 0, goals: 0, assists: 0, minutes: 0, points: 0 });
 
                             // If team played but player has 0 minutes, it's NOT a blank (it's a bench/0-pointer)
                             // isBlank is only true if NO finished fixtures for the team in this GW.
@@ -359,6 +360,7 @@ export const fetchPremierLeagueData = async () => {
                                 goals: aggregated.goals,
                                 assists: aggregated.assists,
                                 minutes: aggregated.minutes,
+                                points: aggregated.points,
                                 isBlank: teamFixturesInGw.length === 0
                             };
                         });
@@ -394,7 +396,13 @@ export const fetchPremierLeagueData = async () => {
                             xGIPer90: xGIPer90,
                             dcPer90: dcPer90,
                             last6Matches: last6Matches,
-                            totalMinutes: totalMinutes
+                            totalMinutes: totalMinutes,
+                            seasonXG: parseFloat(player.expected_goals || 0),
+                            seasonXA: parseFloat(player.expected_assists || 0),
+                            seasonGoals: parseInt(player.goals_scored || 0),
+                            seasonAssists: parseInt(player.assists || 0),
+                            seasonMinutes: parseInt(player.minutes || 0),
+                            totalPoints: parseInt(player.total_points || 0)
                         };
                     } catch (err) {
                         console.error(`Error fetching history for player ${player.id}:`, err);
@@ -423,7 +431,8 @@ export const fetchPremierLeagueData = async () => {
 
         return {
             teams: teamsData,
-            players: playersWithEO
+            players: playersWithEO,
+            currentGameweek: lastGameweek
         };
 
     } catch (error) {

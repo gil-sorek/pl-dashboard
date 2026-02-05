@@ -4,6 +4,7 @@ import TeamStats from './components/dashboard/TeamStats';
 import PlayerStats from './components/dashboard/PlayerStats';
 import SuspensionStats from './components/dashboard/SuspensionStats';
 import EOTracker from './components/dashboard/EOTracker';
+import OversUnders from './components/dashboard/OversUnders';
 import { RefreshCw, AlertCircle } from './components/ui/Icons';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
   const [error, setError] = useState(null);
   const [activeTab, setActiveTab] = useState('teams');
   const [lastUpdated, setLastUpdated] = useState(null);
+  const [currentGameweek, setCurrentGameweek] = useState(38);
 
   const fetchData = async (isLiveRefresh = false) => {
     setLoading(true);
@@ -44,6 +46,9 @@ function App() {
 
       setTeams(data.teams);
       setPlayers(data.players);
+      if (data.currentGameweek) {
+        setCurrentGameweek(data.currentGameweek);
+      }
       console.log('Data ready!');
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -129,6 +134,15 @@ function App() {
           >
             EO Tracker
           </button>
+          <button
+            onClick={() => setActiveTab('oversunders')}
+            className={`px-8 py-4 rounded-lg font-semibold transition-all ${activeTab === 'oversunders'
+              ? 'bg-white text-purple-900 shadow-lg'
+              : 'bg-white/10 text-white hover:bg-white/20'
+              }`}
+          >
+            Overs/Unders
+          </button>
         </div>
 
         {loading ? (
@@ -149,6 +163,7 @@ function App() {
             {activeTab === 'players' && <PlayerStats players={players} teams={teams} />}
             {activeTab === 'suspensions' && <SuspensionStats players={players} />}
             {activeTab === 'eo' && <EOTracker players={players} />}
+            {activeTab === 'oversunders' && <OversUnders players={players} teams={teams} currentGameweek={currentGameweek} />}
           </>
         )}
 

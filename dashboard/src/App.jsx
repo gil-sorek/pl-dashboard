@@ -26,16 +26,22 @@ function App() {
       if (!isLiveRefresh) {
         console.log('Attempting to load data from snapshot...');
         try {
-          // In production, snapshots are relative to the base path
-          const response = await fetch(`./data/snapshot.json?t=${Date.now()}`);
+          // Construct absolute path using Vite's BASE_URL
+          const baseUrl = import.meta.env.BASE_URL || '/';
+          const snapshotPath = `${baseUrl.endsWith('/') ? baseUrl : baseUrl + '/'}data/snapshot.json?t=${Date.now()}`;
+          console.log('Fetching snapshot from:', snapshotPath);
+
+          const response = await fetch(snapshotPath);
           if (response.ok) {
             const snapshot = await response.json();
             data = snapshot;
             setLastUpdated(new Date(snapshot.updatedAt));
             console.log('Snapshot loaded instantly!');
+          } else {
+            console.warn(`Snapshot fetch failed with status: ${response.status} ${response.statusText}`);
           }
         } catch (snapshotErr) {
-          console.warn('Snapshot load failed, falling back to live fetch:', snapshotErr);
+          console.warn('Snapshot load error, falling back to live fetch:', snapshotErr);
         }
       }
 

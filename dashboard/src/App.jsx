@@ -25,23 +25,32 @@ function App() {
 
       if (!isLiveRefresh) {
         console.log('Attempting to load data from snapshot...');
-        try {
-          // Construct absolute path using Vite's BASE_URL
-          const baseUrl = import.meta.env.BASE_URL || '/';
-          const snapshotPath = `${baseUrl.endsWith('/') ? baseUrl : baseUrl + '/'}data/snapshot.json?t=${Date.now()}`;
-          console.log('Fetching snapshot from:', snapshotPath);
+        const baseUrl = import.meta.env.BASE_URL || '/';
+        const cleanBase = baseUrl.endsWith('/') ? baseUrl : baseUrl + '/';
 
-          const response = await fetch(snapshotPath);
-          if (response.ok) {
-            const snapshot = await response.json();
-            data = snapshot;
-            setLastUpdated(new Date(snapshot.updatedAt));
-            console.log('Snapshot loaded instantly!');
-          } else {
-            console.warn(`Snapshot fetch failed with status: ${response.status} ${response.statusText}`);
+        // Try these paths in order to be robust across different hosting structures
+        const pathsToTry = [
+          `${cleanBase}data/snapshot.json`, // Preferred: absolute from base
+          'data/snapshot.json',             // Fallback: simple relative
+          './data/snapshot.json'            // Fallback: explicit relative
+        ];
+
+        for (const path of pathsToTry) {
+          try {
+            console.log('Trying snapshot path:', path);
+            const response = await fetch(path);
+            if (response.ok) {
+              const snapshot = await response.json();
+              data = snapshot;
+              setLastUpdated(new Date(snapshot.updatedAt));
+              console.log('Snapshot loaded instantly from:', path);
+              break;
+            } else {
+              console.warn(`Snapshot fetch failed for ${path} with status: ${response.status}`);
+            }
+          } catch (err) {
+            console.warn(`Path ${path} error:`, err);
           }
-        } catch (snapshotErr) {
-          console.warn('Snapshot load error, falling back to live fetch:', snapshotErr);
         }
       }
 

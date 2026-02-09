@@ -398,18 +398,21 @@ export const fetchPremierLeagueData = async () => {
                         const seasonDefCon = historyData.history.reduce((sum, m) =>
                             sum + parseFloat(m.defensive_contribution || 0), 0
                         );
+                        // Use calculated sum if bootstrap is missing or just to be safe/consistent
                         const dcPer90 = seasonMinutes > 0 ? (seasonDefCon / seasonMinutes) * 90 : 0;
 
                         return {
                             id: player.id,
                             name: player.web_name,
                             fullName: `${player.first_name} ${player.second_name}`,
+                            code: player.code,
                             team: team.short_name,
                             teamId: player.team,
                             teamCode: team.code,
                             position: position,
                             price: player.now_cost / 10,
                             yellowCards: player.yellow_cards || 0,
+                            redCards: player.red_cards || 0,
                             selectedBy: parseFloat(player.selected_by_percent || 0),
                             xG: totalXG,
                             xA: totalXA,
@@ -424,7 +427,16 @@ export const fetchPremierLeagueData = async () => {
                             seasonGoals: parseInt(player.goals_scored || 0),
                             seasonAssists: parseInt(player.assists || 0),
                             seasonMinutes: parseInt(player.minutes || 0),
-                            totalPoints: parseInt(player.total_points || 0)
+                            totalPoints: parseInt(player.total_points || 0),
+                            starts: parseInt(player.starts || 0),
+                            matchesPlayed: historyData.history.filter(m => m.minutes > 0).length,
+                            defconMatches: historyData.history.filter(m => {
+                                if (m.minutes === 0) return false;
+                                const isDefen = player.element_type === 2 || player.element_type === 1; // DEF or GK
+                                const dc = parseFloat(m.defensive_contribution || 0);
+                                return isDefen ? (dc >= 10) : (dc >= 12);
+                            }).length,
+                            seasonDefCon: parseFloat(player.defensive_contribution || 0)
                         };
                     } catch (err) {
                         console.error(`Error fetching history for player ${player.id}:`, err);

@@ -5,6 +5,7 @@ import PlayerStats from './components/dashboard/PlayerStats';
 import SuspensionStats from './components/dashboard/SuspensionStats';
 import EOTracker from './components/dashboard/EOTracker';
 import OversUnders from './components/dashboard/OversUnders';
+import CompareTab from './components/dashboard/CompareTab';
 import { RefreshCw, AlertCircle } from './components/ui/Icons';
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
         console.log('Attempting to load data from snapshot...');
         try {
           // In production, snapshots are relative to the base path
-          const response = await fetch('./data/snapshot.json');
+          const response = await fetch(`./data/snapshot.json?t=${Date.now()}`);
           if (response.ok) {
             const snapshot = await response.json();
             data = snapshot;
@@ -143,6 +144,15 @@ function App() {
           >
             Overs/Unders
           </button>
+          <button
+            onClick={() => setActiveTab('compare')}
+            className={`px-8 py-4 rounded-lg font-semibold transition-all ${activeTab === 'compare'
+              ? 'bg-white text-purple-900 shadow-lg'
+              : 'bg-white/10 text-white hover:bg-white/20'
+              }`}
+          >
+            Compare
+          </button>
         </div>
 
         {loading ? (
@@ -164,29 +174,10 @@ function App() {
             {activeTab === 'suspensions' && <SuspensionStats players={players} />}
             {activeTab === 'eo' && <EOTracker players={players} />}
             {activeTab === 'oversunders' && <OversUnders players={players} teams={teams} currentGameweek={currentGameweek} />}
+            {activeTab === 'compare' && <CompareTab players={players} />}
           </>
         )}
 
-        <div className="mt-6 bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
-          <p className="text-white text-sm mb-2">
-            <strong>Teams Attack:</strong> <span className="text-green-400">Green = High xG (&gt;1.5)</span> •
-            <span className="text-yellow-400 ml-2">Yellow = Medium (0.5-1.5)</span> •
-            <span className="text-red-400 ml-2">Red = Low (&lt;0.5)</span>
-          </p>
-          <p className="text-white text-sm mb-2">
-            <strong>Teams Defense:</strong> <span className="text-green-400">Green = Low xGC (&lt;0.7)</span> •
-            <span className="text-yellow-400 ml-2">Yellow = Medium (0.7-1.2)</span> •
-            <span className="text-red-400 ml-2">Red = High (&gt;1.2)</span>
-          </p>
-          <p className="text-white text-sm">
-            <strong>Players (xGI):</strong> <span className="text-green-400">Green = High (&gt;1)</span> •
-            <span className="text-yellow-400 ml-2">Yellow = Medium (0.3-1)</span> •
-            <span className="text-red-400 ml-2">Red = Low (&lt;0.3)</span>
-          </p>
-          <p className="text-purple-200 text-xs mt-2">
-            xG = Expected Goals (derived from live player stats) | xGC = Expected Goals Conceded | xGI = Expected Goal Involvements | DC/90 = Defensive Contributions per 90 minutes
-          </p>
-        </div>
       </div>
     </div>
   );

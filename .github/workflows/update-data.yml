@@ -22,8 +22,8 @@ jobs:
       - name: Fetch Data Snapshot
         run: |
           cd dashboard
-          npm install --no-package-lock
-          node scripts/fetch-snapshot.mjs
+          npm install
+          node update_snapshot.js
 
       - name: Commit and Push Data
         run: |
@@ -31,6 +31,7 @@ jobs:
           git config --global user.email "action@github.com"
           git add -f dashboard/public/data/snapshot.json
           git commit -m "data: automated snapshot update [skip ci]" || echo "No changes to commit"
+          git pull --rebase origin main
           git push origin main
 
       - name: Build Dashboard
@@ -44,6 +45,5 @@ jobs:
           folder: dashboard/dist
           branch: gh-pages
           token: ${{ secrets.GITHUB_TOKEN }}
-          clean-exclude: |
-            .nojekyll
-            !.gitignore
+          clean: true
+

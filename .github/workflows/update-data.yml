@@ -31,6 +31,8 @@ jobs:
           git config --global user.email "action@github.com"
           git add -f dashboard/public/data/snapshot.json
           git commit -m "data: automated snapshot update [skip ci]" || echo "No changes to commit"
+          # Clear any unstaged changes (like package-lock.json) before pulling
+          git checkout .
           git pull --rebase origin main
           git push origin main
 

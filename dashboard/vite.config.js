@@ -7,5 +7,5 @@ export default defineConfig({
     react(),
     // tailwindcss(), // Wait, I am using PostCSS plugin method as per my previous steps.
   ],
-  base: './',
+  base: '/pl-dashboard/',
 })

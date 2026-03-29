@@ -3957,10 +3957,10 @@
       "teamId": 7,
       "teamCode": 8,
       "position": "DEF",
-      "price": 5.5,
+      "price": 5.4,
       "yellowCards": 3,
       "redCards": 1,
-      "selectedBy": 13.9,
+      "selectedBy": 13.8,
       "xG": 0.16,
       "xA": 0.3,
       "xGI": 0.45999999999999996,
@@ -11848,7 +11848,7 @@
       "price": 7.4,
       "yellowCards": 3,
       "redCards": 1,
-      "selectedBy": 7.3,
+      "selectedBy": 7.4,
       "xG": 3.68,
       "xA": 0.33,
       "xGI": 4.01,
@@ -18912,7 +18912,7 @@
       "price": 6.3,
       "yellowCards": 3,
       "redCards": 1,
-      "selectedBy": 5.8,
+      "selectedBy": 5.7,
       "xG": 0,
       "xA": 0,
       "xGI": 0,
@@ -37322,5 +37322,5 @@
     }
   ],
   "currentGameweek": 31,
-  "updatedAt": "2026-03-28T05:40:27.411Z"
+  "updatedAt": "2026-03-29T05:57:10.432Z"
 }

@@ -1810,7 +1810,7 @@
       "price": 7.2,
       "yellowCards": 3,
       "redCards": 0,
-      "selectedBy": 43.1,
+      "selectedBy": 43,
       "xG": 0.18,
       "xA": 0.81,
       "xGI": 0.99,
@@ -2761,7 +2761,7 @@
       "teamId": 9,
       "teamCode": 11,
       "position": "MID",
-      "price": 5.2,
+      "price": 5.3,
       "yellowCards": 7,
       "redCards": 0,
       "selectedBy": 4.3,
@@ -9456,7 +9456,7 @@
       "price": 5,
       "yellowCards": 4,
       "redCards": 0,
-      "selectedBy": 2,
+      "selectedBy": 1.9,
       "xG": 0.9800000000000001,
       "xA": 0.99,
       "xGI": 1.9699999999999998,
@@ -20465,7 +20465,7 @@
       "teamId": 14,
       "teamCode": 1,
       "position": "GK",
-      "price": 5,
+      "price": 5.1,
       "yellowCards": 0,
       "redCards": 0,
       "selectedBy": 2.8,
@@ -37322,5 +37322,5 @@
     }
   ],
   "currentGameweek": 31,
-  "updatedAt": "2026-04-01T06:11:05.634Z"
+  "updatedAt": "2026-04-02T05:56:12.920Z"
 }

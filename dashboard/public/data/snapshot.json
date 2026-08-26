@@ -8,19 +8,19 @@
       "fixtures": [
         {
           "gameweek": 1,
-          "opponent": "-",
-          "opponentId": null,
+          "opponent": "COV",
+          "opponentId": 7,
           "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "xg": "1.88",
+          "gc": "0.21",
+          "score": "3-0",
+          "isBlank": false
         }
       ],
-      "totalXG": 0,
-      "avgXG": 0,
-      "totalGC": 0,
-      "avgGC": 0
+      "totalXG": 1.88,
+      "avgXG": 1.88,
+      "totalGC": 0.21,
+      "avgGC": 0.21
     },
     {
       "id": 2,
@@ -30,19 +30,19 @@
       "fixtures": [
         {
           "gameweek": 1,
-          "opponent": "-",
-          "opponentId": null,
-          "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "opponent": "BHA",
+          "opponentId": 5,
+          "isHome": false,
+          "xg": "0.30",
+          "gc": "3.77",
+          "score": "0-4",
+          "isBlank": false
         }
       ],
-      "totalXG": 0,
-      "avgXG": 0,
-      "totalGC": 0,
-      "avgGC": 0
+      "totalXG": 0.3,
+      "avgXG": 0.3,
+      "totalGC": 3.77,
+      "avgGC": 3.77
     },
     {
       "id": 3,
@@ -52,19 +52,19 @@
       "fixtures": [
         {
           "gameweek": 1,
-          "opponent": "-",
-          "opponentId": null,
-          "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "opponent": "MCI",
+          "opponentId": 15,
+          "isHome": false,
+          "xg": "0.65",
+          "gc": "2.24",
+          "score": "1-2",
+          "isBlank": false
         }
       ],
-      "totalXG": 0,
-      "avgXG": 0,
-      "totalGC": 0,
-      "avgGC": 0
+      "totalXG": 0.65,
+      "avgXG": 0.65,
+      "totalGC": 2.24,
+      "avgGC": 2.24
     },
     {
       "id": 4,
@@ -74,19 +74,19 @@
       "fixtures": [
         {
           "gameweek": 1,
-          "opponent": "-",
-          "opponentId": null,
+          "opponent": "TOT",
+          "opponentId": 19,
           "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "xg": "3.91",
+          "gc": "0.57",
+          "score": "3-0",
+          "isBlank": false
         }
       ],
-      "totalXG": 0,
-      "avgXG": 0,
-      "totalGC": 0,
-      "avgGC": 0
+      "totalXG": 3.91,
+      "avgXG": 3.91,
+      "totalGC": 0.57,
+      "avgGC": 0.57
     },
     {
       "id": 5,
@@ -96,19 +96,19 @@
       "fixtures": [
         {
           "gameweek": 1,
-          "opponent": "-",
-          "opponentId": null,
+          "opponent": "AVL",
+          "opponentId": 2,
           "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "xg": "3.77",
+          "gc": "0.30",
+          "score": "4-0",
+          "isBlank": false
         }
       ],
-      "totalXG": 0,
-      "avgXG": 0,
-      "totalGC": 0,
-      "avgGC": 0
+      "totalXG": 3.77,
+      "avgXG": 3.77,
+      "totalGC": 0.3,
+      "avgGC": 0.3
     },
     {
       "id": 6,
@@ -118,19 +118,19 @@
       "fixtures": [
         {
           "gameweek": 1,
-          "opponent": "-",
-          "opponentId": null,
-          "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "opponent": "FUL",
+          "opponentId": 10,
+          "isHome": false,
+          "xg": "2.23",
+          "gc": "1.38",
+          "score": "3-2",
+          "isBlank": false
         }
       ],
-      "totalXG": 0,
-      "avgXG": 0,
-      "totalGC": 0,
-      "avgGC": 0
+      "totalXG": 2.23,
+      "avgXG": 2.23,
+      "totalGC": 1.38,
+      "avgGC": 1.38
     },
     {
       "id": 7,
@@ -140,19 +140,19 @@
       "fixtures": [
         {
           "gameweek": 1,
-          "opponent": "-",
-          "opponentId": null,
-          "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "opponent": "ARS",
+          "opponentId": 1,
+          "isHome": false,
+          "xg": "0.21",
+          "gc": "1.88",
+          "score": "0-3",
+          "isBlank": false
         }
       ],
-      "totalXG": 0,
-      "avgXG": 0,
-      "totalGC": 0,
-      "avgGC": 0
+      "totalXG": 0.21,
+      "avgXG": 0.21,
+      "totalGC": 1.88,
+      "avgGC": 1.88
     },
     {
       "id": 8,
@@ -162,19 +162,19 @@
       "fixtures": [
         {
           "gameweek": 1,
-          "opponent": "-",
-          "opponentId": null,
-          "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "opponent": "EVE",
+          "opponentId": 9,
+          "isHome": false,
+          "xg": "1.97",
+          "gc": "1.12",
+          "score": "0-2",
+          "isBlank": false
         }
       ],
-      "totalXG": 0,
-      "avgXG": 0,
-      "totalGC": 0,
-      "avgGC": 0
+      "totalXG": 1.97,
+      "avgXG": 1.97,
+      "totalGC": 1.12,
+      "avgGC": 1.12
     },
     {
       "id": 9,
@@ -184,19 +184,19 @@
       "fixtures": [
         {
           "gameweek": 1,
-          "opponent": "-",
-          "opponentId": null,
+          "opponent": "CRY",
+          "opponentId": 8,
           "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "xg": "1.12",
+          "gc": "1.97",
+          "score": "2-0",
+          "isBlank": false
         }
       ],
-      "totalXG": 0,
-      "avgXG": 0,
-      "totalGC": 0,
-      "avgGC": 0
+      "totalXG": 1.12,
+      "avgXG": 1.12,
+      "totalGC": 1.97,
+      "avgGC": 1.97
     },
     {
       "id": 10,
@@ -206,19 +206,19 @@
       "fixtures": [
         {
           "gameweek": 1,
-          "opponent": "-",
-          "opponentId": null,
+          "opponent": "CHE",
+          "opponentId": 6,
           "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "xg": "1.38",
+          "gc": "2.23",
+          "score": "2-3",
+          "isBlank": false
         }
       ],
-      "totalXG": 0,
-      "avgXG": 0,
-      "totalGC": 0,
-      "avgGC": 0
+      "totalXG": 1.38,
+      "avgXG": 1.38,
+      "totalGC": 2.23,
+      "avgGC": 2.23
     },
     {
       "id": 11,
@@ -228,19 +228,19 @@
       "fixtures": [
         {
           "gameweek": 1,
-          "opponent": "-",
-          "opponentId": null,
+          "opponent": "MUN",
+          "opponentId": 16,
           "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "xg": "1.08",
+          "gc": "1.82",
+          "score": "2-0",
+          "isBlank": false
         }
       ],
-      "totalXG": 0,
-      "avgXG": 0,
-      "totalGC": 0,
-      "avgGC": 0
+      "totalXG": 1.08,
+      "avgXG": 1.08,
+      "totalGC": 1.82,
+      "avgGC": 1.82
     },
     {
       "id": 12,
@@ -250,19 +250,19 @@
       "fixtures": [
         {
           "gameweek": 1,
-          "opponent": "-",
-          "opponentId": null,
+          "opponent": "SUN",
+          "opponentId": 20,
           "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "xg": "1.79",
+          "gc": "0.67",
+          "score": "2-1",
+          "isBlank": false
         }
       ],
-      "totalXG": 0,
-      "avgXG": 0,
-      "totalGC": 0,
-      "avgGC": 0
+      "totalXG": 1.79,
+      "avgXG": 1.79,
+      "totalGC": 0.67,
+      "avgGC": 0.67
     },
     {
       "id": 13,
@@ -272,19 +272,19 @@
       "fixtures": [
         {
           "gameweek": 1,
-          "opponent": "-",
-          "opponentId": null,
-          "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "opponent": "NFO",
+          "opponentId": 18,
+          "isHome": false,
+          "xg": "0.47",
+          "gc": "0.65",
+          "score": "1-0",
+          "isBlank": false
         }
       ],
-      "totalXG": 0,
-      "avgXG": 0,
-      "totalGC": 0,
-      "avgGC": 0
+      "totalXG": 0.47,
+      "avgXG": 0.47,
+      "totalGC": 0.65,
+      "avgGC": 0.65
     },
     {
       "id": 14,
@@ -294,19 +294,19 @@
       "fixtures": [
         {
           "gameweek": 1,
-          "opponent": "-",
-          "opponentId": null,
-          "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "opponent": "NEW",
+          "opponentId": 17,
+          "isHome": false,
+          "xg": "3.01",
+          "gc": "1.58",
+          "score": "2-2",
+          "isBlank": false
         }
       ],
-      "totalXG": 0,
-      "avgXG": 0,
-      "totalGC": 0,
-      "avgGC": 0
+      "totalXG": 3.01,
+      "avgXG": 3.01,
+      "totalGC": 1.58,
+      "avgGC": 1.58
     },
     {
       "id": 15,
@@ -316,19 +316,19 @@
       "fixtures": [
         {
           "gameweek": 1,
-          "opponent": "-",
-          "opponentId": null,
+          "opponent": "BOU",
+          "opponentId": 3,
           "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "xg": "2.24",
+          "gc": "0.65",
+          "score": "2-1",
+          "isBlank": false
         }
       ],
-      "totalXG": 0,
-      "avgXG": 0,
-      "totalGC": 0,
-      "avgGC": 0
+      "totalXG": 2.24,
+      "avgXG": 2.24,
+      "totalGC": 0.65,
+      "avgGC": 0.65
     },
     {
       "id": 16,
@@ -338,19 +338,19 @@
       "fixtures": [
         {
           "gameweek": 1,
-          "opponent": "-",
-          "opponentId": null,
-          "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "opponent": "HUL",
+          "opponentId": 11,
+          "isHome": false,
+          "xg": "1.82",
+          "gc": "1.08",
+          "score": "0-2",
+          "isBlank": false
         }
       ],
-      "totalXG": 0,
-      "avgXG": 0,
-      "totalGC": 0,
-      "avgGC": 0
+      "totalXG": 1.82,
+      "avgXG": 1.82,
+      "totalGC": 1.08,
+      "avgGC": 1.08
     },
     {
       "id": 17,
@@ -360,19 +360,19 @@
       "fixtures": [
         {
           "gameweek": 1,
-          "opponent": "-",
-          "opponentId": null,
+          "opponent": "LIV",
+          "opponentId": 14,
           "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "xg": "1.58",
+          "gc": "3.01",
+          "score": "2-2",
+          "isBlank": false
         }
       ],
-      "totalXG": 0,
-      "avgXG": 0,
-      "totalGC": 0,
-      "avgGC": 0
+      "totalXG": 1.58,
+      "avgXG": 1.58,
+      "totalGC": 3.01,
+      "avgGC": 3.01
     },
     {
       "id": 18,
@@ -382,19 +382,19 @@
       "fixtures": [
         {
           "gameweek": 1,
-          "opponent": "-",
-          "opponentId": null,
+          "opponent": "LEE",
+          "opponentId": 13,
           "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "xg": "0.65",
+          "gc": "0.47",
+          "score": "0-1",
+          "isBlank": false
         }
       ],
-      "totalXG": 0,
-      "avgXG": 0,
-      "totalGC": 0,
-      "avgGC": 0
+      "totalXG": 0.65,
+      "avgXG": 0.65,
+      "totalGC": 0.47,
+      "avgGC": 0.47
     },
     {
       "id": 19,
@@ -404,19 +404,19 @@
       "fixtures": [
         {
           "gameweek": 1,
-          "opponent": "-",
-          "opponentId": null,
-          "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "opponent": "BRE",
+          "opponentId": 4,
+          "isHome": false,
+          "xg": "0.57",
+          "gc": "3.91",
+          "score": "0-3",
+          "isBlank": false
         }
       ],
-      "totalXG": 0,
-      "avgXG": 0,
-      "totalGC": 0,
-      "avgGC": 0
+      "totalXG": 0.57,
+      "avgXG": 0.57,
+      "totalGC": 3.91,
+      "avgGC": 3.91
     },
     {
       "id": 20,
@@ -426,19 +426,19 @@
       "fixtures": [
         {
           "gameweek": 1,
-          "opponent": "-",
-          "opponentId": null,
-          "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "opponent": "IPS",
+          "opponentId": 12,
+          "isHome": false,
+          "xg": "0.67",
+          "gc": "1.79",
+          "score": "1-2",
+          "isBlank": false
         }
       ],
-      "totalXG": 0,
-      "avgXG": 0,
-      "totalGC": 0,
-      "avgGC": 0
+      "totalXG": 0.67,
+      "avgXG": 0.67,
+      "totalGC": 1.79,
+      "avgGC": 1.79
     }
   ],
   "players": [
@@ -451,10 +451,10 @@
       "teamId": 5,
       "teamCode": 36,
       "position": "DEF",
-      "price": 4.5,
+      "price": 4.6,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 4.5,
+      "selectedBy": 6.1,
       "xG": 1.47,
       "xA": 0.21,
       "xGI": 1.68,
@@ -474,7 +474,7 @@
           "assists": 1,
           "minutes": 77,
           "points": 17,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 77,
@@ -504,7 +504,7 @@
       "price": 6,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 1.4,
+      "selectedBy": 2,
       "xG": 1.41,
       "xA": 0.02,
       "xGI": 1.43,
@@ -524,7 +524,7 @@
           "assists": 0,
           "minutes": 63,
           "points": 16,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 63,
@@ -554,7 +554,7 @@
       "price": 4,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 1.9,
+      "selectedBy": 2.3,
       "xG": 0.28,
       "xA": 0,
       "xGI": 0.28,
@@ -574,7 +574,7 @@
           "assists": 0,
           "minutes": 63,
           "points": 15,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 63,
@@ -601,10 +601,10 @@
       "teamId": 4,
       "teamCode": 94,
       "position": "MID",
-      "price": 5.5,
+      "price": 5.6,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 5.5,
+      "selectedBy": 6.7,
       "xG": 0.05,
       "xA": 0.33,
       "xGI": 0.38,
@@ -624,7 +624,7 @@
           "assists": 2,
           "minutes": 75,
           "points": 14,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 75,
@@ -654,7 +654,7 @@
       "price": 4,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 1.4,
+      "selectedBy": 1.5,
       "xG": 0.52,
       "xA": 0,
       "xGI": 0.52,
@@ -674,7 +674,7 @@
           "assists": 0,
           "minutes": 63,
           "points": 14,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 63,
@@ -704,7 +704,7 @@
       "price": 4.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 5.2,
+      "selectedBy": 6.2,
       "xG": 0.5,
       "xA": 0,
       "xGI": 0.5,
@@ -724,7 +724,7 @@
           "assists": 0,
           "minutes": 75,
           "points": 13,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 75,
@@ -754,7 +754,7 @@
       "price": 9.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 11.8,
+      "selectedBy": 13.4,
       "xG": 0.28,
       "xA": 0.19,
       "xGI": 0.47,
@@ -774,7 +774,7 @@
           "assists": 1,
           "minutes": 82,
           "points": 13,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 82,
@@ -804,7 +804,7 @@
       "price": 6,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 1.4,
+      "selectedBy": 1.7,
       "xG": 0.1,
       "xA": 0.05,
       "xGI": 0.15,
@@ -824,7 +824,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 13,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -854,7 +854,7 @@
       "price": 7,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 4.6,
+      "selectedBy": 5.2,
       "xG": 0.3,
       "xA": 0.15,
       "xGI": 0.45,
@@ -874,7 +874,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 12,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -904,7 +904,7 @@
       "price": 5.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 5.4,
+      "selectedBy": 5.9,
       "xG": 0.18,
       "xA": 0.21,
       "xGI": 0.39,
@@ -924,7 +924,7 @@
           "assists": 1,
           "minutes": 90,
           "points": 11,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -954,7 +954,7 @@
       "price": 6.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 10.3,
+      "selectedBy": 10.8,
       "xG": 0.21,
       "xA": 0.1,
       "xGI": 0.31,
@@ -974,7 +974,7 @@
           "assists": 0,
           "minutes": 75,
           "points": 11,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 75,
@@ -1004,7 +1004,7 @@
       "price": 7.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 65.1,
+      "selectedBy": 66.3,
       "xG": 0.63,
       "xA": 0.06,
       "xGI": 0.69,
@@ -1024,7 +1024,7 @@
           "assists": 1,
           "minutes": 90,
           "points": 11,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -1054,7 +1054,7 @@
       "price": 6.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 4.1,
+      "selectedBy": 4.3,
       "xG": 0.12,
       "xA": 0.17,
       "xGI": 0.29,
@@ -1074,7 +1074,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 11,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -1104,7 +1104,7 @@
       "price": 6,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 1.9,
+      "selectedBy": 2.1,
       "xG": 0.4,
       "xA": 0.08,
       "xGI": 0.48,
@@ -1124,7 +1124,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 10,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -1154,7 +1154,7 @@
       "price": 5.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 0.7,
+      "selectedBy": 0.8,
       "xG": 0.77,
       "xA": 0.12,
       "xGI": 0.89,
@@ -1174,7 +1174,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 10,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -1204,7 +1204,7 @@
       "price": 4.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 1.5,
+      "selectedBy": 2,
       "xG": 0,
       "xA": 0,
       "xGI": 0,
@@ -1224,7 +1224,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 10,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -1254,7 +1254,7 @@
       "price": 5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 0.6,
+      "selectedBy": 0.8,
       "xG": 0.11,
       "xA": 0,
       "xGI": 0.11,
@@ -1274,7 +1274,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 10,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -1304,7 +1304,7 @@
       "price": 4.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 0.8,
+      "selectedBy": 0.9,
       "xG": 0,
       "xA": 0.01,
       "xGI": 0.01,
@@ -1324,7 +1324,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 10,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -1354,7 +1354,7 @@
       "price": 6,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 18.2,
+      "selectedBy": 18.8,
       "xG": 0.89,
       "xA": 0.32,
       "xGI": 1.21,
@@ -1374,7 +1374,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 10,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -1404,7 +1404,7 @@
       "price": 5.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 40.9,
+      "selectedBy": 41.3,
       "xG": 0.04,
       "xA": 0.09,
       "xGI": 0.13,
@@ -1424,7 +1424,7 @@
           "assists": 1,
           "minutes": 80,
           "points": 9,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 80,
@@ -1454,7 +1454,7 @@
       "price": 9.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 10.2,
+      "selectedBy": 10.3,
       "xG": 0.64,
       "xA": 0.08,
       "xGI": 0.72,
@@ -1474,7 +1474,7 @@
           "assists": 0,
           "minutes": 67,
           "points": 9,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 67,
@@ -1504,7 +1504,7 @@
       "price": 5,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 0.2,
+      "selectedBy": 0.3,
       "xG": 0.39,
       "xA": 0.17,
       "xGI": 0.56,
@@ -1524,7 +1524,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 9,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -1554,7 +1554,7 @@
       "price": 6,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 16,
+      "selectedBy": 16.1,
       "xG": 0.24,
       "xA": 0.32,
       "xGI": 0.56,
@@ -1574,7 +1574,7 @@
           "assists": 1,
           "minutes": 90,
           "points": 9,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -1604,7 +1604,7 @@
       "price": 5.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 1.1,
+      "selectedBy": 1.3,
       "xG": 0.82,
       "xA": 0.06,
       "xGI": 0.88,
@@ -1624,7 +1624,7 @@
           "assists": 0,
           "minutes": 65,
           "points": 9,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 65,
@@ -1654,7 +1654,7 @@
       "price": 5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 3.4,
+      "selectedBy": 3.7,
       "xG": 0,
       "xA": 0,
       "xGI": 0,
@@ -1674,7 +1674,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 9,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -1704,7 +1704,7 @@
       "price": 5.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 12.3,
+      "selectedBy": 12.8,
       "xG": 0.19,
       "xA": 0.05,
       "xGI": 0.24,
@@ -1724,7 +1724,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 9,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -1754,7 +1754,7 @@
       "price": 6,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 1.3,
+      "selectedBy": 1.6,
       "xG": 0.22,
       "xA": 0.01,
       "xGI": 0.23,
@@ -1774,7 +1774,7 @@
           "assists": 0,
           "minutes": 75,
           "points": 9,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 75,
@@ -1804,7 +1804,7 @@
       "price": 5.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 4.5,
+      "selectedBy": 4.6,
       "xG": 0,
       "xA": 0.09,
       "xGI": 0.09,
@@ -1824,7 +1824,7 @@
           "assists": 1,
           "minutes": 90,
           "points": 9,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -1854,7 +1854,7 @@
       "price": 4.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 3.7,
+      "selectedBy": 3.8,
       "xG": 0.11,
       "xA": 0.02,
       "xGI": 0.13,
@@ -1874,7 +1874,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 8,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -1904,7 +1904,7 @@
       "price": 7.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 25,
+      "selectedBy": 25.6,
       "xG": 0.96,
       "xA": 0.1,
       "xGI": 1.06,
@@ -1924,7 +1924,7 @@
           "assists": 0,
           "minutes": 81,
           "points": 8,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 81,
@@ -1974,7 +1974,7 @@
           "assists": 1,
           "minutes": 90,
           "points": 8,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -2004,7 +2004,7 @@
       "price": 5.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 1.9,
+      "selectedBy": 2.2,
       "xG": 0.45,
       "xA": 0.09,
       "xGI": 0.54,
@@ -2024,7 +2024,7 @@
           "assists": 0,
           "minutes": 78,
           "points": 8,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 78,
@@ -2054,7 +2054,7 @@
       "price": 4,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 1.8,
+      "selectedBy": 1.9,
       "xG": 0,
       "xA": 0,
       "xGI": 0,
@@ -2074,7 +2074,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 8,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -2104,7 +2104,7 @@
       "price": 7,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 42.5,
+      "selectedBy": 42.8,
       "xG": 0.85,
       "xA": 0.27,
       "xGI": 1.12,
@@ -2124,7 +2124,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 8,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -2154,7 +2154,7 @@
       "price": 7.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 9.3,
+      "selectedBy": 9.9,
       "xG": 0,
       "xA": 0.5,
       "xGI": 0.5,
@@ -2174,7 +2174,7 @@
           "assists": 2,
           "minutes": 27,
           "points": 8,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 27,
@@ -2204,7 +2204,7 @@
       "price": 5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 6.2,
+      "selectedBy": 6.3,
       "xG": 0,
       "xA": 0.01,
       "xGI": 0.01,
@@ -2224,7 +2224,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 7,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -2274,7 +2274,7 @@
           "assists": 0,
           "minutes": 77,
           "points": 7,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 77,
@@ -2304,7 +2304,7 @@
       "price": 5.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 8.5,
+      "selectedBy": 8.7,
       "xG": 0,
       "xA": 0.02,
       "xGI": 0.02,
@@ -2324,7 +2324,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 7,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -2354,7 +2354,7 @@
       "price": 5.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 0.3,
+      "selectedBy": 0.4,
       "xG": 0.17,
       "xA": 0.04,
       "xGI": 0.21,
@@ -2374,7 +2374,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 7,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -2424,7 +2424,7 @@
           "assists": 0,
           "minutes": 19,
           "points": 7,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 19,
@@ -2454,7 +2454,7 @@
       "price": 6,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 38,
+      "selectedBy": 38.1,
       "xG": 0,
       "xA": 0,
       "xGI": 0,
@@ -2474,7 +2474,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -2504,7 +2504,7 @@
       "price": 5.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 6.1,
+      "selectedBy": 6,
       "xG": 0,
       "xA": 0,
       "xGI": 0,
@@ -2524,7 +2524,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -2554,7 +2554,7 @@
       "price": 7.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 6.7,
+      "selectedBy": 7,
       "xG": 0.26,
       "xA": 0.03,
       "xGI": 0.29,
@@ -2574,7 +2574,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -2604,7 +2604,7 @@
       "price": 6.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 25.6,
+      "selectedBy": 25.8,
       "xG": 0.19,
       "xA": 0.14,
       "xGI": 0.33,
@@ -2624,7 +2624,7 @@
           "assists": 1,
           "minutes": 75,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 75,
@@ -2674,7 +2674,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -2724,7 +2724,7 @@
           "assists": 1,
           "minutes": 66,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 66,
@@ -2774,7 +2774,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -2804,7 +2804,7 @@
       "price": 4.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 0.2,
+      "selectedBy": 0.3,
       "xG": 0,
       "xA": 0.04,
       "xGI": 0.04,
@@ -2824,7 +2824,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -2874,7 +2874,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -2924,7 +2924,7 @@
           "assists": 1,
           "minutes": 85,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 85,
@@ -2974,7 +2974,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -3004,7 +3004,7 @@
       "price": 6,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 9.2,
+      "selectedBy": 9.4,
       "xG": 0,
       "xA": 0.2,
       "xGI": 0.2,
@@ -3024,7 +3024,7 @@
           "assists": 1,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -3054,7 +3054,7 @@
       "price": 6,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 8.9,
+      "selectedBy": 8.8,
       "xG": 0.05,
       "xA": 0,
       "xGI": 0.05,
@@ -3074,7 +3074,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -3124,7 +3124,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -3174,7 +3174,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -3204,7 +3204,7 @@
       "price": 4.5,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 0.3,
+      "selectedBy": 0.4,
       "xG": 0.09,
       "xA": 0.18,
       "xGI": 0.27,
@@ -3224,7 +3224,7 @@
           "assists": 2,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -3254,7 +3254,7 @@
       "price": 6,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 2.5,
+      "selectedBy": 2.9,
       "xG": 0.73,
       "xA": 0.01,
       "xGI": 0.74,
@@ -3274,7 +3274,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -3304,7 +3304,7 @@
       "price": 4,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 0.7,
+      "selectedBy": 0.6,
       "xG": 0,
       "xA": 0.01,
       "xGI": 0.01,
@@ -3324,7 +3324,7 @@
           "assists": 0,
           "minutes": 69,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 69,
@@ -3374,7 +3374,7 @@
           "assists": 0,
           "minutes": 84,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 84,
@@ -3404,7 +3404,7 @@
       "price": 4.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 3.4,
+      "selectedBy": 3.6,
       "xG": 0,
       "xA": 0.44,
       "xGI": 0.44,
@@ -3424,7 +3424,7 @@
           "assists": 1,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -3474,7 +3474,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -3524,7 +3524,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -3574,7 +3574,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -3624,7 +3624,7 @@
           "assists": 0,
           "minutes": 34,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 34,
@@ -3654,7 +3654,7 @@
       "price": 8,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 29.5,
+      "selectedBy": 29.4,
       "xG": 0.05,
       "xA": 0.01,
       "xGI": 0.06,
@@ -3674,7 +3674,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 5,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -3704,7 +3704,7 @@
       "price": 5.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 1,
+      "selectedBy": 1.1,
       "xG": 0.08,
       "xA": 0.44,
       "xGI": 0.52,
@@ -3724,7 +3724,7 @@
           "assists": 1,
           "minutes": 90,
           "points": 5,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -3754,7 +3754,7 @@
       "price": 5.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 1.7,
+      "selectedBy": 1.9,
       "xG": 0.16,
       "xA": 0.01,
       "xGI": 0.17,
@@ -3774,7 +3774,7 @@
           "assists": 1,
           "minutes": 90,
           "points": 5,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -3824,7 +3824,7 @@
           "assists": 1,
           "minutes": 90,
           "points": 5,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -3874,7 +3874,7 @@
           "assists": 1,
           "minutes": 70,
           "points": 5,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 70,
@@ -3924,7 +3924,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 5,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -3974,7 +3974,7 @@
           "assists": 1,
           "minutes": 77,
           "points": 5,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 77,
@@ -4024,7 +4024,7 @@
           "assists": 0,
           "minutes": 73,
           "points": 5,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 73,
@@ -4074,7 +4074,7 @@
           "assists": 0,
           "minutes": 58,
           "points": 5,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 58,
@@ -4104,7 +4104,7 @@
       "price": 6,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 2.6,
+      "selectedBy": 2.7,
       "xG": 0,
       "xA": 0.21,
       "xGI": 0.21,
@@ -4124,7 +4124,7 @@
           "assists": 1,
           "minutes": 74,
           "points": 4,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 74,
@@ -4174,7 +4174,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 4,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -4224,7 +4224,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 4,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -4274,7 +4274,7 @@
           "assists": 0,
           "minutes": 79,
           "points": 4,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 79,
@@ -4324,7 +4324,7 @@
           "assists": 1,
           "minutes": 27,
           "points": 4,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 27,
@@ -4354,7 +4354,7 @@
       "price": 6,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 2.3,
+      "selectedBy": 2.7,
       "xG": 1,
       "xA": 0.02,
       "xGI": 1.02,
@@ -4374,7 +4374,7 @@
           "assists": 1,
           "minutes": 90,
           "points": 4,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -4404,7 +4404,7 @@
       "price": 6,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 1.1,
+      "selectedBy": 1.2,
       "xG": 0.06,
       "xA": 0.14,
       "xGI": 0.2,
@@ -4424,7 +4424,7 @@
           "assists": 1,
           "minutes": 55,
           "points": 4,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 55,
@@ -4474,7 +4474,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 4,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -4524,7 +4524,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -4554,7 +4554,7 @@
       "price": 7.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 17.7,
+      "selectedBy": 17.4,
       "xG": 0.07,
       "xA": 0.08,
       "xGI": 0.15,
@@ -4574,7 +4574,7 @@
           "assists": 0,
           "minutes": 67,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 67,
@@ -4624,7 +4624,7 @@
           "assists": 0,
           "minutes": 74,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 74,
@@ -4674,7 +4674,7 @@
           "assists": 0,
           "minutes": 75,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 75,
@@ -4704,7 +4704,7 @@
       "price": 6,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 3.6,
+      "selectedBy": 3.5,
       "xG": 0.52,
       "xA": 0.01,
       "xGI": 0.53,
@@ -4724,7 +4724,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -4774,7 +4774,7 @@
           "assists": 0,
           "minutes": 66,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 66,
@@ -4824,7 +4824,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -4874,7 +4874,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -4904,7 +4904,7 @@
       "price": 5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 0.8,
+      "selectedBy": 0.7,
       "xG": 0,
       "xA": 0,
       "xGI": 0,
@@ -4924,7 +4924,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -4974,7 +4974,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -5024,7 +5024,7 @@
           "assists": 0,
           "minutes": 83,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 83,
@@ -5074,7 +5074,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -5124,7 +5124,7 @@
           "assists": 0,
           "minutes": 78,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 78,
@@ -5174,7 +5174,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -5224,7 +5224,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -5274,7 +5274,7 @@
           "assists": 0,
           "minutes": 70,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 70,
@@ -5304,7 +5304,7 @@
       "price": 6.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 6.1,
+      "selectedBy": 5.9,
       "xG": 0,
       "xA": 0.02,
       "xGI": 0.02,
@@ -5324,7 +5324,7 @@
           "assists": 0,
           "minutes": 65,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 65,
@@ -5374,7 +5374,7 @@
           "assists": 0,
           "minutes": 81,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 81,
@@ -5424,7 +5424,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -5474,7 +5474,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -5524,7 +5524,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -5554,7 +5554,7 @@
       "price": 5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 3.9,
+      "selectedBy": 4,
       "xG": 0,
       "xA": 0.35,
       "xGI": 0.35,
@@ -5574,7 +5574,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -5624,7 +5624,7 @@
           "assists": 0,
           "minutes": 75,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 75,
@@ -5674,7 +5674,7 @@
           "assists": 0,
           "minutes": 61,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 61,
@@ -5724,7 +5724,7 @@
           "assists": 0,
           "minutes": 73,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 73,
@@ -5754,7 +5754,7 @@
       "price": 6,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 8,
+      "selectedBy": 7.9,
       "xG": 0,
       "xA": 0.02,
       "xGI": 0.02,
@@ -5774,7 +5774,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -5824,7 +5824,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -5874,7 +5874,7 @@
           "assists": 0,
           "minutes": 85,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 85,
@@ -5924,7 +5924,7 @@
           "assists": 0,
           "minutes": 73,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 73,
@@ -5974,7 +5974,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -6024,7 +6024,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -6074,7 +6074,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -6124,7 +6124,7 @@
           "assists": 0,
           "minutes": 88,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 88,
@@ -6174,7 +6174,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -6224,7 +6224,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -6254,7 +6254,7 @@
       "price": 5.5,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 13.7,
+      "selectedBy": 13.4,
       "xG": 0,
       "xA": 0.27,
       "xGI": 0.27,
@@ -6274,7 +6274,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -6324,7 +6324,7 @@
           "assists": 0,
           "minutes": 63,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 63,
@@ -6374,7 +6374,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -6424,7 +6424,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -6474,7 +6474,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -6524,7 +6524,7 @@
           "assists": 0,
           "minutes": 81,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 81,
@@ -6574,7 +6574,7 @@
           "assists": 0,
           "minutes": 69,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 69,
@@ -6604,7 +6604,7 @@
       "price": 5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 0.9,
+      "selectedBy": 1,
       "xG": 0,
       "xA": 0.01,
       "xGI": 0.01,
@@ -6624,7 +6624,7 @@
           "assists": 0,
           "minutes": 69,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 69,
@@ -6674,7 +6674,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -6704,7 +6704,7 @@
       "price": 6.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 5.6,
+      "selectedBy": 5.4,
       "xG": 0.7,
       "xA": 0.02,
       "xGI": 0.72,
@@ -6724,7 +6724,7 @@
           "assists": 0,
           "minutes": 62,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 62,
@@ -6774,7 +6774,7 @@
           "assists": 0,
           "minutes": 62,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 62,
@@ -6804,7 +6804,7 @@
       "price": 4.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 3.1,
+      "selectedBy": 3,
       "xG": 0,
       "xA": 0,
       "xGI": 0,
@@ -6824,7 +6824,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -6874,7 +6874,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -6924,7 +6924,7 @@
           "assists": 0,
           "minutes": 66,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 66,
@@ -6974,7 +6974,7 @@
           "assists": 0,
           "minutes": 72,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 72,
@@ -7024,7 +7024,7 @@
           "assists": 0,
           "minutes": 72,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 72,
@@ -7074,7 +7074,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -7104,7 +7104,7 @@
       "price": 4,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 17.8,
+      "selectedBy": 17.5,
       "xG": 0,
       "xA": 0.01,
       "xGI": 0.01,
@@ -7124,7 +7124,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -7154,7 +7154,7 @@
       "price": 4,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 5.1,
+      "selectedBy": 5,
       "xG": 0,
       "xA": 0.01,
       "xGI": 0.01,
@@ -7174,7 +7174,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -7224,7 +7224,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -7274,7 +7274,7 @@
           "assists": 0,
           "minutes": 65,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 65,
@@ -7324,7 +7324,7 @@
           "assists": 0,
           "minutes": 79,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 79,
@@ -7374,7 +7374,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -7424,7 +7424,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -7474,7 +7474,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -7504,7 +7504,7 @@
       "price": 7.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 12.3,
+      "selectedBy": 12,
       "xG": 0.26,
       "xA": 0.04,
       "xGI": 0.3,
@@ -7524,7 +7524,7 @@
           "assists": 0,
           "minutes": 62,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 62,
@@ -7554,7 +7554,7 @@
       "price": 6,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 1.2,
+      "selectedBy": 1.1,
       "xG": 0.04,
       "xA": 0.02,
       "xGI": 0.06,
@@ -7574,7 +7574,7 @@
           "assists": 0,
           "minutes": 62,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 62,
@@ -7604,7 +7604,7 @@
       "price": 9,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 16.9,
+      "selectedBy": 16.7,
       "xG": 1.09,
       "xA": 0.01,
       "xGI": 1.1,
@@ -7624,7 +7624,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -7654,7 +7654,7 @@
       "price": 6.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 21.2,
+      "selectedBy": 21.1,
       "xG": 0.07,
       "xA": 0.41,
       "xGI": 0.48,
@@ -7674,7 +7674,7 @@
           "assists": 0,
           "minutes": 62,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 62,
@@ -7724,7 +7724,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -7774,7 +7774,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -7804,7 +7804,7 @@
       "price": 8.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 25.4,
+      "selectedBy": 24.9,
       "xG": 0.06,
       "xA": 0.02,
       "xGI": 0.08,
@@ -7824,7 +7824,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -7854,7 +7854,7 @@
       "price": 15.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 68.7,
+      "selectedBy": 68.3,
       "xG": 0.74,
       "xA": 0.02,
       "xGI": 0.76,
@@ -7874,7 +7874,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -7904,7 +7904,7 @@
       "price": 6.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 7,
+      "selectedBy": 6.6,
       "xG": 0,
       "xA": 0.25,
       "xGI": 0.25,
@@ -7924,7 +7924,7 @@
           "assists": 0,
           "minutes": 62,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 62,
@@ -7954,7 +7954,7 @@
       "price": 6,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 2.5,
+      "selectedBy": 2.4,
       "xG": 0.04,
       "xA": 0.11,
       "xGI": 0.15,
@@ -7974,7 +7974,7 @@
           "assists": 0,
           "minutes": 66,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 66,
@@ -8024,7 +8024,7 @@
           "assists": 0,
           "minutes": 66,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 66,
@@ -8054,7 +8054,7 @@
       "price": 12,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 50,
+      "selectedBy": 49.3,
       "xG": 0.08,
       "xA": 0.26,
       "xGI": 0.34,
@@ -8074,7 +8074,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -8104,7 +8104,7 @@
       "price": 8,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 37.2,
+      "selectedBy": 36.7,
       "xG": 0.5,
       "xA": 0.23,
       "xGI": 0.73,
@@ -8124,7 +8124,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -8154,7 +8154,7 @@
       "price": 8,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 9.8,
+      "selectedBy": 9.7,
       "xG": 0.24,
       "xA": 0.21,
       "xGI": 0.45,
@@ -8174,7 +8174,7 @@
           "assists": 0,
           "minutes": 79,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 79,
@@ -8224,7 +8224,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -8274,7 +8274,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -8304,7 +8304,7 @@
       "price": 5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 9.6,
+      "selectedBy": 9.4,
       "xG": 0,
       "xA": 0.02,
       "xGI": 0.02,
@@ -8324,7 +8324,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -8374,7 +8374,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -8404,7 +8404,7 @@
       "price": 8,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 10.6,
+      "selectedBy": 9.8,
       "xG": 0.13,
       "xA": 0.06,
       "xGI": 0.19,
@@ -8424,7 +8424,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -8474,7 +8474,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -8504,7 +8504,7 @@
       "price": 6,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 4.1,
+      "selectedBy": 4,
       "xG": 0.22,
       "xA": 0.02,
       "xGI": 0.24,
@@ -8524,7 +8524,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -8554,7 +8554,7 @@
       "price": 5.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 4,
+      "selectedBy": 3.9,
       "xG": 0.04,
       "xA": 0.06,
       "xGI": 0.1,
@@ -8574,7 +8574,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -8604,7 +8604,7 @@
       "price": 4.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 23.5,
+      "selectedBy": 23.1,
       "xG": 0,
       "xA": 0,
       "xGI": 0,
@@ -8624,7 +8624,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -8674,7 +8674,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -8724,7 +8724,7 @@
           "assists": 0,
           "minutes": 85,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 85,
@@ -8774,7 +8774,7 @@
           "assists": 0,
           "minutes": 67,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 67,
@@ -8804,7 +8804,7 @@
       "price": 6,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 3.1,
+      "selectedBy": 3,
       "xG": 0,
       "xA": 0,
       "xGI": 0,
@@ -8824,7 +8824,7 @@
           "assists": 0,
           "minutes": 67,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 67,
@@ -8854,7 +8854,7 @@
       "price": 4.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 6.7,
+      "selectedBy": 6.6,
       "xG": 0.04,
       "xA": 0.27,
       "xGI": 0.31,
@@ -8874,7 +8874,7 @@
           "assists": 0,
           "minutes": 79,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 79,
@@ -8904,7 +8904,7 @@
       "price": 6,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 9.5,
+      "selectedBy": 9.2,
       "xG": 0,
       "xA": 0.03,
       "xGI": 0.03,
@@ -8924,7 +8924,7 @@
           "assists": 0,
           "minutes": 79,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 79,
@@ -8974,7 +8974,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -9004,7 +9004,7 @@
       "price": 6,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 13.6,
+      "selectedBy": 13.3,
       "xG": 0.3,
       "xA": 0,
       "xGI": 0.3,
@@ -9024,7 +9024,7 @@
           "assists": 0,
           "minutes": 66,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 66,
@@ -9074,7 +9074,7 @@
           "assists": 0,
           "minutes": 9,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 9,
@@ -9124,7 +9124,7 @@
           "assists": 0,
           "minutes": 14,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 14,
@@ -9174,7 +9174,7 @@
           "assists": 0,
           "minutes": 22,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 22,
@@ -9224,7 +9224,7 @@
           "assists": 0,
           "minutes": 14,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 14,
@@ -9254,7 +9254,7 @@
       "price": 5.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 1.1,
+      "selectedBy": 1,
       "xG": 0,
       "xA": 0.02,
       "xGI": 0.02,
@@ -9274,7 +9274,7 @@
           "assists": 0,
           "minutes": 22,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 22,
@@ -9324,7 +9324,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -9374,7 +9374,7 @@
           "assists": 0,
           "minutes": 16,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 16,
@@ -9424,7 +9424,7 @@
           "assists": 0,
           "minutes": 16,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 16,
@@ -9454,7 +9454,7 @@
       "price": 5.5,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 3.1,
+      "selectedBy": 3,
       "xG": 0.04,
       "xA": 0.01,
       "xGI": 0.05,
@@ -9474,7 +9474,7 @@
           "assists": 0,
           "minutes": 81,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 81,
@@ -9524,7 +9524,7 @@
           "assists": 0,
           "minutes": 8,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 8,
@@ -9574,7 +9574,7 @@
           "assists": 0,
           "minutes": 4,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 4,
@@ -9624,7 +9624,7 @@
           "assists": 0,
           "minutes": 8,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 8,
@@ -9674,7 +9674,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -9724,7 +9724,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -9774,7 +9774,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -9824,7 +9824,7 @@
           "assists": 0,
           "minutes": 1,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 1,
@@ -9874,7 +9874,7 @@
           "assists": 0,
           "minutes": 15,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 15,
@@ -9924,7 +9924,7 @@
           "assists": 0,
           "minutes": 15,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 15,
@@ -9974,7 +9974,7 @@
           "assists": 0,
           "minutes": 15,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 15,
@@ -10024,7 +10024,7 @@
           "assists": 0,
           "minutes": 14,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 14,
@@ -10074,7 +10074,7 @@
           "assists": 0,
           "minutes": 14,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 14,
@@ -10124,7 +10124,7 @@
           "assists": 0,
           "minutes": 23,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 23,
@@ -10174,7 +10174,7 @@
           "assists": 0,
           "minutes": 23,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 23,
@@ -10224,7 +10224,7 @@
           "assists": 0,
           "minutes": 7,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 7,
@@ -10274,7 +10274,7 @@
           "assists": 0,
           "minutes": 26,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 26,
@@ -10324,7 +10324,7 @@
           "assists": 0,
           "minutes": 12,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 12,
@@ -10374,7 +10374,7 @@
           "assists": 0,
           "minutes": 26,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 26,
@@ -10424,7 +10424,7 @@
           "assists": 0,
           "minutes": 12,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 12,
@@ -10454,7 +10454,7 @@
       "price": 4.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 0,
+      "selectedBy": 0.1,
       "xG": 0,
       "xA": 0.01,
       "xGI": 0.01,
@@ -10474,7 +10474,7 @@
           "assists": 0,
           "minutes": 4,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 4,
@@ -10524,7 +10524,7 @@
           "assists": 0,
           "minutes": 75,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 75,
@@ -10574,7 +10574,7 @@
           "assists": 0,
           "minutes": 64,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 64,
@@ -10604,7 +10604,7 @@
       "price": 7,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 5.1,
+      "selectedBy": 4.8,
       "xG": 0,
       "xA": 0.02,
       "xGI": 0.02,
@@ -10624,7 +10624,7 @@
           "assists": 0,
           "minutes": 25,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 25,
@@ -10674,7 +10674,7 @@
           "assists": 0,
           "minutes": 14,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 14,
@@ -10704,7 +10704,7 @@
       "price": 6.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 1.3,
+      "selectedBy": 1.2,
       "xG": 0,
       "xA": 0,
       "xGI": 0,
@@ -10724,7 +10724,7 @@
           "assists": 0,
           "minutes": 7,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 7,
@@ -10774,7 +10774,7 @@
           "assists": 0,
           "minutes": 64,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 64,
@@ -10824,7 +10824,7 @@
           "assists": 0,
           "minutes": 8,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 8,
@@ -10874,7 +10874,7 @@
           "assists": 0,
           "minutes": 25,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 25,
@@ -10924,7 +10924,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -10954,7 +10954,7 @@
       "price": 4,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 13.5,
+      "selectedBy": 13.3,
       "xG": 0,
       "xA": 0.01,
       "xGI": 0.01,
@@ -10974,7 +10974,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -11024,7 +11024,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -11074,7 +11074,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -11124,7 +11124,7 @@
           "assists": 0,
           "minutes": 20,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 20,
@@ -11174,7 +11174,7 @@
           "assists": 0,
           "minutes": 28,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 28,
@@ -11224,7 +11224,7 @@
           "assists": 0,
           "minutes": 20,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 20,
@@ -11254,7 +11254,7 @@
       "price": 5,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 0.3,
+      "selectedBy": 0.2,
       "xG": 0,
       "xA": 0,
       "xGI": 0,
@@ -11274,7 +11274,7 @@
           "assists": 0,
           "minutes": 61,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 61,
@@ -11304,7 +11304,7 @@
       "price": 5.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 0.2,
+      "selectedBy": 0.1,
       "xG": 0,
       "xA": 0,
       "xGI": 0,
@@ -11324,7 +11324,7 @@
           "assists": 0,
           "minutes": 8,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 8,
@@ -11374,7 +11374,7 @@
           "assists": 0,
           "minutes": 27,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 27,
@@ -11424,7 +11424,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -11454,7 +11454,7 @@
       "price": 4.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 6,
+      "selectedBy": 5.8,
       "xG": 0,
       "xA": 0.01,
       "xGI": 0.01,
@@ -11474,7 +11474,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -11524,7 +11524,7 @@
           "assists": 0,
           "minutes": 72,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 72,
@@ -11574,7 +11574,7 @@
           "assists": 0,
           "minutes": 35,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 35,
@@ -11604,7 +11604,7 @@
       "price": 6,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 0.6,
+      "selectedBy": 0.5,
       "xG": 0.25,
       "xA": 0.01,
       "xGI": 0.26,
@@ -11624,7 +11624,7 @@
           "assists": 0,
           "minutes": 27,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 27,
@@ -11674,7 +11674,7 @@
           "assists": 0,
           "minutes": 55,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 55,
@@ -11724,7 +11724,7 @@
           "assists": 0,
           "minutes": 18,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 18,
@@ -11774,7 +11774,7 @@
           "assists": 0,
           "minutes": 35,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 35,
@@ -11824,7 +11824,7 @@
           "assists": 0,
           "minutes": 6,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 6,
@@ -11874,7 +11874,7 @@
           "assists": 0,
           "minutes": 11,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 11,
@@ -11924,7 +11924,7 @@
           "assists": 0,
           "minutes": 1,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 1,
@@ -11954,7 +11954,7 @@
       "price": 5.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 2.6,
+      "selectedBy": 2.5,
       "xG": 0.05,
       "xA": 0,
       "xGI": 0.05,
@@ -11974,7 +11974,7 @@
           "assists": 0,
           "minutes": 11,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 11,
@@ -12024,7 +12024,7 @@
           "assists": 0,
           "minutes": 81,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 81,
@@ -12074,7 +12074,7 @@
           "assists": 0,
           "minutes": 17,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 17,
@@ -12124,7 +12124,7 @@
           "assists": 0,
           "minutes": 17,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 17,
@@ -12174,7 +12174,7 @@
           "assists": 0,
           "minutes": 8,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 8,
@@ -12224,7 +12224,7 @@
           "assists": 0,
           "minutes": 23,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 23,
@@ -12274,7 +12274,7 @@
           "assists": 0,
           "minutes": 20,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 20,
@@ -12324,7 +12324,7 @@
           "assists": 0,
           "minutes": 26,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 26,
@@ -12374,7 +12374,7 @@
           "assists": 0,
           "minutes": 5,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 5,
@@ -12424,7 +12424,7 @@
           "assists": 0,
           "minutes": 26,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 26,
@@ -12474,7 +12474,7 @@
           "assists": 0,
           "minutes": 24,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 24,
@@ -12504,7 +12504,7 @@
       "price": 4.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 2.3,
+      "selectedBy": 2.4,
       "xG": 0,
       "xA": 0,
       "xGI": 0,
@@ -12524,7 +12524,7 @@
           "assists": 0,
           "minutes": 10,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 10,
@@ -12574,7 +12574,7 @@
           "assists": 0,
           "minutes": 24,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 24,
@@ -12604,7 +12604,7 @@
       "price": 4,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 1.1,
+      "selectedBy": 1,
       "xG": 0,
       "xA": 0,
       "xGI": 0,
@@ -12624,7 +12624,7 @@
           "assists": 0,
           "minutes": 10,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 10,
@@ -12674,7 +12674,7 @@
           "assists": 0,
           "minutes": 24,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 24,
@@ -12724,7 +12724,7 @@
           "assists": 0,
           "minutes": 8,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 8,
@@ -12754,7 +12754,7 @@
       "price": 6,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 30,
+      "selectedBy": 29.5,
       "xG": 0.13,
       "xA": 0,
       "xGI": 0.13,
@@ -12774,7 +12774,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -12824,7 +12824,7 @@
           "assists": 0,
           "minutes": 69,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 69,
@@ -12854,7 +12854,7 @@
       "price": 5.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 1.7,
+      "selectedBy": 1.6,
       "xG": 0,
       "xA": 0.01,
       "xGI": 0.01,
@@ -12874,7 +12874,7 @@
           "assists": 0,
           "minutes": 27,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 27,
@@ -12924,7 +12924,7 @@
           "assists": 0,
           "minutes": 12,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 12,
@@ -12974,7 +12974,7 @@
           "assists": 0,
           "minutes": 20,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 20,
@@ -13024,7 +13024,7 @@
           "assists": 0,
           "minutes": 8,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 8,
@@ -13074,7 +13074,7 @@
           "assists": 0,
           "minutes": 33,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 33,
@@ -13124,7 +13124,7 @@
           "assists": 0,
           "minutes": 56,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 56,
@@ -13154,7 +13154,7 @@
       "price": 7,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 4.3,
+      "selectedBy": 4.2,
       "xG": 0.12,
       "xA": 0.4,
       "xGI": 0.52,
@@ -13174,7 +13174,7 @@
           "assists": 0,
           "minutes": 81,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 81,
@@ -13224,7 +13224,7 @@
           "assists": 0,
           "minutes": 27,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 27,
@@ -13254,7 +13254,7 @@
       "price": 5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 16.1,
+      "selectedBy": 15.9,
       "xG": 0,
       "xA": 0,
       "xGI": 0,
@@ -13274,7 +13274,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -13324,7 +13324,7 @@
           "assists": 0,
           "minutes": 10,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 10,
@@ -13354,7 +13354,7 @@
       "price": 5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 17.7,
+      "selectedBy": 17.4,
       "xG": 0.04,
       "xA": 0.4,
       "xGI": 0.44,
@@ -13374,7 +13374,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -13424,7 +13424,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -13474,7 +13474,7 @@
           "assists": 0,
           "minutes": 79,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 79,
@@ -13504,7 +13504,7 @@
       "price": 4.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 20.4,
+      "selectedBy": 20.1,
       "xG": 0,
       "xA": 0.26,
       "xGI": 0.26,
@@ -13524,7 +13524,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -13574,7 +13574,7 @@
           "assists": 0,
           "minutes": 45,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 45,
@@ -13624,7 +13624,7 @@
           "assists": 0,
           "minutes": 23,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 23,
@@ -13674,7 +13674,7 @@
           "assists": 0,
           "minutes": 10,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 10,
@@ -13704,7 +13704,7 @@
       "price": 7,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 1.6,
+      "selectedBy": 1.7,
       "xG": 0.04,
       "xA": 0,
       "xGI": 0.04,
@@ -13724,7 +13724,7 @@
           "assists": 0,
           "minutes": 23,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 23,
@@ -13774,7 +13774,7 @@
           "assists": 0,
           "minutes": 1,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 1,
@@ -13824,7 +13824,7 @@
           "assists": 0,
           "minutes": 55,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 55,
@@ -13874,7 +13874,7 @@
           "assists": 0,
           "minutes": 14,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 14,
@@ -13924,7 +13924,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -13974,7 +13974,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -14024,7 +14024,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -14074,7 +14074,7 @@
           "assists": 0,
           "minutes": 16,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 16,
@@ -14124,7 +14124,7 @@
           "assists": 0,
           "minutes": 28,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 28,
@@ -14174,7 +14174,7 @@
           "assists": 0,
           "minutes": 1,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 1,
@@ -14224,7 +14224,7 @@
           "assists": 0,
           "minutes": 16,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 16,
@@ -14254,7 +14254,7 @@
       "price": 5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 10.2,
+      "selectedBy": 10,
       "xG": 0,
       "xA": 0.03,
       "xGI": 0.03,
@@ -14274,7 +14274,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -14324,7 +14324,7 @@
           "assists": 0,
           "minutes": 4,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 4,
@@ -14354,7 +14354,7 @@
       "price": 6.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 1.3,
+      "selectedBy": 1.2,
       "xG": 0,
       "xA": 0.01,
       "xGI": 0.01,
@@ -14374,7 +14374,7 @@
           "assists": 0,
           "minutes": 22,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 22,
@@ -14424,7 +14424,7 @@
           "assists": 0,
           "minutes": 45,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 45,
@@ -14474,7 +14474,7 @@
           "assists": 0,
           "minutes": 45,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 45,
@@ -14504,7 +14504,7 @@
       "price": 6,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 1.8,
+      "selectedBy": 1.7,
       "xG": 0,
       "xA": 0.06,
       "xGI": 0.06,
@@ -14524,7 +14524,7 @@
           "assists": 0,
           "minutes": 45,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 45,
@@ -14574,7 +14574,7 @@
           "assists": 0,
           "minutes": 22,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 22,
@@ -14604,7 +14604,7 @@
       "price": 5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 4.2,
+      "selectedBy": 4.1,
       "xG": 0,
       "xA": 0,
       "xGI": 0,
@@ -14624,7 +14624,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -14674,7 +14674,7 @@
           "assists": 0,
           "minutes": 23,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 23,
@@ -14724,7 +14724,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -14754,7 +14754,7 @@
       "price": 4,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 3.6,
+      "selectedBy": 3.5,
       "xG": 0.01,
       "xA": 0.01,
       "xGI": 0.02,
@@ -14774,7 +14774,7 @@
           "assists": 0,
           "minutes": 66,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 66,
@@ -14824,7 +14824,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -14874,7 +14874,7 @@
           "assists": 0,
           "minutes": 10,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 10,
@@ -14924,7 +14924,7 @@
           "assists": 0,
           "minutes": 10,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 10,
@@ -14974,7 +14974,7 @@
           "assists": 0,
           "minutes": 31,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 31,
@@ -15004,7 +15004,7 @@
       "price": 5.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 1,
+      "selectedBy": 0.9,
       "xG": 0,
       "xA": 0,
       "xGI": 0,
@@ -15024,7 +15024,7 @@
           "assists": 0,
           "minutes": 23,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 23,
@@ -15074,7 +15074,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 0,
@@ -15124,7 +15124,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 0,
@@ -15174,7 +15174,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 0,
@@ -15224,7 +15224,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 0,
@@ -15251,7 +15251,7 @@
       "teamId": 1,
       "teamCode": 3,
       "position": "MID",
-      "price": 6.5,
+      "price": 6.4,
       "yellowCards": 0,
       "redCards": 0,
       "selectedBy": 0.2,
@@ -15274,7 +15274,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 0,
@@ -15324,7 +15324,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 0,
@@ -15374,7 +15374,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 0,
@@ -15424,7 +15424,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 0,
@@ -15444,5 +15444,5 @@
     }
   ],
   "currentGameweek": 1,
-  "updatedAt": "2026-08-25T05:05:31.877Z"
+  "updatedAt": "2026-08-26T05:05:15.106Z"
 }

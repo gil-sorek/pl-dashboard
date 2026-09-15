@@ -38,19 +38,19 @@
         },
         {
           "gameweek": 4,
-          "opponent": "-",
-          "opponentId": null,
-          "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "opponent": "SUN",
+          "opponentId": 20,
+          "isHome": false,
+          "xg": "1.89",
+          "gc": "1.80",
+          "score": "2-0",
+          "isBlank": false
         }
       ],
-      "totalXG": 4.98,
-      "avgXG": 1.6600000000000001,
-      "totalGC": 0.9400000000000001,
-      "avgGC": 0.31333333333333335
+      "totalXG": 6.87,
+      "avgXG": 1.7175,
+      "totalGC": 2.74,
+      "avgGC": 0.685
     },
     {
       "id": 2,
@@ -90,19 +90,19 @@
         },
         {
           "gameweek": 4,
-          "opponent": "-",
-          "opponentId": null,
+          "opponent": "NFO",
+          "opponentId": 18,
           "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "xg": "0.82",
+          "gc": "2.30",
+          "score": "1-2",
+          "isBlank": false
         }
       ],
-      "totalXG": 2.57,
-      "avgXG": 0.8566666666666666,
-      "totalGC": 5.380000000000001,
-      "avgGC": 1.7933333333333337
+      "totalXG": 3.3899999999999997,
+      "avgXG": 0.8474999999999999,
+      "totalGC": 7.680000000000001,
+      "avgGC": 1.9200000000000002
     },
     {
       "id": 3,
@@ -142,19 +142,19 @@
         },
         {
           "gameweek": 4,
-          "opponent": "-",
-          "opponentId": null,
+          "opponent": "BRE",
+          "opponentId": 4,
           "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "xg": "1.78",
+          "gc": "0.52",
+          "score": "2-2",
+          "isBlank": false
         }
       ],
-      "totalXG": 4.21,
-      "avgXG": 1.4033333333333333,
-      "totalGC": 5.03,
-      "avgGC": 1.6766666666666667
+      "totalXG": 5.99,
+      "avgXG": 1.4975,
+      "totalGC": 5.550000000000001,
+      "avgGC": 1.3875000000000002
     },
     {
       "id": 4,
@@ -194,19 +194,19 @@
         },
         {
           "gameweek": 4,
-          "opponent": "-",
-          "opponentId": null,
-          "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "opponent": "BOU",
+          "opponentId": 3,
+          "isHome": false,
+          "xg": "0.52",
+          "gc": "1.78",
+          "score": "2-2",
+          "isBlank": false
         }
       ],
-      "totalXG": 6.79,
-      "avgXG": 2.263333333333333,
-      "totalGC": 3.7399999999999998,
-      "avgGC": 1.2466666666666666
+      "totalXG": 7.3100000000000005,
+      "avgXG": 1.8275000000000001,
+      "totalGC": 5.52,
+      "avgGC": 1.38
     },
     {
       "id": 5,
@@ -246,19 +246,19 @@
         },
         {
           "gameweek": 4,
-          "opponent": "-",
-          "opponentId": null,
-          "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "opponent": "COV",
+          "opponentId": 7,
+          "isHome": false,
+          "xg": "2.80",
+          "gc": "1.37",
+          "score": "5-0",
+          "isBlank": false
         }
       ],
-      "totalXG": 7.430000000000001,
-      "avgXG": 2.476666666666667,
-      "totalGC": 5.96,
-      "avgGC": 1.9866666666666666
+      "totalXG": 10.23,
+      "avgXG": 2.5575,
+      "totalGC": 7.33,
+      "avgGC": 1.8325
     },
     {
       "id": 6,
@@ -298,19 +298,19 @@
         },
         {
           "gameweek": 4,
-          "opponent": "-",
-          "opponentId": null,
+          "opponent": "HUL",
+          "opponentId": 11,
           "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "xg": "0.91",
+          "gc": "1.39",
+          "score": "2-2",
+          "isBlank": false
         }
       ],
-      "totalXG": 5.659999999999999,
-      "avgXG": 1.8866666666666665,
-      "totalGC": 4.9,
-      "avgGC": 1.6333333333333335
+      "totalXG": 6.569999999999999,
+      "avgXG": 1.6424999999999998,
+      "totalGC": 6.29,
+      "avgGC": 1.5725
     },
     {
       "id": 7,
@@ -350,19 +350,19 @@
         },
         {
           "gameweek": 4,
-          "opponent": "-",
-          "opponentId": null,
+          "opponent": "BHA",
+          "opponentId": 5,
           "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "xg": "1.37",
+          "gc": "2.80",
+          "score": "0-5",
+          "isBlank": false
         }
       ],
-      "totalXG": 2.88,
-      "avgXG": 0.96,
-      "totalGC": 4.72,
-      "avgGC": 1.5733333333333333
+      "totalXG": 4.25,
+      "avgXG": 1.0625,
+      "totalGC": 7.52,
+      "avgGC": 1.88
     },
     {
       "id": 8,
@@ -402,19 +402,19 @@
         },
         {
           "gameweek": 4,
-          "opponent": "-",
-          "opponentId": null,
+          "opponent": "IPS",
+          "opponentId": 12,
           "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "xg": "0.61",
+          "gc": "1.70",
+          "score": "2-3",
+          "isBlank": false
         }
       ],
-      "totalXG": 4.4,
-      "avgXG": 1.4666666666666668,
-      "totalGC": 6.28,
-      "avgGC": 2.0933333333333333
+      "totalXG": 5.010000000000001,
+      "avgXG": 1.2525000000000002,
+      "totalGC": 7.98,
+      "avgGC": 1.995
     },
     {
       "id": 9,
@@ -454,19 +454,19 @@
         },
         {
           "gameweek": 4,
-          "opponent": "-",
-          "opponentId": null,
-          "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "opponent": "TOT",
+          "opponentId": 19,
+          "isHome": false,
+          "xg": "1.12",
+          "gc": "0.69",
+          "score": "0-0",
+          "isBlank": false
         }
       ],
-      "totalXG": 3.75,
-      "avgXG": 1.25,
-      "totalGC": 4.619999999999999,
-      "avgGC": 1.5399999999999998
+      "totalXG": 4.87,
+      "avgXG": 1.2175,
+      "totalGC": 5.309999999999999,
+      "avgGC": 1.3274999999999997
     },
     {
       "id": 10,
@@ -506,19 +506,19 @@
         },
         {
           "gameweek": 4,
-          "opponent": "-",
-          "opponentId": null,
-          "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "opponent": "LIV",
+          "opponentId": 14,
+          "isHome": false,
+          "xg": "0.69",
+          "gc": "1.29",
+          "score": "0-0",
+          "isBlank": false
         }
       ],
-      "totalXG": 5.48,
-      "avgXG": 1.8266666666666669,
-      "totalGC": 6.24,
-      "avgGC": 2.08
+      "totalXG": 6.17,
+      "avgXG": 1.5425,
+      "totalGC": 7.53,
+      "avgGC": 1.8825
     },
     {
       "id": 11,
@@ -558,19 +558,19 @@
         },
         {
           "gameweek": 4,
-          "opponent": "-",
-          "opponentId": null,
-          "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "opponent": "CHE",
+          "opponentId": 6,
+          "isHome": false,
+          "xg": "1.39",
+          "gc": "0.91",
+          "score": "2-2",
+          "isBlank": false
         }
       ],
-      "totalXG": 2.37,
-      "avgXG": 0.79,
-      "totalGC": 5.05,
-      "avgGC": 1.6833333333333333
+      "totalXG": 3.76,
+      "avgXG": 0.94,
+      "totalGC": 5.96,
+      "avgGC": 1.49
     },
     {
       "id": 12,
@@ -610,19 +610,19 @@
         },
         {
           "gameweek": 4,
-          "opponent": "-",
-          "opponentId": null,
-          "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "opponent": "CRY",
+          "opponentId": 8,
+          "isHome": false,
+          "xg": "1.70",
+          "gc": "0.61",
+          "score": "3-2",
+          "isBlank": false
         }
       ],
-      "totalXG": 4.61,
-      "avgXG": 1.5366666666666668,
-      "totalGC": 6.51,
-      "avgGC": 2.17
+      "totalXG": 6.3100000000000005,
+      "avgXG": 1.5775000000000001,
+      "totalGC": 7.12,
+      "avgGC": 1.78
     },
     {
       "id": 13,
@@ -662,19 +662,19 @@
         },
         {
           "gameweek": 4,
-          "opponent": "-",
-          "opponentId": null,
+          "opponent": "NEW",
+          "opponentId": 17,
           "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "xg": "2.07",
+          "gc": "0.87",
+          "score": "4-1",
+          "isBlank": false
         }
       ],
-      "totalXG": 4.55,
-      "avgXG": 1.5166666666666666,
-      "totalGC": 4.75,
-      "avgGC": 1.5833333333333333
+      "totalXG": 6.619999999999999,
+      "avgXG": 1.6549999999999998,
+      "totalGC": 5.62,
+      "avgGC": 1.405
     },
     {
       "id": 14,
@@ -714,19 +714,19 @@
         },
         {
           "gameweek": 4,
-          "opponent": "-",
-          "opponentId": null,
+          "opponent": "FUL",
+          "opponentId": 10,
           "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "xg": "1.29",
+          "gc": "0.69",
+          "score": "0-0",
+          "isBlank": false
         }
       ],
-      "totalXG": 5.4399999999999995,
-      "avgXG": 1.8133333333333332,
-      "totalGC": 4.64,
-      "avgGC": 1.5466666666666666
+      "totalXG": 6.7299999999999995,
+      "avgXG": 1.6824999999999999,
+      "totalGC": 5.33,
+      "avgGC": 1.3325
     },
     {
       "id": 15,
@@ -766,19 +766,19 @@
         },
         {
           "gameweek": 4,
-          "opponent": "-",
-          "opponentId": null,
-          "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "opponent": "MUN",
+          "opponentId": 16,
+          "isHome": false,
+          "xg": "1.10",
+          "gc": "1.01",
+          "score": "1-0",
+          "isBlank": false
         }
       ],
-      "totalXG": 6.840000000000001,
-      "avgXG": 2.2800000000000002,
-      "totalGC": 2.7,
-      "avgGC": 0.9
+      "totalXG": 7.940000000000001,
+      "avgXG": 1.9850000000000003,
+      "totalGC": 3.71,
+      "avgGC": 0.9275
     },
     {
       "id": 16,
@@ -818,19 +818,19 @@
         },
         {
           "gameweek": 4,
-          "opponent": "-",
-          "opponentId": null,
+          "opponent": "MCI",
+          "opponentId": 15,
           "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "xg": "1.01",
+          "gc": "1.10",
+          "score": "0-1",
+          "isBlank": false
         }
       ],
-      "totalXG": 7.66,
-      "avgXG": 2.5533333333333332,
-      "totalGC": 4.16,
-      "avgGC": 1.3866666666666667
+      "totalXG": 8.67,
+      "avgXG": 2.1675,
+      "totalGC": 5.26,
+      "avgGC": 1.315
     },
     {
       "id": 17,
@@ -870,19 +870,19 @@
         },
         {
           "gameweek": 4,
-          "opponent": "-",
-          "opponentId": null,
-          "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "opponent": "LEE",
+          "opponentId": 13,
+          "isHome": false,
+          "xg": "0.87",
+          "gc": "2.07",
+          "score": "1-4",
+          "isBlank": false
         }
       ],
-      "totalXG": 3,
-      "avgXG": 1,
-      "totalGC": 5.51,
-      "avgGC": 1.8366666666666667
+      "totalXG": 3.87,
+      "avgXG": 0.9675,
+      "totalGC": 7.58,
+      "avgGC": 1.895
     },
     {
       "id": 18,
@@ -922,19 +922,19 @@
         },
         {
           "gameweek": 4,
-          "opponent": "-",
-          "opponentId": null,
-          "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "opponent": "AVL",
+          "opponentId": 2,
+          "isHome": false,
+          "xg": "2.30",
+          "gc": "0.82",
+          "score": "2-1",
+          "isBlank": false
         }
       ],
-      "totalXG": 4.109999999999999,
-      "avgXG": 1.3699999999999999,
-      "totalGC": 3.2800000000000002,
-      "avgGC": 1.0933333333333335
+      "totalXG": 6.409999999999999,
+      "avgXG": 1.6024999999999998,
+      "totalGC": 4.1000000000000005,
+      "avgGC": 1.0250000000000001
     },
     {
       "id": 19,
@@ -974,19 +974,19 @@
         },
         {
           "gameweek": 4,
-          "opponent": "-",
-          "opponentId": null,
+          "opponent": "EVE",
+          "opponentId": 9,
           "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "xg": "0.69",
+          "gc": "1.12",
+          "score": "0-0",
+          "isBlank": false
         }
       ],
-      "totalXG": 2.7699999999999996,
-      "avgXG": 0.9233333333333332,
-      "totalGC": 5.56,
-      "avgGC": 1.8533333333333333
+      "totalXG": 3.4599999999999995,
+      "avgXG": 0.8649999999999999,
+      "totalGC": 6.68,
+      "avgGC": 1.67
     },
     {
       "id": 20,
@@ -1026,22 +1026,114 @@
         },
         {
           "gameweek": 4,
-          "opponent": "-",
-          "opponentId": null,
+          "opponent": "ARS",
+          "opponentId": 1,
           "isHome": true,
-          "xg": "0.00",
-          "gc": "0.00",
-          "score": "-",
-          "isBlank": true
+          "xg": "1.80",
+          "gc": "1.89",
+          "score": "0-2",
+          "isBlank": false
         }
       ],
-      "totalXG": 4.41,
-      "avgXG": 1.47,
-      "totalGC": 3.94,
-      "avgGC": 1.3133333333333332
+      "totalXG": 6.21,
+      "avgXG": 1.5525,
+      "totalGC": 5.83,
+      "avgGC": 1.4575
     }
   ],
   "players": [
+    {
+      "id": 330,
+      "name": "Bogle",
+      "fullName": "Jayden Bogle",
+      "code": 226182,
+      "team": "LEE",
+      "teamId": 13,
+      "teamCode": 2,
+      "position": "DEF",
+      "price": 4.5,
+      "yellowCards": 1,
+      "redCards": 0,
+      "selectedBy": 2.8,
+      "xG": 1.31,
+      "xA": 0.08,
+      "xGI": 1.3900000000000001,
+      "DC": 15,
+      "xGIPer90": 0.4183946488294315,
+      "dcPer90": 4.51505016722408,
+      "last6Matches": [
+        {
+          "gameweek": 1,
+          "opponent": "NFO",
+          "wasHome": false,
+          "xGI": 0,
+          "xG": 0,
+          "xA": 0,
+          "DC": 3,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 90,
+          "points": 6,
+          "isBlank": false
+        },
+        {
+          "gameweek": 2,
+          "opponent": "BRE",
+          "wasHome": true,
+          "xGI": 0.01,
+          "xG": 0,
+          "xA": 0.01,
+          "DC": 7,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 67,
+          "points": 2,
+          "isBlank": false
+        },
+        {
+          "gameweek": 3,
+          "opponent": "BHA",
+          "wasHome": false,
+          "xGI": 0.92,
+          "xG": 0.9,
+          "xA": 0.02,
+          "DC": 2,
+          "goals": 1,
+          "assists": 0,
+          "minutes": 60,
+          "points": 14,
+          "isBlank": false
+        },
+        {
+          "gameweek": 4,
+          "opponent": "NEW",
+          "wasHome": true,
+          "xGI": 0.46,
+          "xG": 0.41,
+          "xA": 0.05,
+          "DC": 3,
+          "goals": 1,
+          "assists": 0,
+          "minutes": 82,
+          "points": 15,
+          "isBlank": false
+        }
+      ],
+      "totalMinutes": 299,
+      "seasonXG": 1.31,
+      "seasonXA": 0.08,
+      "seasonGoals": 2,
+      "seasonAssists": 0,
+      "seasonMinutes": 299,
+      "totalPoints": 37,
+      "starts": 4,
+      "matchesPlayed": 4,
+      "defconMatches": 0,
+      "seasonDefCon": 15,
+      "eo10k": "0.7",
+      "eoOverall": "0.0",
+      "cap10k": "0.0"
+    },
     {
       "id": 124,
       "name": "Groß",
@@ -1054,7 +1146,7 @@
       "price": 5.6,
       "yellowCards": 2,
       "redCards": 0,
-      "selectedBy": 17.3,
+      "selectedBy": 18.4,
       "xG": 1.6600000000000001,
       "xA": 0.61,
       "xGI": 2.27,
@@ -1116,7 +1208,7 @@
           "assists": 2,
           "minutes": 90,
           "points": 17,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -1146,7 +1238,7 @@
       "price": 7.8,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 74.8,
+      "selectedBy": 75.2,
       "xG": 2.17,
       "xA": 0.19000000000000003,
       "xGI": 2.36,
@@ -1208,7 +1300,7 @@
           "assists": 1,
           "minutes": 90,
           "points": 12,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -1238,7 +1330,7 @@
       "price": 5.7,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 21.7,
+      "selectedBy": 22.7,
       "xG": 0.22,
       "xA": 0.11,
       "xGI": 0.32999999999999996,
@@ -1300,7 +1392,7 @@
           "assists": 1,
           "minutes": 90,
           "points": 11,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 344,
@@ -1330,7 +1422,7 @@
       "price": 15.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 72,
+      "selectedBy": 72.3,
       "xG": 3.33,
       "xA": 0.51,
       "xGI": 3.84,
@@ -1392,7 +1484,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 9,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -1422,7 +1514,7 @@
       "price": 4.8,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 22.9,
+      "selectedBy": 23.5,
       "xG": 1.53,
       "xA": 0.44,
       "xGI": 1.97,
@@ -1484,7 +1576,7 @@
           "assists": 1,
           "minutes": 90,
           "points": 11,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 333,
@@ -1514,7 +1606,7 @@
       "price": 9.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 11.8,
+      "selectedBy": 12.1,
       "xG": 2.88,
       "xA": 0.43,
       "xGI": 3.31,
@@ -1576,7 +1668,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 8,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 336,
@@ -1606,7 +1698,7 @@
       "price": 6,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 5,
+      "selectedBy": 5.7,
       "xG": 0.98,
       "xA": 0.30000000000000004,
       "xGI": 1.28,
@@ -1668,7 +1760,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 15,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 357,
@@ -1698,7 +1790,7 @@
       "price": 6,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 39.9,
+      "selectedBy": 40.3,
       "xG": 0,
       "xA": 0.01,
       "xGI": 0.01,
@@ -1760,7 +1852,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 14,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -1790,7 +1882,7 @@
       "price": 6.1,
       "yellowCards": 2,
       "redCards": 0,
-      "selectedBy": 4.7,
+      "selectedBy": 5.2,
       "xG": 1.7,
       "xA": 0.8099999999999999,
       "xGI": 2.5100000000000002,
@@ -1852,7 +1944,7 @@
           "assists": 0,
           "minutes": 82,
           "points": 8,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 350,
@@ -1882,7 +1974,7 @@
       "price": 6.1,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 12.7,
+      "selectedBy": 13.1,
       "xG": 0.17,
       "xA": 0.03,
       "xGI": 0.2,
@@ -1944,7 +2036,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 8,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -1974,7 +2066,7 @@
       "price": 7.2,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 12.2,
+      "selectedBy": 12.1,
       "xG": 0.44,
       "xA": 1.2200000000000002,
       "xGI": 1.6600000000000001,
@@ -2036,7 +2128,7 @@
           "assists": 0,
           "minutes": 30,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 280,
@@ -2066,7 +2158,7 @@
       "price": 12,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 42.3,
+      "selectedBy": 41.8,
       "xG": 2.28,
       "xA": 1.1300000000000001,
       "xGI": 3.4099999999999997,
@@ -2128,7 +2220,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -2158,7 +2250,7 @@
       "price": 5.8,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 49.9,
+      "selectedBy": 50.1,
       "xG": 0.6000000000000001,
       "xA": 0.5900000000000001,
       "xGI": 1.19,
@@ -2220,7 +2312,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 326,
@@ -2312,7 +2404,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 4,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 356,
@@ -2342,7 +2434,7 @@
       "price": 4.6,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 10.6,
+      "selectedBy": 10.8,
       "xG": 0,
       "xA": 0,
       "xGI": 0,
@@ -2404,7 +2496,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -2434,7 +2526,7 @@
       "price": 6.7,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 19,
+      "selectedBy": 19.2,
       "xG": 1.01,
       "xA": 1.3,
       "xGI": 2.31,
@@ -2496,7 +2588,7 @@
           "assists": 0,
           "minutes": 84,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 305,
@@ -2526,7 +2618,7 @@
       "price": 7.7,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 36.5,
+      "selectedBy": 37.4,
       "xG": 1.3900000000000001,
       "xA": 1.1600000000000001,
       "xGI": 2.55,
@@ -2588,7 +2680,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 8,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 347,
@@ -2618,7 +2710,7 @@
       "price": 5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 2.3,
+      "selectedBy": 2.9,
       "xG": 0.37,
       "xA": 0.12,
       "xGI": 0.49,
@@ -2680,7 +2772,7 @@
           "assists": 0,
           "minutes": 59,
           "points": 13,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 312,
@@ -2772,7 +2864,7 @@
           "assists": 1,
           "minutes": 90,
           "points": 5,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 352,
@@ -2802,7 +2894,7 @@
       "price": 4.2,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 13.4,
+      "selectedBy": 13.6,
       "xG": 0.65,
       "xA": 0,
       "xGI": 0.65,
@@ -2864,7 +2956,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 333,
@@ -2956,7 +3048,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -2986,7 +3078,7 @@
       "price": 7.8,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 28.9,
+      "selectedBy": 28.5,
       "xG": 0.59,
       "xA": 1.4100000000000001,
       "xGI": 2,
@@ -3048,7 +3140,7 @@
           "assists": 0,
           "minutes": 45,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 218,
@@ -3078,7 +3170,7 @@
       "price": 7.9,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 10.6,
+      "selectedBy": 11.5,
       "xG": 1.5599999999999998,
       "xA": 1.02,
       "xGI": 2.58,
@@ -3140,7 +3232,7 @@
           "assists": 1,
           "minutes": 90,
           "points": 8,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -3232,7 +3324,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 4,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -3324,7 +3416,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -3354,7 +3446,7 @@
       "price": 4.1,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 7.6,
+      "selectedBy": 7.4,
       "xG": 0.32000000000000006,
       "xA": 0,
       "xGI": 0.32000000000000006,
@@ -3416,7 +3508,7 @@
           "assists": 0,
           "minutes": 58,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 249,
@@ -3446,7 +3538,7 @@
       "price": 9.1,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 22.4,
+      "selectedBy": 22.2,
       "xG": 2.79,
       "xA": 0.060000000000000005,
       "xGI": 2.8499999999999996,
@@ -3508,7 +3600,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 333,
@@ -3538,7 +3630,7 @@
       "price": 8,
       "yellowCards": 2,
       "redCards": 0,
-      "selectedBy": 23.6,
+      "selectedBy": 23.5,
       "xG": 0.51,
       "xA": 0.060000000000000005,
       "xGI": 0.5700000000000001,
@@ -3600,7 +3692,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 9,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -3692,7 +3784,7 @@
           "assists": 0,
           "minutes": 77,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 347,
@@ -3722,7 +3814,7 @@
       "price": 4,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 2.2,
+      "selectedBy": 2.3,
       "xG": 0.02,
       "xA": 0.35000000000000003,
       "xGI": 0.37,
@@ -3784,7 +3876,7 @@
           "assists": 1,
           "minutes": 90,
           "points": 4,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 354,
@@ -3814,7 +3906,7 @@
       "price": 5.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 2.3,
+      "selectedBy": 2.5,
       "xG": 1.48,
       "xA": 0.11,
       "xGI": 1.59,
@@ -3876,7 +3968,7 @@
           "assists": 1,
           "minutes": 62,
           "points": 12,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 237,
@@ -3906,7 +3998,7 @@
       "price": 4,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 5.8,
+      "selectedBy": 6.1,
       "xG": 1.17,
       "xA": 0.44,
       "xGI": 1.6099999999999999,
@@ -3968,7 +4060,7 @@
           "assists": 2,
           "minutes": 90,
           "points": 14,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -3998,7 +4090,7 @@
       "price": 7.9,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 23.2,
+      "selectedBy": 22.9,
       "xG": 2.8,
       "xA": 0.5499999999999999,
       "xGI": 3.35,
@@ -4060,7 +4152,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -4090,7 +4182,7 @@
       "price": 5.7,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 12.5,
+      "selectedBy": 12.2,
       "xG": 0.41000000000000003,
       "xA": 0.65,
       "xGI": 1.06,
@@ -4152,7 +4244,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 4,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 300,
@@ -4182,7 +4274,7 @@
       "price": 4.5,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 1.4,
+      "selectedBy": 1.5,
       "xG": 0.03,
       "xA": 0.09,
       "xGI": 0.12,
@@ -4244,7 +4336,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 12,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -4274,7 +4366,7 @@
       "price": 4.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 2.7,
+      "selectedBy": 2.9,
       "xG": 0,
       "xA": 0.14,
       "xGI": 0.14,
@@ -4336,7 +4428,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 11,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -4366,7 +4458,7 @@
       "price": 5.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 1.4,
+      "selectedBy": 1.5,
       "xG": 1.16,
       "xA": 0.43000000000000005,
       "xGI": 1.59,
@@ -4428,7 +4520,7 @@
           "assists": 0,
           "minutes": 76,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 346,
@@ -4447,94 +4539,94 @@
       "cap10k": "0.0"
     },
     {
-      "id": 330,
-      "name": "Bogle",
-      "fullName": "Jayden Bogle",
-      "code": 226182,
+      "id": 335,
+      "name": "Stach",
+      "fullName": "Anton Stach",
+      "code": 466525,
       "team": "LEE",
       "teamId": 13,
       "teamCode": 2,
-      "position": "DEF",
-      "price": 4.5,
-      "yellowCards": 1,
+      "position": "MID",
+      "price": 6,
+      "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 2.1,
-      "xG": 0.9,
-      "xA": 0.03,
-      "xGI": 0.93,
-      "DC": 12,
-      "xGIPer90": 0.38571428571428573,
-      "dcPer90": 4.976958525345623,
+      "selectedBy": 2.7,
+      "xG": 0.9199999999999999,
+      "xA": 0.23,
+      "xGI": 1.15,
+      "DC": 48,
+      "xGIPer90": 0.2899159663865546,
+      "dcPer90": 12.100840336134453,
       "last6Matches": [
         {
           "gameweek": 1,
           "opponent": "NFO",
           "wasHome": false,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 3,
-          "goals": 0,
+          "xGI": 0.15,
+          "xG": 0.1,
+          "xA": 0.05,
+          "DC": 16,
+          "goals": 1,
           "assists": 0,
           "minutes": 90,
-          "points": 6,
+          "points": 13,
           "isBlank": false
         },
         {
           "gameweek": 2,
           "opponent": "BRE",
           "wasHome": true,
-          "xGI": 0.01,
-          "xG": 0,
+          "xGI": 0.08,
+          "xG": 0.07,
           "xA": 0.01,
-          "DC": 7,
+          "DC": 16,
           "goals": 0,
           "assists": 0,
-          "minutes": 67,
-          "points": 2,
+          "minutes": 90,
+          "points": 4,
           "isBlank": false
         },
         {
           "gameweek": 3,
           "opponent": "BHA",
           "wasHome": false,
-          "xGI": 0.92,
-          "xG": 0.9,
-          "xA": 0.02,
-          "DC": 2,
-          "goals": 1,
+          "xGI": 0.42,
+          "xG": 0.32,
+          "xA": 0.1,
+          "DC": 6,
+          "goals": 0,
           "assists": 0,
-          "minutes": 60,
-          "points": 14,
+          "minutes": 90,
+          "points": 2,
           "isBlank": false
         },
         {
           "gameweek": 4,
           "opponent": "NEW",
           "wasHome": true,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 0,
+          "xGI": 0.5,
+          "xG": 0.43,
+          "xA": 0.07,
+          "DC": 10,
           "goals": 0,
           "assists": 0,
-          "minutes": 0,
-          "points": 0,
-          "isBlank": true
+          "minutes": 87,
+          "points": 3,
+          "isBlank": false
         }
       ],
-      "totalMinutes": 217,
-      "seasonXG": 0.9,
-      "seasonXA": 0.03,
+      "totalMinutes": 357,
+      "seasonXG": 0.92,
+      "seasonXA": 0.23,
       "seasonGoals": 1,
       "seasonAssists": 0,
-      "seasonMinutes": 217,
+      "seasonMinutes": 357,
       "totalPoints": 22,
-      "starts": 3,
-      "matchesPlayed": 3,
-      "defconMatches": 0,
-      "seasonDefCon": 12,
-      "eo10k": "0.7",
+      "starts": 4,
+      "matchesPlayed": 4,
+      "defconMatches": 2,
+      "seasonDefCon": 48,
+      "eo10k": "1.0",
       "eoOverall": "0.0",
       "cap10k": "0.0"
     },
@@ -4550,7 +4642,7 @@
       "price": 5.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 7,
+      "selectedBy": 6.8,
       "xG": 0.18,
       "xA": 0.29000000000000004,
       "xGI": 0.47,
@@ -4612,7 +4704,7 @@
           "assists": 0,
           "minutes": 45,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 315,
@@ -4631,6 +4723,190 @@
       "cap10k": "0.0"
     },
     {
+      "id": 334,
+      "name": "Muharemović",
+      "fullName": "Tarik Muharemović",
+      "code": 522047,
+      "team": "LEE",
+      "teamId": 13,
+      "teamCode": 2,
+      "position": "DEF",
+      "price": 5,
+      "yellowCards": 0,
+      "redCards": 0,
+      "selectedBy": 4,
+      "xG": 0.09,
+      "xA": 0.04,
+      "xGI": 0.12999999999999998,
+      "DC": 50,
+      "xGIPer90": 0.032499999999999994,
+      "dcPer90": 12.5,
+      "last6Matches": [
+        {
+          "gameweek": 1,
+          "opponent": "NFO",
+          "wasHome": false,
+          "xGI": 0.09,
+          "xG": 0.09,
+          "xA": 0,
+          "DC": 7,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 90,
+          "points": 6,
+          "isBlank": false
+        },
+        {
+          "gameweek": 2,
+          "opponent": "BRE",
+          "wasHome": true,
+          "xGI": 0.01,
+          "xG": 0,
+          "xA": 0.01,
+          "DC": 19,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 90,
+          "points": 4,
+          "isBlank": false
+        },
+        {
+          "gameweek": 3,
+          "opponent": "BHA",
+          "wasHome": false,
+          "xGI": 0.01,
+          "xG": 0,
+          "xA": 0.01,
+          "DC": 13,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 90,
+          "points": 4,
+          "isBlank": false
+        },
+        {
+          "gameweek": 4,
+          "opponent": "NEW",
+          "wasHome": true,
+          "xGI": 0.02,
+          "xG": 0,
+          "xA": 0.02,
+          "DC": 11,
+          "goals": 0,
+          "assists": 1,
+          "minutes": 90,
+          "points": 7,
+          "isBlank": false
+        }
+      ],
+      "totalMinutes": 360,
+      "seasonXG": 0.09,
+      "seasonXA": 0.04,
+      "seasonGoals": 0,
+      "seasonAssists": 1,
+      "seasonMinutes": 360,
+      "totalPoints": 21,
+      "starts": 4,
+      "matchesPlayed": 4,
+      "defconMatches": 3,
+      "seasonDefCon": 50,
+      "eo10k": "10.2",
+      "eoOverall": "0.0",
+      "cap10k": "0.0"
+    },
+    {
+      "id": 346,
+      "name": "Calvert-Lewin",
+      "fullName": "Dominic Calvert-Lewin",
+      "code": 177815,
+      "team": "LEE",
+      "teamId": 13,
+      "teamCode": 2,
+      "position": "FWD",
+      "price": 6,
+      "yellowCards": 3,
+      "redCards": 0,
+      "selectedBy": 22.3,
+      "xG": 2.48,
+      "xA": 0.08,
+      "xGI": 2.56,
+      "DC": 14,
+      "xGIPer90": 0.7003039513677811,
+      "dcPer90": 3.829787234042553,
+      "last6Matches": [
+        {
+          "gameweek": 1,
+          "opponent": "NFO",
+          "wasHome": false,
+          "xGI": 0.13,
+          "xG": 0.13,
+          "xA": 0,
+          "DC": 2,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 90,
+          "points": 1,
+          "isBlank": false
+        },
+        {
+          "gameweek": 2,
+          "opponent": "BRE",
+          "wasHome": true,
+          "xGI": 0.94,
+          "xG": 0.92,
+          "xA": 0.02,
+          "DC": 4,
+          "goals": 1,
+          "assists": 0,
+          "minutes": 90,
+          "points": 8,
+          "isBlank": false
+        },
+        {
+          "gameweek": 3,
+          "opponent": "BHA",
+          "wasHome": false,
+          "xGI": 0.62,
+          "xG": 0.56,
+          "xA": 0.06,
+          "DC": 3,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 72,
+          "points": 1,
+          "isBlank": false
+        },
+        {
+          "gameweek": 4,
+          "opponent": "NEW",
+          "wasHome": true,
+          "xGI": 0.87,
+          "xG": 0.87,
+          "xA": 0,
+          "DC": 5,
+          "goals": 1,
+          "assists": 1,
+          "minutes": 77,
+          "points": 10,
+          "isBlank": false
+        }
+      ],
+      "totalMinutes": 329,
+      "seasonXG": 2.48,
+      "seasonXA": 0.08,
+      "seasonGoals": 2,
+      "seasonAssists": 1,
+      "seasonMinutes": 329,
+      "totalPoints": 20,
+      "starts": 4,
+      "matchesPlayed": 4,
+      "defconMatches": 0,
+      "seasonDefCon": 14,
+      "eo10k": "34.0",
+      "eoOverall": "0.0",
+      "cap10k": "0.0"
+    },
+    {
       "id": 13,
       "name": "Rice",
       "fullName": "Declan Rice",
@@ -4642,7 +4918,7 @@
       "price": 7.4,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 12.8,
+      "selectedBy": 12.7,
       "xG": 0.1,
       "xA": 0.63,
       "xGI": 0.73,
@@ -4704,7 +4980,7 @@
           "assists": 1,
           "minutes": 80,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 321,
@@ -4734,7 +5010,7 @@
       "price": 5.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 2,
+      "selectedBy": 1.9,
       "xG": 1.06,
       "xA": 0.78,
       "xGI": 1.84,
@@ -4796,7 +5072,7 @@
           "assists": 0,
           "minutes": 59,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 326,
@@ -4826,7 +5102,7 @@
       "price": 4.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 3.5,
+      "selectedBy": 3.7,
       "xG": 1.42,
       "xA": 0.27,
       "xGI": 1.69,
@@ -4888,7 +5164,7 @@
           "assists": 0,
           "minutes": 64,
           "points": 8,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 231,
@@ -4918,7 +5194,7 @@
       "price": 5.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 2,
+      "selectedBy": 2.1,
       "xG": 0.16999999999999998,
       "xA": 0.02,
       "xGI": 0.19,
@@ -4980,7 +5256,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -5072,7 +5348,7 @@
           "assists": 0,
           "minutes": 71,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 318,
@@ -5087,98 +5363,6 @@
       "defconMatches": 0,
       "seasonDefCon": 20,
       "eo10k": "0.0",
-      "eoOverall": "0.0",
-      "cap10k": "0.0"
-    },
-    {
-      "id": 335,
-      "name": "Stach",
-      "fullName": "Anton Stach",
-      "code": 466525,
-      "team": "LEE",
-      "teamId": 13,
-      "teamCode": 2,
-      "position": "MID",
-      "price": 6,
-      "yellowCards": 0,
-      "redCards": 0,
-      "selectedBy": 2.7,
-      "xG": 0.49,
-      "xA": 0.16,
-      "xGI": 0.6499999999999999,
-      "DC": 38,
-      "xGIPer90": 0.21666666666666665,
-      "dcPer90": 12.666666666666668,
-      "last6Matches": [
-        {
-          "gameweek": 1,
-          "opponent": "NFO",
-          "wasHome": false,
-          "xGI": 0.15,
-          "xG": 0.1,
-          "xA": 0.05,
-          "DC": 16,
-          "goals": 1,
-          "assists": 0,
-          "minutes": 90,
-          "points": 13,
-          "isBlank": false
-        },
-        {
-          "gameweek": 2,
-          "opponent": "BRE",
-          "wasHome": true,
-          "xGI": 0.08,
-          "xG": 0.07,
-          "xA": 0.01,
-          "DC": 16,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 90,
-          "points": 4,
-          "isBlank": false
-        },
-        {
-          "gameweek": 3,
-          "opponent": "BHA",
-          "wasHome": false,
-          "xGI": 0.42,
-          "xG": 0.32,
-          "xA": 0.1,
-          "DC": 6,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 90,
-          "points": 2,
-          "isBlank": false
-        },
-        {
-          "gameweek": 4,
-          "opponent": "NEW",
-          "wasHome": true,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 0,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 0,
-          "points": 0,
-          "isBlank": true
-        }
-      ],
-      "totalMinutes": 270,
-      "seasonXG": 0.49,
-      "seasonXA": 0.16,
-      "seasonGoals": 1,
-      "seasonAssists": 0,
-      "seasonMinutes": 270,
-      "totalPoints": 19,
-      "starts": 3,
-      "matchesPlayed": 3,
-      "defconMatches": 2,
-      "seasonDefCon": 38,
-      "eo10k": "1.0",
       "eoOverall": "0.0",
       "cap10k": "0.0"
     },
@@ -5256,7 +5440,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 9,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -5275,6 +5459,98 @@
       "cap10k": "0.0"
     },
     {
+      "id": 453,
+      "name": "Barnes",
+      "fullName": "Harvey Barnes",
+      "code": 201666,
+      "team": "NEW",
+      "teamId": 17,
+      "teamCode": 4,
+      "position": "MID",
+      "price": 6,
+      "yellowCards": 0,
+      "redCards": 0,
+      "selectedBy": 3,
+      "xG": 0.51,
+      "xA": 0.37,
+      "xGI": 0.88,
+      "DC": 24,
+      "xGIPer90": 0.22,
+      "dcPer90": 6,
+      "last6Matches": [
+        {
+          "gameweek": 1,
+          "opponent": "LIV",
+          "wasHome": true,
+          "xGI": 0.09,
+          "xG": 0.07,
+          "xA": 0.02,
+          "DC": 8,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 90,
+          "points": 2,
+          "isBlank": false
+        },
+        {
+          "gameweek": 2,
+          "opponent": "TOT",
+          "wasHome": false,
+          "xGI": 0.05,
+          "xG": 0.04,
+          "xA": 0.01,
+          "DC": 4,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 90,
+          "points": 3,
+          "isBlank": false
+        },
+        {
+          "gameweek": 3,
+          "opponent": "BOU",
+          "wasHome": true,
+          "xGI": 0.14,
+          "xG": 0.11,
+          "xA": 0.03,
+          "DC": 6,
+          "goals": 1,
+          "assists": 1,
+          "minutes": 90,
+          "points": 12,
+          "isBlank": false
+        },
+        {
+          "gameweek": 4,
+          "opponent": "LEE",
+          "wasHome": false,
+          "xGI": 0.6,
+          "xG": 0.29,
+          "xA": 0.31,
+          "DC": 6,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 90,
+          "points": 2,
+          "isBlank": false
+        }
+      ],
+      "totalMinutes": 360,
+      "seasonXG": 0.51,
+      "seasonXA": 0.37,
+      "seasonGoals": 1,
+      "seasonAssists": 1,
+      "seasonMinutes": 360,
+      "totalPoints": 19,
+      "starts": 4,
+      "matchesPlayed": 4,
+      "defconMatches": 0,
+      "seasonDefCon": 24,
+      "eo10k": "5.4",
+      "eoOverall": "0.0",
+      "cap10k": "0.0"
+    },
+    {
       "id": 472,
       "name": "Murillo",
       "fullName": "Murillo Costa dos Santos",
@@ -5286,7 +5562,7 @@
       "price": 5.5,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 1.8,
+      "selectedBy": 1.9,
       "xG": 0.35,
       "xA": 0.29000000000000004,
       "xGI": 0.64,
@@ -5348,7 +5624,7 @@
           "assists": 1,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 359,
@@ -5378,7 +5654,7 @@
       "price": 5.5,
       "yellowCards": 2,
       "redCards": 0,
-      "selectedBy": 4.1,
+      "selectedBy": 4,
       "xG": 0.06,
       "xA": 0.94,
       "xGI": 0.9999999999999999,
@@ -5440,7 +5716,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -5470,7 +5746,7 @@
       "price": 5.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 0.6,
+      "selectedBy": 0.7,
       "xG": 1.17,
       "xA": 0.05,
       "xGI": 1.2200000000000002,
@@ -5532,7 +5808,7 @@
           "assists": 1,
           "minutes": 83,
           "points": 10,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 278,
@@ -5624,7 +5900,7 @@
           "assists": 2,
           "minutes": 83,
           "points": 8,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 351,
@@ -5654,7 +5930,7 @@
       "price": 5.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 0.7,
+      "selectedBy": 0.8,
       "xG": 0.31999999999999995,
       "xA": 0.31,
       "xGI": 0.63,
@@ -5716,7 +5992,7 @@
           "assists": 0,
           "minutes": 64,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 298,
@@ -5735,6 +6011,190 @@
       "cap10k": "0.0"
     },
     {
+      "id": 332,
+      "name": "Justin",
+      "fullName": "James Justin",
+      "code": 220627,
+      "team": "LEE",
+      "teamId": 13,
+      "teamCode": 2,
+      "position": "DEF",
+      "price": 4.5,
+      "yellowCards": 0,
+      "redCards": 0,
+      "selectedBy": 1.5,
+      "xG": 0.17,
+      "xA": 0.30000000000000004,
+      "xGI": 0.47000000000000003,
+      "DC": 35,
+      "xGIPer90": 0.11750000000000001,
+      "dcPer90": 8.75,
+      "last6Matches": [
+        {
+          "gameweek": 1,
+          "opponent": "NFO",
+          "wasHome": false,
+          "xGI": 0.01,
+          "xG": 0,
+          "xA": 0.01,
+          "DC": 12,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 90,
+          "points": 10,
+          "isBlank": false
+        },
+        {
+          "gameweek": 2,
+          "opponent": "BRE",
+          "wasHome": true,
+          "xGI": 0.04,
+          "xG": 0.03,
+          "xA": 0.01,
+          "DC": 8,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 90,
+          "points": 2,
+          "isBlank": false
+        },
+        {
+          "gameweek": 3,
+          "opponent": "BHA",
+          "wasHome": false,
+          "xGI": 0.14,
+          "xG": 0.14,
+          "xA": 0,
+          "DC": 10,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 90,
+          "points": 4,
+          "isBlank": false
+        },
+        {
+          "gameweek": 4,
+          "opponent": "NEW",
+          "wasHome": true,
+          "xGI": 0.28,
+          "xG": 0,
+          "xA": 0.28,
+          "DC": 5,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 90,
+          "points": 2,
+          "isBlank": false
+        }
+      ],
+      "totalMinutes": 360,
+      "seasonXG": 0.17,
+      "seasonXA": 0.3,
+      "seasonGoals": 0,
+      "seasonAssists": 0,
+      "seasonMinutes": 360,
+      "totalPoints": 18,
+      "starts": 4,
+      "matchesPlayed": 4,
+      "defconMatches": 2,
+      "seasonDefCon": 35,
+      "eo10k": "0.7",
+      "eoOverall": "0.0",
+      "cap10k": "0.0"
+    },
+    {
+      "id": 385,
+      "name": "Trafford",
+      "fullName": "James Trafford",
+      "code": 432720,
+      "team": "LEE",
+      "teamId": 13,
+      "teamCode": 2,
+      "position": "GK",
+      "price": 5,
+      "yellowCards": 0,
+      "redCards": 0,
+      "selectedBy": 5.4,
+      "xG": 0,
+      "xA": 0,
+      "xGI": 0,
+      "DC": 0,
+      "xGIPer90": 0,
+      "dcPer90": 0,
+      "last6Matches": [
+        {
+          "gameweek": 1,
+          "opponent": "NFO",
+          "wasHome": false,
+          "xGI": 0,
+          "xG": 0,
+          "xA": 0,
+          "DC": 0,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 90,
+          "points": 9,
+          "isBlank": false
+        },
+        {
+          "gameweek": 2,
+          "opponent": "BRE",
+          "wasHome": true,
+          "xGI": 0,
+          "xG": 0,
+          "xA": 0,
+          "DC": 0,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 90,
+          "points": 3,
+          "isBlank": false
+        },
+        {
+          "gameweek": 3,
+          "opponent": "BHA",
+          "wasHome": false,
+          "xGI": 0,
+          "xG": 0,
+          "xA": 0,
+          "DC": 0,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 90,
+          "points": 3,
+          "isBlank": false
+        },
+        {
+          "gameweek": 4,
+          "opponent": "NEW",
+          "wasHome": true,
+          "xGI": 0,
+          "xG": 0,
+          "xA": 0,
+          "DC": 0,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 90,
+          "points": 3,
+          "isBlank": false
+        }
+      ],
+      "totalMinutes": 360,
+      "seasonXG": 0,
+      "seasonXA": 0,
+      "seasonGoals": 0,
+      "seasonAssists": 0,
+      "seasonMinutes": 360,
+      "totalPoints": 18,
+      "starts": 4,
+      "matchesPlayed": 4,
+      "defconMatches": 0,
+      "seasonDefCon": 0,
+      "eo10k": "1.6",
+      "eoOverall": "0.0",
+      "cap10k": "0.0"
+    },
+    {
       "id": 362,
       "name": "Jacquet",
       "fullName": "Jeremy Jacquet",
@@ -5746,7 +6206,7 @@
       "price": 5,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 3,
+      "selectedBy": 3.1,
       "xG": 0,
       "xA": 0.12000000000000001,
       "xGI": 0.12000000000000001,
@@ -5808,7 +6268,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 9,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 325,
@@ -5838,7 +6298,7 @@
       "price": 7,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 37.1,
+      "selectedBy": 36.4,
       "xG": 1.29,
       "xA": 0.8,
       "xGI": 2.0900000000000003,
@@ -5900,7 +6360,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -5992,7 +6452,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 4,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 275,
@@ -6022,13 +6482,13 @@
       "price": 5.2,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 14.5,
-      "xG": 0.04,
-      "xA": 0.6699999999999999,
-      "xGI": 0.71,
-      "DC": 30,
-      "xGIPer90": 0.23754646840148697,
-      "dcPer90": 10.03717472118959,
+      "selectedBy": 14.4,
+      "xG": 0.06,
+      "xA": 0.6799999999999999,
+      "xGI": 0.74,
+      "DC": 36,
+      "xGIPer90": 0.18551532033426185,
+      "dcPer90": 9.025069637883009,
       "last6Matches": [
         {
           "gameweek": 1,
@@ -6076,28 +6536,28 @@
           "gameweek": 4,
           "opponent": "LEE",
           "wasHome": false,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 0,
+          "xGI": 0.03,
+          "xG": 0.02,
+          "xA": 0.01,
+          "DC": 6,
           "goals": 0,
           "assists": 0,
-          "minutes": 0,
+          "minutes": 90,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
-      "totalMinutes": 269,
-      "seasonXG": 0.04,
-      "seasonXA": 0.67,
+      "totalMinutes": 359,
+      "seasonXG": 0.06,
+      "seasonXA": 0.68,
       "seasonGoals": 0,
       "seasonAssists": 1,
-      "seasonMinutes": 269,
+      "seasonMinutes": 359,
       "totalPoints": 18,
-      "starts": 3,
-      "matchesPlayed": 3,
+      "starts": 4,
+      "matchesPlayed": 4,
       "defconMatches": 2,
-      "seasonDefCon": 30,
+      "seasonDefCon": 36,
       "eo10k": "8.5",
       "eoOverall": "0.0",
       "cap10k": "0.0"
@@ -6114,7 +6574,7 @@
       "price": 6.2,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 11.5,
+      "selectedBy": 10.1,
       "xG": 0.42000000000000004,
       "xA": 0.34,
       "xGI": 0.76,
@@ -6176,7 +6636,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 232,
@@ -6268,7 +6728,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 8,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -6298,7 +6758,7 @@
       "price": 7.6,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 8,
+      "selectedBy": 7.9,
       "xG": 0.8900000000000001,
       "xA": 0.35000000000000003,
       "xGI": 1.24,
@@ -6360,7 +6820,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 347,
@@ -6390,7 +6850,7 @@
       "price": 4.6,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 8.4,
+      "selectedBy": 8.2,
       "xG": 0.55,
       "xA": 0.36,
       "xGI": 0.91,
@@ -6452,7 +6912,7 @@
           "assists": 0,
           "minutes": 19,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 226,
@@ -6482,7 +6942,7 @@
       "price": 4.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 22.1,
+      "selectedBy": 22,
       "xG": 0,
       "xA": 0.2,
       "xGI": 0.2,
@@ -6544,7 +7004,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 8,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -6574,7 +7034,7 @@
       "price": 4.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 6.5,
+      "selectedBy": 6.4,
       "xG": 0.77,
       "xA": 0.24000000000000002,
       "xGI": 1.01,
@@ -6636,7 +7096,7 @@
           "assists": 0,
           "minutes": 76,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 329,
@@ -6666,7 +7126,7 @@
       "price": 5.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 8.7,
+      "selectedBy": 8.8,
       "xG": 0,
       "xA": 0.02,
       "xGI": 0.02,
@@ -6728,7 +7188,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -6758,7 +7218,7 @@
       "price": 6.5,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 4.8,
+      "selectedBy": 5,
       "xG": 0.62,
       "xA": 0.49,
       "xGI": 1.11,
@@ -6820,7 +7280,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -6850,7 +7310,7 @@
       "price": 6.5,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 16.8,
+      "selectedBy": 16.7,
       "xG": 0.25,
       "xA": 0.06999999999999999,
       "xGI": 0.32000000000000006,
@@ -6912,7 +7372,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 8,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -6942,7 +7402,7 @@
       "price": 5.9,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 8.2,
+      "selectedBy": 8,
       "xG": 0.28,
       "xA": 0.44,
       "xGI": 0.72,
@@ -7004,7 +7464,7 @@
           "assists": 0,
           "minutes": 45,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 311,
@@ -7096,7 +7556,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 7,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -7115,98 +7575,6 @@
       "cap10k": "0.0"
     },
     {
-      "id": 453,
-      "name": "Barnes",
-      "fullName": "Harvey Barnes",
-      "code": 201666,
-      "team": "NEW",
-      "teamId": 17,
-      "teamCode": 4,
-      "position": "MID",
-      "price": 6,
-      "yellowCards": 0,
-      "redCards": 0,
-      "selectedBy": 2.8,
-      "xG": 0.22000000000000003,
-      "xA": 0.06,
-      "xGI": 0.28,
-      "DC": 18,
-      "xGIPer90": 0.09333333333333334,
-      "dcPer90": 6,
-      "last6Matches": [
-        {
-          "gameweek": 1,
-          "opponent": "LIV",
-          "wasHome": true,
-          "xGI": 0.09,
-          "xG": 0.07,
-          "xA": 0.02,
-          "DC": 8,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 90,
-          "points": 2,
-          "isBlank": false
-        },
-        {
-          "gameweek": 2,
-          "opponent": "TOT",
-          "wasHome": false,
-          "xGI": 0.05,
-          "xG": 0.04,
-          "xA": 0.01,
-          "DC": 4,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 90,
-          "points": 3,
-          "isBlank": false
-        },
-        {
-          "gameweek": 3,
-          "opponent": "BOU",
-          "wasHome": true,
-          "xGI": 0.14,
-          "xG": 0.11,
-          "xA": 0.03,
-          "DC": 6,
-          "goals": 1,
-          "assists": 1,
-          "minutes": 90,
-          "points": 12,
-          "isBlank": false
-        },
-        {
-          "gameweek": 4,
-          "opponent": "LEE",
-          "wasHome": false,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 0,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 0,
-          "points": 0,
-          "isBlank": true
-        }
-      ],
-      "totalMinutes": 270,
-      "seasonXG": 0.22,
-      "seasonXA": 0.06,
-      "seasonGoals": 1,
-      "seasonAssists": 1,
-      "seasonMinutes": 270,
-      "totalPoints": 17,
-      "starts": 3,
-      "matchesPlayed": 3,
-      "defconMatches": 0,
-      "seasonDefCon": 18,
-      "eo10k": "5.4",
-      "eoOverall": "0.0",
-      "cap10k": "0.0"
-    },
-    {
       "id": 469,
       "name": "N.Williams",
       "fullName": "Neco Williams",
@@ -7218,7 +7586,7 @@
       "price": 5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 8.3,
+      "selectedBy": 8.5,
       "xG": 0.32,
       "xA": 0.4,
       "xGI": 0.72,
@@ -7280,7 +7648,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -7372,7 +7740,7 @@
           "assists": 1,
           "minutes": 90,
           "points": 5,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 334,
@@ -7402,7 +7770,7 @@
       "price": 5.9,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 0.8,
+      "selectedBy": 0.7,
       "xG": 1.41,
       "xA": 0.02,
       "xGI": 1.43,
@@ -7464,7 +7832,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 63,
@@ -7494,7 +7862,7 @@
       "price": 5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 4.7,
+      "selectedBy": 4.6,
       "xG": 0.79,
       "xA": 0.76,
       "xGI": 1.55,
@@ -7556,7 +7924,7 @@
           "assists": 0,
           "minutes": 83,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 348,
@@ -7575,47 +7943,47 @@
       "cap10k": "0.0"
     },
     {
-      "id": 332,
-      "name": "Justin",
-      "fullName": "James Justin",
-      "code": 220627,
+      "id": 338,
+      "name": "Ampadu",
+      "fullName": "Ethan Ampadu",
+      "code": 199598,
       "team": "LEE",
       "teamId": 13,
       "teamCode": 2,
-      "position": "DEF",
-      "price": 4.5,
+      "position": "MID",
+      "price": 5.4,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 1.5,
-      "xG": 0.17,
-      "xA": 0.02,
-      "xGI": 0.19,
-      "DC": 30,
-      "xGIPer90": 0.06333333333333332,
-      "dcPer90": 10,
+      "selectedBy": 1,
+      "xG": 0.08,
+      "xA": 0.16,
+      "xGI": 0.24000000000000002,
+      "DC": 46,
+      "xGIPer90": 0.060000000000000005,
+      "dcPer90": 11.5,
       "last6Matches": [
         {
           "gameweek": 1,
           "opponent": "NFO",
           "wasHome": false,
-          "xGI": 0.01,
+          "xGI": 0.04,
           "xG": 0,
-          "xA": 0.01,
-          "DC": 12,
+          "xA": 0.04,
+          "DC": 13,
           "goals": 0,
           "assists": 0,
           "minutes": 90,
-          "points": 10,
+          "points": 5,
           "isBlank": false
         },
         {
           "gameweek": 2,
           "opponent": "BRE",
           "wasHome": true,
-          "xGI": 0.04,
-          "xG": 0.03,
-          "xA": 0.01,
-          "DC": 8,
+          "xGI": 0.1,
+          "xG": 0.01,
+          "xA": 0.09,
+          "DC": 10,
           "goals": 0,
           "assists": 0,
           "minutes": 90,
@@ -7626,43 +7994,43 @@
           "gameweek": 3,
           "opponent": "BHA",
           "wasHome": false,
-          "xGI": 0.14,
-          "xG": 0.14,
-          "xA": 0,
-          "DC": 10,
+          "xGI": 0.01,
+          "xG": 0,
+          "xA": 0.01,
+          "DC": 11,
           "goals": 0,
           "assists": 0,
           "minutes": 90,
-          "points": 4,
+          "points": 2,
           "isBlank": false
         },
         {
           "gameweek": 4,
           "opponent": "NEW",
           "wasHome": true,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 0,
+          "xGI": 0.09,
+          "xG": 0.07,
+          "xA": 0.02,
+          "DC": 12,
           "goals": 0,
-          "assists": 0,
-          "minutes": 0,
-          "points": 0,
-          "isBlank": true
+          "assists": 1,
+          "minutes": 90,
+          "points": 7,
+          "isBlank": false
         }
       ],
-      "totalMinutes": 270,
-      "seasonXG": 0.17,
-      "seasonXA": 0.02,
+      "totalMinutes": 360,
+      "seasonXG": 0.08,
+      "seasonXA": 0.16,
       "seasonGoals": 0,
-      "seasonAssists": 0,
-      "seasonMinutes": 270,
+      "seasonAssists": 1,
+      "seasonMinutes": 360,
       "totalPoints": 16,
-      "starts": 3,
-      "matchesPlayed": 3,
+      "starts": 4,
+      "matchesPlayed": 4,
       "defconMatches": 2,
-      "seasonDefCon": 30,
-      "eo10k": "0.7",
+      "seasonDefCon": 46,
+      "eo10k": "0.1",
       "eoOverall": "0.0",
       "cap10k": "0.0"
     },
@@ -7740,7 +8108,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -7770,7 +8138,7 @@
       "price": 8.4,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 15.8,
+      "selectedBy": 15.5,
       "xG": 0.16999999999999998,
       "xA": 0.99,
       "xGI": 1.1600000000000001,
@@ -7832,7 +8200,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -7862,7 +8230,7 @@
       "price": 7.9,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 6.3,
+      "selectedBy": 6.1,
       "xG": 0.58,
       "xA": 0.43999999999999995,
       "xGI": 1.02,
@@ -7924,7 +8292,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 317,
@@ -8016,7 +8384,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 7,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -8108,7 +8476,7 @@
           "assists": 0,
           "minutes": 65,
           "points": 8,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 294,
@@ -8138,7 +8506,7 @@
       "price": 4,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 9.1,
+      "selectedBy": 9,
       "xG": 0.43,
       "xA": 0.26,
       "xGI": 0.69,
@@ -8200,7 +8568,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 347,
@@ -8292,7 +8660,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 9,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -8311,64 +8679,64 @@
       "cap10k": "0.0"
     },
     {
-      "id": 385,
-      "name": "Trafford",
-      "fullName": "James Trafford",
-      "code": 432720,
+      "id": 336,
+      "name": "Okafor",
+      "fullName": "Noah Okafor",
+      "code": 435997,
       "team": "LEE",
       "teamId": 13,
       "teamCode": 2,
-      "position": "GK",
-      "price": 5,
+      "position": "MID",
+      "price": 5.8,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 5.4,
-      "xG": 0,
-      "xA": 0,
-      "xGI": 0,
-      "DC": 0,
-      "xGIPer90": 0,
-      "dcPer90": 0,
+      "selectedBy": 0.3,
+      "xG": 0.15000000000000002,
+      "xA": 0.26,
+      "xGI": 0.41000000000000003,
+      "DC": 13,
+      "xGIPer90": 0.16473214285714285,
+      "dcPer90": 5.223214285714286,
       "last6Matches": [
         {
           "gameweek": 1,
           "opponent": "NFO",
           "wasHome": false,
-          "xGI": 0,
+          "xGI": 0.16,
           "xG": 0,
-          "xA": 0,
-          "DC": 0,
+          "xA": 0.16,
+          "DC": 5,
           "goals": 0,
           "assists": 0,
-          "minutes": 90,
-          "points": 9,
+          "minutes": 24,
+          "points": 1,
           "isBlank": false
         },
         {
           "gameweek": 2,
           "opponent": "BRE",
           "wasHome": true,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 0,
+          "xGI": 0.09,
+          "xG": 0.08,
+          "xA": 0.01,
+          "DC": 2,
           "goals": 0,
           "assists": 0,
-          "minutes": 90,
-          "points": 3,
+          "minutes": 68,
+          "points": 2,
           "isBlank": false
         },
         {
           "gameweek": 3,
           "opponent": "BHA",
           "wasHome": false,
-          "xGI": 0,
+          "xGI": 0.01,
           "xG": 0,
-          "xA": 0,
+          "xA": 0.01,
           "DC": 0,
           "goals": 0,
           "assists": 0,
-          "minutes": 90,
+          "minutes": 61,
           "points": 3,
           "isBlank": false
         },
@@ -8376,29 +8744,29 @@
           "gameweek": 4,
           "opponent": "NEW",
           "wasHome": true,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 0,
-          "goals": 0,
+          "xGI": 0.15,
+          "xG": 0.07,
+          "xA": 0.08,
+          "DC": 6,
+          "goals": 1,
           "assists": 0,
-          "minutes": 0,
-          "points": 0,
-          "isBlank": true
+          "minutes": 71,
+          "points": 9,
+          "isBlank": false
         }
       ],
-      "totalMinutes": 270,
-      "seasonXG": 0,
-      "seasonXA": 0,
-      "seasonGoals": 0,
+      "totalMinutes": 224,
+      "seasonXG": 0.15,
+      "seasonXA": 0.26,
+      "seasonGoals": 1,
       "seasonAssists": 0,
-      "seasonMinutes": 270,
+      "seasonMinutes": 224,
       "totalPoints": 15,
       "starts": 3,
-      "matchesPlayed": 3,
+      "matchesPlayed": 4,
       "defconMatches": 0,
-      "seasonDefCon": 0,
-      "eo10k": "1.6",
+      "seasonDefCon": 13,
+      "eo10k": "0.0",
       "eoOverall": "0.0",
       "cap10k": "0.0"
     },
@@ -8476,7 +8844,7 @@
           "assists": 0,
           "minutes": 71,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 194,
@@ -8491,6 +8859,98 @@
       "defconMatches": 1,
       "seasonDefCon": 19,
       "eo10k": "0.4",
+      "eoOverall": "0.0",
+      "cap10k": "0.0"
+    },
+    {
+      "id": 464,
+      "name": "Wissa",
+      "fullName": "Yoane Wissa",
+      "code": 216646,
+      "team": "NEW",
+      "teamId": 17,
+      "teamCode": 4,
+      "position": "FWD",
+      "price": 6.2,
+      "yellowCards": 2,
+      "redCards": 0,
+      "selectedBy": 18.3,
+      "xG": 1.51,
+      "xA": 0.05,
+      "xGI": 1.56,
+      "DC": 22,
+      "xGIPer90": 0.4,
+      "dcPer90": 5.641025641025641,
+      "last6Matches": [
+        {
+          "gameweek": 1,
+          "opponent": "LIV",
+          "wasHome": true,
+          "xGI": 1.02,
+          "xG": 1,
+          "xA": 0.02,
+          "DC": 8,
+          "goals": 0,
+          "assists": 1,
+          "minutes": 90,
+          "points": 4,
+          "isBlank": false
+        },
+        {
+          "gameweek": 2,
+          "opponent": "TOT",
+          "wasHome": false,
+          "xGI": 0.35,
+          "xG": 0.35,
+          "xA": 0,
+          "DC": 6,
+          "goals": 1,
+          "assists": 0,
+          "minutes": 81,
+          "points": 8,
+          "isBlank": false
+        },
+        {
+          "gameweek": 3,
+          "opponent": "BOU",
+          "wasHome": true,
+          "xGI": 0.03,
+          "xG": 0,
+          "xA": 0.03,
+          "DC": 3,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 90,
+          "points": 1,
+          "isBlank": false
+        },
+        {
+          "gameweek": 4,
+          "opponent": "LEE",
+          "wasHome": false,
+          "xGI": 0.16,
+          "xG": 0.16,
+          "xA": 0,
+          "DC": 5,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 90,
+          "points": 2,
+          "isBlank": false
+        }
+      ],
+      "totalMinutes": 351,
+      "seasonXG": 1.51,
+      "seasonXA": 0.05,
+      "seasonGoals": 1,
+      "seasonAssists": 1,
+      "seasonMinutes": 351,
+      "totalPoints": 15,
+      "starts": 4,
+      "matchesPlayed": 4,
+      "defconMatches": 0,
+      "seasonDefCon": 22,
+      "eo10k": "11.8",
       "eoOverall": "0.0",
       "cap10k": "0.0"
     },
@@ -8568,7 +9028,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 270,
@@ -8598,7 +9058,7 @@
       "price": 6.4,
       "yellowCards": 2,
       "redCards": 0,
-      "selectedBy": 15.2,
+      "selectedBy": 14.8,
       "xG": 0.19,
       "xA": 0.48000000000000004,
       "xGI": 0.67,
@@ -8660,7 +9120,7 @@
           "assists": 0,
           "minutes": 80,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 290,
@@ -8752,7 +9212,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 270,
@@ -8782,7 +9242,7 @@
       "price": 5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 6.5,
+      "selectedBy": 6.4,
       "xG": 0,
       "xA": 0.01,
       "xGI": 0.01,
@@ -8844,7 +9304,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -8874,7 +9334,7 @@
       "price": 4.5,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 4.5,
+      "selectedBy": 4.4,
       "xG": 0.13,
       "xA": 0.03,
       "xGI": 0.16,
@@ -8936,7 +9396,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -9028,7 +9488,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 356,
@@ -9058,7 +9518,7 @@
       "price": 5.6,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 6.4,
+      "selectedBy": 6.5,
       "xG": 2.98,
       "xA": 0.14,
       "xGI": 3.12,
@@ -9120,7 +9580,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 327,
@@ -9135,98 +9595,6 @@
       "defconMatches": 0,
       "seasonDefCon": 12,
       "eo10k": "5.2",
-      "eoOverall": "0.0",
-      "cap10k": "0.0"
-    },
-    {
-      "id": 334,
-      "name": "Muharemović",
-      "fullName": "Tarik Muharemović",
-      "code": 522047,
-      "team": "LEE",
-      "teamId": 13,
-      "teamCode": 2,
-      "position": "DEF",
-      "price": 5,
-      "yellowCards": 0,
-      "redCards": 0,
-      "selectedBy": 3.9,
-      "xG": 0.09,
-      "xA": 0.02,
-      "xGI": 0.10999999999999999,
-      "DC": 39,
-      "xGIPer90": 0.03666666666666667,
-      "dcPer90": 12.999999999999998,
-      "last6Matches": [
-        {
-          "gameweek": 1,
-          "opponent": "NFO",
-          "wasHome": false,
-          "xGI": 0.09,
-          "xG": 0.09,
-          "xA": 0,
-          "DC": 7,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 90,
-          "points": 6,
-          "isBlank": false
-        },
-        {
-          "gameweek": 2,
-          "opponent": "BRE",
-          "wasHome": true,
-          "xGI": 0.01,
-          "xG": 0,
-          "xA": 0.01,
-          "DC": 19,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 90,
-          "points": 4,
-          "isBlank": false
-        },
-        {
-          "gameweek": 3,
-          "opponent": "BHA",
-          "wasHome": false,
-          "xGI": 0.01,
-          "xG": 0,
-          "xA": 0.01,
-          "DC": 13,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 90,
-          "points": 4,
-          "isBlank": false
-        },
-        {
-          "gameweek": 4,
-          "opponent": "NEW",
-          "wasHome": true,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 0,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 0,
-          "points": 0,
-          "isBlank": true
-        }
-      ],
-      "totalMinutes": 270,
-      "seasonXG": 0.09,
-      "seasonXA": 0.02,
-      "seasonGoals": 0,
-      "seasonAssists": 0,
-      "seasonMinutes": 270,
-      "totalPoints": 14,
-      "starts": 3,
-      "matchesPlayed": 3,
-      "defconMatches": 2,
-      "seasonDefCon": 39,
-      "eo10k": "10.2",
       "eoOverall": "0.0",
       "cap10k": "0.0"
     },
@@ -9304,7 +9672,7 @@
           "assists": 0,
           "minutes": 59,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 239,
@@ -9396,7 +9764,7 @@
           "assists": 0,
           "minutes": 74,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 258,
@@ -9426,7 +9794,7 @@
       "price": 5.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 1.5,
+      "selectedBy": 1.4,
       "xG": 1.49,
       "xA": 0.01,
       "xGI": 1.5,
@@ -9488,7 +9856,7 @@
           "assists": 0,
           "minutes": 20,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 95,
@@ -9580,7 +9948,7 @@
           "assists": 0,
           "minutes": 30,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 197,
@@ -9672,7 +10040,7 @@
           "assists": 0,
           "minutes": 77,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 347,
@@ -9764,7 +10132,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 7,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 289,
@@ -9794,7 +10162,7 @@
       "price": 4.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 0.6,
+      "selectedBy": 0.7,
       "xG": 0.06,
       "xA": 0.14,
       "xGI": 0.2,
@@ -9852,7 +10220,7 @@
           "assists": 0,
           "minutes": 74,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 87,
@@ -9944,7 +10312,7 @@
           "assists": 0,
           "minutes": 81,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 258,
@@ -10036,7 +10404,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -10128,7 +10496,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 340,
@@ -10220,7 +10588,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 5,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 323,
@@ -10235,98 +10603,6 @@
       "defconMatches": 2,
       "seasonDefCon": 45,
       "eo10k": "0.4",
-      "eoOverall": "0.0",
-      "cap10k": "0.0"
-    },
-    {
-      "id": 464,
-      "name": "Wissa",
-      "fullName": "Yoane Wissa",
-      "code": 216646,
-      "team": "NEW",
-      "teamId": 17,
-      "teamCode": 4,
-      "position": "FWD",
-      "price": 6.2,
-      "yellowCards": 2,
-      "redCards": 0,
-      "selectedBy": 18.6,
-      "xG": 1.35,
-      "xA": 0.05,
-      "xGI": 1.4000000000000001,
-      "DC": 17,
-      "xGIPer90": 0.4827586206896552,
-      "dcPer90": 5.862068965517241,
-      "last6Matches": [
-        {
-          "gameweek": 1,
-          "opponent": "LIV",
-          "wasHome": true,
-          "xGI": 1.02,
-          "xG": 1,
-          "xA": 0.02,
-          "DC": 8,
-          "goals": 0,
-          "assists": 1,
-          "minutes": 90,
-          "points": 4,
-          "isBlank": false
-        },
-        {
-          "gameweek": 2,
-          "opponent": "TOT",
-          "wasHome": false,
-          "xGI": 0.35,
-          "xG": 0.35,
-          "xA": 0,
-          "DC": 6,
-          "goals": 1,
-          "assists": 0,
-          "minutes": 81,
-          "points": 8,
-          "isBlank": false
-        },
-        {
-          "gameweek": 3,
-          "opponent": "BOU",
-          "wasHome": true,
-          "xGI": 0.03,
-          "xG": 0,
-          "xA": 0.03,
-          "DC": 3,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 90,
-          "points": 1,
-          "isBlank": false
-        },
-        {
-          "gameweek": 4,
-          "opponent": "LEE",
-          "wasHome": false,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 0,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 0,
-          "points": 0,
-          "isBlank": true
-        }
-      ],
-      "totalMinutes": 261,
-      "seasonXG": 1.35,
-      "seasonXA": 0.05,
-      "seasonGoals": 1,
-      "seasonAssists": 1,
-      "seasonMinutes": 261,
-      "totalPoints": 13,
-      "starts": 3,
-      "matchesPlayed": 3,
-      "defconMatches": 0,
-      "seasonDefCon": 17,
-      "eo10k": "11.8",
       "eoOverall": "0.0",
       "cap10k": "0.0"
     },
@@ -10346,9 +10622,9 @@
       "xG": 0.14,
       "xA": 0.08,
       "xGI": 0.22,
-      "DC": 18,
-      "xGIPer90": 0.07333333333333333,
-      "dcPer90": 6,
+      "DC": 24,
+      "xGIPer90": 0.06055045871559633,
+      "dcPer90": 6.605504587155964,
       "last6Matches": [
         {
           "gameweek": 1,
@@ -10399,25 +10675,25 @@
           "xGI": 0,
           "xG": 0,
           "xA": 0,
-          "DC": 0,
+          "DC": 6,
           "goals": 0,
           "assists": 0,
-          "minutes": 0,
+          "minutes": 57,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
-      "totalMinutes": 270,
+      "totalMinutes": 327,
       "seasonXG": 0.14,
       "seasonXA": 0.08,
       "seasonGoals": 0,
       "seasonAssists": 1,
-      "seasonMinutes": 270,
+      "seasonMinutes": 327,
       "totalPoints": 13,
-      "starts": 3,
-      "matchesPlayed": 3,
+      "starts": 4,
+      "matchesPlayed": 4,
       "defconMatches": 0,
-      "seasonDefCon": 18,
+      "seasonDefCon": 24,
       "eo10k": "0.9",
       "eoOverall": "0.0",
       "cap10k": "0.0"
@@ -10496,7 +10772,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 7,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 276,
@@ -10588,7 +10864,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 270,
@@ -10618,7 +10894,7 @@
       "price": 5.8,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 4.1,
+      "selectedBy": 4,
       "xG": 2.06,
       "xA": 0.82,
       "xGI": 2.88,
@@ -10680,7 +10956,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 348,
@@ -10710,7 +10986,7 @@
       "price": 5.4,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 2.2,
+      "selectedBy": 2,
       "xG": 0,
       "xA": 0.01,
       "xGI": 0.01,
@@ -10772,7 +11048,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 168,
@@ -10864,7 +11140,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 8,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 243,
@@ -10956,7 +11232,7 @@
           "assists": 0,
           "minutes": 85,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 246,
@@ -11048,7 +11324,7 @@
           "assists": 0,
           "minutes": 36,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 226,
@@ -11140,7 +11416,7 @@
           "assists": 0,
           "minutes": 83,
           "points": 8,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 217,
@@ -11170,7 +11446,7 @@
       "price": 6,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 3.8,
+      "selectedBy": 3.7,
       "xG": 1.64,
       "xA": 0.25,
       "xGI": 1.8900000000000001,
@@ -11232,7 +11508,7 @@
           "assists": 0,
           "minutes": 76,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 346,
@@ -11324,7 +11600,7 @@
           "assists": 1,
           "minutes": 81,
           "points": 4,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 351,
@@ -11416,7 +11692,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 164,
@@ -11435,6 +11711,98 @@
       "cap10k": "0.0"
     },
     {
+      "id": 345,
+      "name": "Tanaka",
+      "fullName": "Tanaka Ao",
+      "code": 248056,
+      "team": "LEE",
+      "teamId": 13,
+      "teamCode": 2,
+      "position": "MID",
+      "price": 4.9,
+      "yellowCards": 0,
+      "redCards": 0,
+      "selectedBy": 0.3,
+      "xG": 0.5900000000000001,
+      "xA": 0.05,
+      "xGI": 0.64,
+      "DC": 24,
+      "xGIPer90": 0.30638297872340425,
+      "dcPer90": 11.489361702127658,
+      "last6Matches": [
+        {
+          "gameweek": 1,
+          "opponent": "NFO",
+          "wasHome": false,
+          "xGI": 0,
+          "xG": 0,
+          "xA": 0,
+          "DC": 0,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 0,
+          "points": 0,
+          "isBlank": false
+        },
+        {
+          "gameweek": 2,
+          "opponent": "BRE",
+          "wasHome": true,
+          "xGI": 0.01,
+          "xG": 0,
+          "xA": 0.01,
+          "DC": 11,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 45,
+          "points": 1,
+          "isBlank": false
+        },
+        {
+          "gameweek": 3,
+          "opponent": "BHA",
+          "wasHome": false,
+          "xGI": 0.54,
+          "xG": 0.53,
+          "xA": 0.01,
+          "DC": 8,
+          "goals": 0,
+          "assists": 1,
+          "minutes": 72,
+          "points": 5,
+          "isBlank": false
+        },
+        {
+          "gameweek": 4,
+          "opponent": "NEW",
+          "wasHome": true,
+          "xGI": 0.09,
+          "xG": 0.06,
+          "xA": 0.03,
+          "DC": 5,
+          "goals": 0,
+          "assists": 1,
+          "minutes": 71,
+          "points": 6,
+          "isBlank": false
+        }
+      ],
+      "totalMinutes": 188,
+      "seasonXG": 0.59,
+      "seasonXA": 0.05,
+      "seasonGoals": 0,
+      "seasonAssists": 2,
+      "seasonMinutes": 188,
+      "totalPoints": 12,
+      "starts": 2,
+      "matchesPlayed": 3,
+      "defconMatches": 0,
+      "seasonDefCon": 24,
+      "eo10k": "0.0",
+      "eoOverall": "0.0",
+      "cap10k": "0.0"
+    },
+    {
       "id": 366,
       "name": "Wirtz",
       "fullName": "Florian Wirtz",
@@ -11446,7 +11814,7 @@
       "price": 7.4,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 7.2,
+      "selectedBy": 7,
       "xG": 0.7799999999999999,
       "xA": 0.35000000000000003,
       "xGI": 1.13,
@@ -11508,7 +11876,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 332,
@@ -11523,6 +11891,98 @@
       "defconMatches": 0,
       "seasonDefCon": 28,
       "eo10k": "6.4",
+      "eoOverall": "0.0",
+      "cap10k": "0.0"
+    },
+    {
+      "id": 460,
+      "name": "Willock",
+      "fullName": "Joe Willock",
+      "code": 200089,
+      "team": "NEW",
+      "teamId": 17,
+      "teamCode": 4,
+      "position": "MID",
+      "price": 5,
+      "yellowCards": 0,
+      "redCards": 0,
+      "selectedBy": 0.5,
+      "xG": 0.64,
+      "xA": 0.26,
+      "xGI": 0.8999999999999999,
+      "DC": 12,
+      "xGIPer90": 0.40909090909090906,
+      "dcPer90": 5.454545454545455,
+      "last6Matches": [
+        {
+          "gameweek": 1,
+          "opponent": "LIV",
+          "wasHome": true,
+          "xGI": 0.26,
+          "xG": 0.09,
+          "xA": 0.17,
+          "DC": 3,
+          "goals": 1,
+          "assists": 0,
+          "minutes": 34,
+          "points": 6,
+          "isBlank": false
+        },
+        {
+          "gameweek": 2,
+          "opponent": "TOT",
+          "wasHome": false,
+          "xGI": 0.09,
+          "xG": 0.07,
+          "xA": 0.02,
+          "DC": 2,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 70,
+          "points": 3,
+          "isBlank": false
+        },
+        {
+          "gameweek": 3,
+          "opponent": "BOU",
+          "wasHome": true,
+          "xGI": 0.37,
+          "xG": 0.36,
+          "xA": 0.01,
+          "DC": 3,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 62,
+          "points": 2,
+          "isBlank": false
+        },
+        {
+          "gameweek": 4,
+          "opponent": "LEE",
+          "wasHome": false,
+          "xGI": 0.18,
+          "xG": 0.12,
+          "xA": 0.06,
+          "DC": 4,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 32,
+          "points": 1,
+          "isBlank": false
+        }
+      ],
+      "totalMinutes": 198,
+      "seasonXG": 0.64,
+      "seasonXA": 0.26,
+      "seasonGoals": 1,
+      "seasonAssists": 0,
+      "seasonMinutes": 198,
+      "totalPoints": 12,
+      "starts": 2,
+      "matchesPlayed": 4,
+      "defconMatches": 0,
+      "seasonDefCon": 12,
+      "eo10k": "0.0",
       "eoOverall": "0.0",
       "cap10k": "0.0"
     },
@@ -11600,7 +12060,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -11630,7 +12090,7 @@
       "price": 5.5,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 1.5,
+      "selectedBy": 1.4,
       "xG": 0.11,
       "xA": 0.03,
       "xGI": 0.14,
@@ -11692,7 +12152,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 270,
@@ -11722,7 +12182,7 @@
       "price": 5.4,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 2.4,
+      "selectedBy": 2.3,
       "xG": 0.18,
       "xA": 0.4,
       "xGI": 0.5800000000000001,
@@ -11784,7 +12244,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 344,
@@ -11814,7 +12274,7 @@
       "price": 4.9,
       "yellowCards": 2,
       "redCards": 0,
-      "selectedBy": 3,
+      "selectedBy": 2.9,
       "xG": 0.16999999999999998,
       "xA": 0.16000000000000003,
       "xGI": 0.33,
@@ -11876,7 +12336,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -11968,7 +12428,7 @@
           "assists": 0,
           "minutes": 69,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 254,
@@ -11998,7 +12458,7 @@
       "price": 4.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 17.7,
+      "selectedBy": 18,
       "xG": 0,
       "xA": 0.01,
       "xGI": 0.01,
@@ -12060,7 +12520,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 191,
@@ -12152,7 +12612,7 @@
           "assists": 1,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 351,
@@ -12244,7 +12704,7 @@
           "assists": 0,
           "minutes": 68,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 258,
@@ -12336,7 +12796,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 207,
@@ -12355,64 +12815,156 @@
       "cap10k": "0.0"
     },
     {
-      "id": 460,
-      "name": "Willock",
-      "fullName": "Joe Willock",
-      "code": 200089,
+      "id": 447,
+      "name": "Botman",
+      "fullName": "Sven Botman",
+      "code": 220237,
       "team": "NEW",
       "teamId": 17,
       "teamCode": 4,
-      "position": "MID",
+      "position": "DEF",
       "price": 5,
-      "yellowCards": 0,
+      "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 0.5,
-      "xG": 0.52,
-      "xA": 0.2,
-      "xGI": 0.72,
-      "DC": 8,
-      "xGIPer90": 0.39036144578313253,
-      "dcPer90": 4.337349397590362,
+      "selectedBy": 0.7,
+      "xG": 0.01,
+      "xA": 0.17,
+      "xGI": 0.18,
+      "DC": 41,
+      "xGIPer90": 0.045,
+      "dcPer90": 10.25,
       "last6Matches": [
         {
           "gameweek": 1,
           "opponent": "LIV",
           "wasHome": true,
-          "xGI": 0.26,
-          "xG": 0.09,
-          "xA": 0.17,
-          "DC": 3,
-          "goals": 1,
+          "xGI": 0.01,
+          "xG": 0,
+          "xA": 0.01,
+          "DC": 10,
+          "goals": 0,
           "assists": 0,
-          "minutes": 34,
-          "points": 6,
+          "minutes": 90,
+          "points": 3,
           "isBlank": false
         },
         {
           "gameweek": 2,
           "opponent": "TOT",
           "wasHome": false,
-          "xGI": 0.09,
-          "xG": 0.07,
-          "xA": 0.02,
-          "DC": 2,
+          "xGI": 0.01,
+          "xG": 0.01,
+          "xA": 0,
+          "DC": 5,
           "goals": 0,
           "assists": 0,
-          "minutes": 70,
-          "points": 3,
+          "minutes": 90,
+          "points": 5,
           "isBlank": false
         },
         {
           "gameweek": 3,
           "opponent": "BOU",
           "wasHome": true,
-          "xGI": 0.37,
-          "xG": 0.36,
-          "xA": 0.01,
-          "DC": 3,
+          "xGI": 0.16,
+          "xG": 0,
+          "xA": 0.16,
+          "DC": 9,
           "goals": 0,
           "assists": 0,
-          "minutes": 62,
+          "minutes": 90,
+          "points": 1,
+          "isBlank": false
+        },
+        {
+          "gameweek": 4,
+          "opponent": "LEE",
+          "wasHome": false,
+          "xGI": 0,
+          "xG": 0,
+          "xA": 0,
+          "DC": 17,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 90,
+          "points": 2,
+          "isBlank": false
+        }
+      ],
+      "totalMinutes": 360,
+      "seasonXG": 0.01,
+      "seasonXA": 0.17,
+      "seasonGoals": 0,
+      "seasonAssists": 0,
+      "seasonMinutes": 360,
+      "totalPoints": 11,
+      "starts": 4,
+      "matchesPlayed": 4,
+      "defconMatches": 2,
+      "seasonDefCon": 41,
+      "eo10k": "0.1",
+      "eoOverall": "0.0",
+      "cap10k": "0.0"
+    },
+    {
+      "id": 567,
+      "name": "Horníček",
+      "fullName": "Lukás Hornícek",
+      "code": 470551,
+      "team": "NEW",
+      "teamId": 17,
+      "teamCode": 4,
+      "position": "GK",
+      "price": 5,
+      "yellowCards": 1,
+      "redCards": 0,
+      "selectedBy": 1.4,
+      "xG": 0,
+      "xA": 0,
+      "xGI": 0,
+      "DC": 0,
+      "xGIPer90": 0,
+      "dcPer90": 0,
+      "last6Matches": [
+        {
+          "gameweek": 1,
+          "opponent": "LIV",
+          "wasHome": true,
+          "xGI": 0,
+          "xG": 0,
+          "xA": 0,
+          "DC": 0,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 90,
+          "points": 1,
+          "isBlank": false
+        },
+        {
+          "gameweek": 2,
+          "opponent": "TOT",
+          "wasHome": false,
+          "xGI": 0,
+          "xG": 0,
+          "xA": 0,
+          "DC": 0,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 90,
+          "points": 7,
+          "isBlank": false
+        },
+        {
+          "gameweek": 3,
+          "opponent": "BOU",
+          "wasHome": true,
+          "xGI": 0,
+          "xG": 0,
+          "xA": 0,
+          "DC": 0,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 90,
           "points": 2,
           "isBlank": false
         },
@@ -12426,23 +12978,23 @@
           "DC": 0,
           "goals": 0,
           "assists": 0,
-          "minutes": 0,
-          "points": 0,
-          "isBlank": true
+          "minutes": 90,
+          "points": 1,
+          "isBlank": false
         }
       ],
-      "totalMinutes": 166,
-      "seasonXG": 0.52,
-      "seasonXA": 0.2,
-      "seasonGoals": 1,
+      "totalMinutes": 360,
+      "seasonXG": 0,
+      "seasonXA": 0,
+      "seasonGoals": 0,
       "seasonAssists": 0,
-      "seasonMinutes": 166,
+      "seasonMinutes": 360,
       "totalPoints": 11,
-      "starts": 2,
-      "matchesPlayed": 3,
+      "starts": 4,
+      "matchesPlayed": 4,
       "defconMatches": 0,
-      "seasonDefCon": 8,
-      "eo10k": "0.0",
+      "seasonDefCon": 0,
+      "eo10k": "1.1",
       "eoOverall": "0.0",
       "cap10k": "0.0"
     },
@@ -12458,7 +13010,7 @@
       "price": 5.8,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 2.5,
+      "selectedBy": 2.6,
       "xG": 1.0899999999999999,
       "xA": 0.06999999999999999,
       "xGI": 1.1600000000000001,
@@ -12520,7 +13072,7 @@
           "assists": 0,
           "minutes": 15,
           "points": 7,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 226,
@@ -12612,7 +13164,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 286,
@@ -12704,7 +13256,7 @@
           "assists": 0,
           "minutes": 62,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 287,
@@ -12734,7 +13286,7 @@
       "price": 4.9,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 2.8,
+      "selectedBy": 2.7,
       "xG": 0,
       "xA": 0,
       "xGI": 0,
@@ -12796,7 +13348,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -12888,7 +13440,7 @@
           "assists": 0,
           "minutes": 75,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 318,
@@ -12980,7 +13532,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -13010,7 +13562,7 @@
       "price": 5.5,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 1.3,
+      "selectedBy": 1.2,
       "xG": 0.51,
       "xA": 0.05,
       "xGI": 0.56,
@@ -13072,7 +13624,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 196,
@@ -13102,7 +13654,7 @@
       "price": 6,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 7.6,
+      "selectedBy": 7.4,
       "xG": 0.02,
       "xA": 0.21000000000000002,
       "xGI": 0.23,
@@ -13164,7 +13716,7 @@
           "assists": 0,
           "minutes": 4,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 274,
@@ -13256,7 +13808,7 @@
           "assists": 0,
           "minutes": 76,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 346,
@@ -13348,7 +13900,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 339,
@@ -13440,7 +13992,7 @@
           "assists": 0,
           "minutes": 62,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 273,
@@ -13459,98 +14011,6 @@
       "cap10k": "0.0"
     },
     {
-      "id": 346,
-      "name": "Calvert-Lewin",
-      "fullName": "Dominic Calvert-Lewin",
-      "code": 177815,
-      "team": "LEE",
-      "teamId": 13,
-      "teamCode": 2,
-      "position": "FWD",
-      "price": 6,
-      "yellowCards": 2,
-      "redCards": 0,
-      "selectedBy": 21.7,
-      "xG": 1.61,
-      "xA": 0.08,
-      "xGI": 1.69,
-      "DC": 9,
-      "xGIPer90": 0.6035714285714285,
-      "dcPer90": 3.214285714285714,
-      "last6Matches": [
-        {
-          "gameweek": 1,
-          "opponent": "NFO",
-          "wasHome": false,
-          "xGI": 0.13,
-          "xG": 0.13,
-          "xA": 0,
-          "DC": 2,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 90,
-          "points": 1,
-          "isBlank": false
-        },
-        {
-          "gameweek": 2,
-          "opponent": "BRE",
-          "wasHome": true,
-          "xGI": 0.94,
-          "xG": 0.92,
-          "xA": 0.02,
-          "DC": 4,
-          "goals": 1,
-          "assists": 0,
-          "minutes": 90,
-          "points": 8,
-          "isBlank": false
-        },
-        {
-          "gameweek": 3,
-          "opponent": "BHA",
-          "wasHome": false,
-          "xGI": 0.62,
-          "xG": 0.56,
-          "xA": 0.06,
-          "DC": 3,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 72,
-          "points": 1,
-          "isBlank": false
-        },
-        {
-          "gameweek": 4,
-          "opponent": "NEW",
-          "wasHome": true,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 0,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 0,
-          "points": 0,
-          "isBlank": true
-        }
-      ],
-      "totalMinutes": 252,
-      "seasonXG": 1.61,
-      "seasonXA": 0.08,
-      "seasonGoals": 1,
-      "seasonAssists": 0,
-      "seasonMinutes": 252,
-      "totalPoints": 10,
-      "starts": 3,
-      "matchesPlayed": 3,
-      "defconMatches": 0,
-      "seasonDefCon": 9,
-      "eo10k": "34.0",
-      "eoOverall": "0.0",
-      "cap10k": "0.0"
-    },
-    {
       "id": 389,
       "name": "Matheus N.",
       "fullName": "Matheus Nunes",
@@ -13562,7 +14022,7 @@
       "price": 5.9,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 0.9,
+      "selectedBy": 1,
       "xG": 0,
       "xA": 0.05,
       "xGI": 0.05,
@@ -13624,7 +14084,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 9,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 123,
@@ -13651,7 +14111,7 @@
       "teamId": 16,
       "teamCode": 1,
       "position": "MID",
-      "price": 5.9,
+      "price": 5.8,
       "yellowCards": 0,
       "redCards": 0,
       "selectedBy": 1.6,
@@ -13716,7 +14176,7 @@
           "assists": 0,
           "minutes": 66,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 312,
@@ -13735,24 +14195,24 @@
       "cap10k": "0.0"
     },
     {
-      "id": 567,
-      "name": "Horníček",
-      "fullName": "Lukás Hornícek",
-      "code": 470551,
+      "id": 445,
+      "name": "Thiaw",
+      "fullName": "Malick Thiaw",
+      "code": 465642,
       "team": "NEW",
       "teamId": 17,
       "teamCode": 4,
-      "position": "GK",
+      "position": "DEF",
       "price": 5,
-      "yellowCards": 1,
+      "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 1.5,
+      "selectedBy": 2.2,
       "xG": 0,
-      "xA": 0,
-      "xGI": 0,
-      "DC": 0,
-      "xGIPer90": 0,
-      "dcPer90": 0,
+      "xA": 0.07,
+      "xGI": 0.07,
+      "DC": 32,
+      "xGIPer90": 0.0175,
+      "dcPer90": 8,
       "last6Matches": [
         {
           "gameweek": 1,
@@ -13761,39 +14221,39 @@
           "xGI": 0,
           "xG": 0,
           "xA": 0,
-          "DC": 0,
+          "DC": 15,
           "goals": 0,
           "assists": 0,
           "minutes": 90,
-          "points": 1,
+          "points": 3,
           "isBlank": false
         },
         {
           "gameweek": 2,
           "opponent": "TOT",
           "wasHome": false,
-          "xGI": 0,
+          "xGI": 0.02,
           "xG": 0,
-          "xA": 0,
-          "DC": 0,
+          "xA": 0.02,
+          "DC": 3,
           "goals": 0,
           "assists": 0,
           "minutes": 90,
-          "points": 7,
+          "points": 6,
           "isBlank": false
         },
         {
           "gameweek": 3,
           "opponent": "BOU",
           "wasHome": true,
-          "xGI": 0,
+          "xGI": 0.05,
           "xG": 0,
-          "xA": 0,
-          "DC": 0,
+          "xA": 0.05,
+          "DC": 3,
           "goals": 0,
           "assists": 0,
           "minutes": 90,
-          "points": 2,
+          "points": -1,
           "isBlank": false
         },
         {
@@ -13803,26 +14263,26 @@
           "xGI": 0,
           "xG": 0,
           "xA": 0,
-          "DC": 0,
+          "DC": 11,
           "goals": 0,
           "assists": 0,
-          "minutes": 0,
-          "points": 0,
-          "isBlank": true
+          "minutes": 90,
+          "points": 2,
+          "isBlank": false
         }
       ],
-      "totalMinutes": 270,
+      "totalMinutes": 360,
       "seasonXG": 0,
-      "seasonXA": 0,
+      "seasonXA": 0.07,
       "seasonGoals": 0,
       "seasonAssists": 0,
-      "seasonMinutes": 270,
+      "seasonMinutes": 360,
       "totalPoints": 10,
-      "starts": 3,
-      "matchesPlayed": 3,
-      "defconMatches": 0,
-      "seasonDefCon": 0,
-      "eo10k": "1.1",
+      "starts": 4,
+      "matchesPlayed": 4,
+      "defconMatches": 2,
+      "seasonDefCon": 32,
+      "eo10k": "0.8",
       "eoOverall": "0.0",
       "cap10k": "0.0"
     },
@@ -13900,7 +14360,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 270,
@@ -13992,7 +14452,7 @@
           "assists": 0,
           "minutes": 81,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 334,
@@ -14084,7 +14544,7 @@
           "assists": 0,
           "minutes": 45,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 271,
@@ -14114,7 +14574,7 @@
       "price": 4.5,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 0.8,
+      "selectedBy": 0.7,
       "xG": 0.28,
       "xA": 0.44999999999999996,
       "xGI": 0.73,
@@ -14176,7 +14636,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 335,
@@ -14268,7 +14728,7 @@
           "assists": 0,
           "minutes": 62,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 311,
@@ -14360,7 +14820,7 @@
           "assists": 0,
           "minutes": 62,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 302,
@@ -14452,7 +14912,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -14544,7 +15004,7 @@
           "assists": 0,
           "minutes": 15,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 136,
@@ -14636,7 +15096,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -14728,7 +15188,7 @@
           "assists": 0,
           "minutes": 76,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 338,
@@ -14820,7 +15280,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 5,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 213,
@@ -14912,7 +15372,7 @@
           "assists": 0,
           "minutes": 76,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 328,
@@ -15004,7 +15464,7 @@
           "assists": 0,
           "minutes": 62,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 105,
@@ -15096,7 +15556,7 @@
           "assists": 0,
           "minutes": 61,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 286,
@@ -15186,7 +15646,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 4,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 195,
@@ -15201,98 +15661,6 @@
       "defconMatches": 2,
       "seasonDefCon": 38,
       "eo10k": "0.0",
-      "eoOverall": "0.0",
-      "cap10k": "0.0"
-    },
-    {
-      "id": 338,
-      "name": "Ampadu",
-      "fullName": "Ethan Ampadu",
-      "code": 199598,
-      "team": "LEE",
-      "teamId": 13,
-      "teamCode": 2,
-      "position": "MID",
-      "price": 5.4,
-      "yellowCards": 0,
-      "redCards": 0,
-      "selectedBy": 1,
-      "xG": 0.01,
-      "xA": 0.14,
-      "xGI": 0.15000000000000002,
-      "DC": 34,
-      "xGIPer90": 0.05000000000000001,
-      "dcPer90": 11.333333333333332,
-      "last6Matches": [
-        {
-          "gameweek": 1,
-          "opponent": "NFO",
-          "wasHome": false,
-          "xGI": 0.04,
-          "xG": 0,
-          "xA": 0.04,
-          "DC": 13,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 90,
-          "points": 5,
-          "isBlank": false
-        },
-        {
-          "gameweek": 2,
-          "opponent": "BRE",
-          "wasHome": true,
-          "xGI": 0.1,
-          "xG": 0.01,
-          "xA": 0.09,
-          "DC": 10,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 90,
-          "points": 2,
-          "isBlank": false
-        },
-        {
-          "gameweek": 3,
-          "opponent": "BHA",
-          "wasHome": false,
-          "xGI": 0.01,
-          "xG": 0,
-          "xA": 0.01,
-          "DC": 11,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 90,
-          "points": 2,
-          "isBlank": false
-        },
-        {
-          "gameweek": 4,
-          "opponent": "NEW",
-          "wasHome": true,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 0,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 0,
-          "points": 0,
-          "isBlank": true
-        }
-      ],
-      "totalMinutes": 270,
-      "seasonXG": 0.01,
-      "seasonXA": 0.14,
-      "seasonGoals": 0,
-      "seasonAssists": 0,
-      "seasonMinutes": 270,
-      "totalPoints": 9,
-      "starts": 3,
-      "matchesPlayed": 3,
-      "defconMatches": 1,
-      "seasonDefCon": 34,
-      "eo10k": "0.1",
       "eoOverall": "0.0",
       "cap10k": "0.0"
     },
@@ -15370,7 +15738,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 268,
@@ -15400,7 +15768,7 @@
       "price": 7,
       "yellowCards": 1,
       "redCards": 1,
-      "selectedBy": 3.4,
+      "selectedBy": 3.1,
       "xG": 1.6099999999999999,
       "xA": 0.8800000000000001,
       "xGI": 2.49,
@@ -15462,7 +15830,7 @@
           "assists": 0,
           "minutes": 22,
           "points": -2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 217,
@@ -15481,98 +15849,6 @@
       "cap10k": "0.0"
     },
     {
-      "id": 447,
-      "name": "Botman",
-      "fullName": "Sven Botman",
-      "code": 220237,
-      "team": "NEW",
-      "teamId": 17,
-      "teamCode": 4,
-      "position": "DEF",
-      "price": 5,
-      "yellowCards": 1,
-      "redCards": 0,
-      "selectedBy": 0.7,
-      "xG": 0.01,
-      "xA": 0.17,
-      "xGI": 0.18,
-      "DC": 24,
-      "xGIPer90": 0.06,
-      "dcPer90": 8,
-      "last6Matches": [
-        {
-          "gameweek": 1,
-          "opponent": "LIV",
-          "wasHome": true,
-          "xGI": 0.01,
-          "xG": 0,
-          "xA": 0.01,
-          "DC": 10,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 90,
-          "points": 3,
-          "isBlank": false
-        },
-        {
-          "gameweek": 2,
-          "opponent": "TOT",
-          "wasHome": false,
-          "xGI": 0.01,
-          "xG": 0.01,
-          "xA": 0,
-          "DC": 5,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 90,
-          "points": 5,
-          "isBlank": false
-        },
-        {
-          "gameweek": 3,
-          "opponent": "BOU",
-          "wasHome": true,
-          "xGI": 0.16,
-          "xG": 0,
-          "xA": 0.16,
-          "DC": 9,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 90,
-          "points": 1,
-          "isBlank": false
-        },
-        {
-          "gameweek": 4,
-          "opponent": "LEE",
-          "wasHome": false,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 0,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 0,
-          "points": 0,
-          "isBlank": true
-        }
-      ],
-      "totalMinutes": 270,
-      "seasonXG": 0.01,
-      "seasonXA": 0.17,
-      "seasonGoals": 0,
-      "seasonAssists": 0,
-      "seasonMinutes": 270,
-      "totalPoints": 9,
-      "starts": 3,
-      "matchesPlayed": 3,
-      "defconMatches": 1,
-      "seasonDefCon": 24,
-      "eo10k": "0.1",
-      "eoOverall": "0.0",
-      "cap10k": "0.0"
-    },
-    {
       "id": 534,
       "name": "Hume",
       "fullName": "Trai Hume",
@@ -15584,7 +15860,7 @@
       "price": 4.4,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 3.7,
+      "selectedBy": 3.6,
       "xG": 0.04,
       "xA": 0.28,
       "xGI": 0.32,
@@ -15646,7 +15922,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 195,
@@ -15738,7 +16014,7 @@
           "assists": 0,
           "minutes": 45,
           "points": 7,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 64,
@@ -15830,7 +16106,7 @@
           "assists": 0,
           "minutes": 45,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 279,
@@ -15860,7 +16136,7 @@
       "price": 5,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 0,
+      "selectedBy": 0.1,
       "xG": 0.06,
       "xA": 0,
       "xGI": 0.06,
@@ -15922,7 +16198,7 @@
           "assists": 0,
           "minutes": 45,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 87,
@@ -16014,7 +16290,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -16106,7 +16382,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -16136,7 +16412,7 @@
       "price": 6.4,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 1.8,
+      "selectedBy": 1.7,
       "xG": 0.87,
       "xA": 0.08,
       "xGI": 0.95,
@@ -16198,7 +16474,7 @@
           "assists": 0,
           "minutes": 81,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 347,
@@ -16290,7 +16566,7 @@
           "assists": 0,
           "minutes": 81,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 192,
@@ -16382,7 +16658,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 6,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 257,
@@ -16474,7 +16750,7 @@
           "assists": 0,
           "minutes": 45,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 258,
@@ -16566,7 +16842,7 @@
           "assists": 0,
           "minutes": 72,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 224,
@@ -16658,7 +16934,7 @@
           "assists": 0,
           "minutes": 83,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 353,
@@ -16746,7 +17022,7 @@
           "assists": 0,
           "minutes": 13,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 29,
@@ -16776,7 +17052,7 @@
       "price": 6,
       "yellowCards": 2,
       "redCards": 0,
-      "selectedBy": 0.1,
+      "selectedBy": 0.2,
       "xG": 0.04,
       "xA": 0.13,
       "xGI": 0.16999999999999998,
@@ -16838,7 +17114,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 4,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 238,
@@ -16930,7 +17206,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 273,
@@ -17018,7 +17294,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 8,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -17048,7 +17324,7 @@
       "price": 4,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 14,
+      "selectedBy": 13.8,
       "xG": 0,
       "xA": 0.15,
       "xGI": 0.15,
@@ -17110,7 +17386,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -17202,7 +17478,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -17221,6 +17497,98 @@
       "cap10k": "0.0"
     },
     {
+      "id": 331,
+      "name": "Gudmundsson",
+      "fullName": "Gabriel Gudmundsson",
+      "code": 243526,
+      "team": "LEE",
+      "teamId": 13,
+      "teamCode": 2,
+      "position": "DEF",
+      "price": 4.5,
+      "yellowCards": 0,
+      "redCards": 0,
+      "selectedBy": 0.1,
+      "xG": 0,
+      "xA": 0.18,
+      "xGI": 0.18,
+      "DC": 9,
+      "xGIPer90": 0.1,
+      "dcPer90": 5,
+      "last6Matches": [
+        {
+          "gameweek": 1,
+          "opponent": "NFO",
+          "wasHome": false,
+          "xGI": 0,
+          "xG": 0,
+          "xA": 0,
+          "DC": 0,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 0,
+          "points": 0,
+          "isBlank": false
+        },
+        {
+          "gameweek": 2,
+          "opponent": "BRE",
+          "wasHome": true,
+          "xGI": 0,
+          "xG": 0,
+          "xA": 0,
+          "DC": 0,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 0,
+          "points": 0,
+          "isBlank": false
+        },
+        {
+          "gameweek": 3,
+          "opponent": "BHA",
+          "wasHome": false,
+          "xGI": 0,
+          "xG": 0,
+          "xA": 0,
+          "DC": 5,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 90,
+          "points": 2,
+          "isBlank": false
+        },
+        {
+          "gameweek": 4,
+          "opponent": "NEW",
+          "wasHome": true,
+          "xGI": 0.18,
+          "xG": 0,
+          "xA": 0.18,
+          "DC": 4,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 72,
+          "points": 6,
+          "isBlank": false
+        }
+      ],
+      "totalMinutes": 162,
+      "seasonXG": 0,
+      "seasonXA": 0.18,
+      "seasonGoals": 0,
+      "seasonAssists": 0,
+      "seasonMinutes": 162,
+      "totalPoints": 8,
+      "starts": 2,
+      "matchesPlayed": 2,
+      "defconMatches": 0,
+      "seasonDefCon": 9,
+      "eo10k": "0.0",
+      "eoOverall": "0.0",
+      "cap10k": "0.0"
+    },
+    {
       "id": 371,
       "name": "Gravenberch",
       "fullName": "Ryan Gravenberch",
@@ -17232,7 +17600,7 @@
       "price": 5.9,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 1.3,
+      "selectedBy": 1.2,
       "xG": 0.1,
       "xA": 0.07,
       "xGI": 0.16999999999999998,
@@ -17294,7 +17662,7 @@
           "assists": 0,
           "minutes": 59,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 181,
@@ -17324,7 +17692,7 @@
       "price": 4.9,
       "yellowCards": 2,
       "redCards": 0,
-      "selectedBy": 10.4,
+      "selectedBy": 10.2,
       "xG": 0.19,
       "xA": 0.43000000000000005,
       "xGI": 0.62,
@@ -17386,7 +17754,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -17478,7 +17846,7 @@
           "assists": 0,
           "minutes": 82,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 275,
@@ -17508,7 +17876,7 @@
       "price": 7,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 1.8,
+      "selectedBy": 1.7,
       "xG": 0.38999999999999996,
       "xA": 0.01,
       "xGI": 0.39999999999999997,
@@ -17570,7 +17938,7 @@
           "assists": 0,
           "minutes": 23,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 76,
@@ -17589,98 +17957,6 @@
       "cap10k": "0.0"
     },
     {
-      "id": 445,
-      "name": "Thiaw",
-      "fullName": "Malick Thiaw",
-      "code": 465642,
-      "team": "NEW",
-      "teamId": 17,
-      "teamCode": 4,
-      "position": "DEF",
-      "price": 5,
-      "yellowCards": 0,
-      "redCards": 0,
-      "selectedBy": 2.2,
-      "xG": 0,
-      "xA": 0.07,
-      "xGI": 0.07,
-      "DC": 21,
-      "xGIPer90": 0.023333333333333334,
-      "dcPer90": 7,
-      "last6Matches": [
-        {
-          "gameweek": 1,
-          "opponent": "LIV",
-          "wasHome": true,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 15,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 90,
-          "points": 3,
-          "isBlank": false
-        },
-        {
-          "gameweek": 2,
-          "opponent": "TOT",
-          "wasHome": false,
-          "xGI": 0.02,
-          "xG": 0,
-          "xA": 0.02,
-          "DC": 3,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 90,
-          "points": 6,
-          "isBlank": false
-        },
-        {
-          "gameweek": 3,
-          "opponent": "BOU",
-          "wasHome": true,
-          "xGI": 0.05,
-          "xG": 0,
-          "xA": 0.05,
-          "DC": 3,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 90,
-          "points": -1,
-          "isBlank": false
-        },
-        {
-          "gameweek": 4,
-          "opponent": "LEE",
-          "wasHome": false,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 0,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 0,
-          "points": 0,
-          "isBlank": true
-        }
-      ],
-      "totalMinutes": 270,
-      "seasonXG": 0,
-      "seasonXA": 0.07,
-      "seasonGoals": 0,
-      "seasonAssists": 0,
-      "seasonMinutes": 270,
-      "totalPoints": 8,
-      "starts": 3,
-      "matchesPlayed": 3,
-      "defconMatches": 1,
-      "seasonDefCon": 21,
-      "eo10k": "0.8",
-      "eoOverall": "0.0",
-      "cap10k": "0.0"
-    },
-    {
       "id": 459,
       "name": "L.Miley",
       "fullName": "Lewis Miley",
@@ -17694,11 +17970,11 @@
       "redCards": 0,
       "selectedBy": 0.1,
       "xG": 0.05,
-      "xA": 0.07,
-      "xGI": 0.12000000000000001,
-      "DC": 26,
-      "xGIPer90": 0.04757709251101322,
-      "dcPer90": 10.308370044052865,
+      "xA": 0.1,
+      "xGI": 0.15000000000000002,
+      "DC": 36,
+      "xGIPer90": 0.04411764705882354,
+      "dcPer90": 10.588235294117647,
       "last6Matches": [
         {
           "gameweek": 1,
@@ -17746,28 +18022,28 @@
           "gameweek": 4,
           "opponent": "LEE",
           "wasHome": false,
-          "xGI": 0,
+          "xGI": 0.03,
           "xG": 0,
-          "xA": 0,
-          "DC": 0,
+          "xA": 0.03,
+          "DC": 10,
           "goals": 0,
           "assists": 0,
-          "minutes": 0,
+          "minutes": 79,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
-      "totalMinutes": 227,
+      "totalMinutes": 306,
       "seasonXG": 0.05,
-      "seasonXA": 0.07,
+      "seasonXA": 0.1,
       "seasonGoals": 0,
       "seasonAssists": 0,
-      "seasonMinutes": 227,
+      "seasonMinutes": 306,
       "totalPoints": 8,
-      "starts": 3,
-      "matchesPlayed": 3,
+      "starts": 4,
+      "matchesPlayed": 4,
       "defconMatches": 1,
-      "seasonDefCon": 26,
+      "seasonDefCon": 36,
       "eo10k": "0.0",
       "eoOverall": "0.0",
       "cap10k": "0.0"
@@ -17784,7 +18060,7 @@
       "price": 5.5,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 1.2,
+      "selectedBy": 1.4,
       "xG": 0.76,
       "xA": 0.14,
       "xGI": 0.8999999999999999,
@@ -17846,7 +18122,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 5,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 187,
@@ -17938,7 +18214,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 306,
@@ -17968,7 +18244,7 @@
       "price": 5.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 9.8,
+      "selectedBy": 9.4,
       "xG": 0.36,
       "xA": 0.16,
       "xGI": 0.52,
@@ -18030,7 +18306,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 180,
@@ -18122,7 +18398,7 @@
           "assists": 0,
           "minutes": 27,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 257,
@@ -18214,7 +18490,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 343,
@@ -18244,7 +18520,7 @@
       "price": 4.5,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 5.6,
+      "selectedBy": 5.4,
       "xG": 0.15,
       "xA": 0.04,
       "xGI": 0.19,
@@ -18306,7 +18582,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 251,
@@ -18398,7 +18674,7 @@
           "assists": 0,
           "minutes": 65,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 171,
@@ -18490,7 +18766,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -18520,7 +18796,7 @@
       "price": 4.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 3.2,
+      "selectedBy": 3.1,
       "xG": 0,
       "xA": 0,
       "xGI": 0,
@@ -18582,7 +18858,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -18674,7 +18950,7 @@
           "assists": 0,
           "minutes": 8,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 165,
@@ -18766,7 +19042,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 163,
@@ -18858,7 +19134,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 156,
@@ -18950,7 +19226,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 270,
@@ -18980,7 +19256,7 @@
       "price": 5.5,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 0.7,
+      "selectedBy": 0.6,
       "xG": 1.1,
       "xA": 0.58,
       "xGI": 1.6800000000000002,
@@ -19042,7 +19318,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 167,
@@ -19134,7 +19410,7 @@
           "assists": 0,
           "minutes": 59,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 249,
@@ -19226,7 +19502,7 @@
           "assists": 0,
           "minutes": 27,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 243,
@@ -19318,7 +19594,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -19410,7 +19686,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 123,
@@ -19425,6 +19701,98 @@
       "defconMatches": 0,
       "seasonDefCon": 11,
       "eo10k": "0.0",
+      "eoOverall": "0.0",
+      "cap10k": "0.0"
+    },
+    {
+      "id": 598,
+      "name": "Elvedi",
+      "fullName": "Nico Elvedi",
+      "code": 173774,
+      "team": "LEE",
+      "teamId": 13,
+      "teamCode": 2,
+      "position": "DEF",
+      "price": 4.5,
+      "yellowCards": 0,
+      "redCards": 0,
+      "selectedBy": 0,
+      "xG": 0.05,
+      "xA": 0.57,
+      "xGI": 0.62,
+      "DC": 25,
+      "xGIPer90": 0.2364406779661017,
+      "dcPer90": 9.533898305084746,
+      "last6Matches": [
+        {
+          "gameweek": 1,
+          "opponent": "NFO",
+          "wasHome": false,
+          "xGI": 0,
+          "xG": 0,
+          "xA": 0,
+          "DC": 0,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 0,
+          "points": 0,
+          "isBlank": false
+        },
+        {
+          "gameweek": 2,
+          "opponent": "BRE",
+          "wasHome": true,
+          "xGI": 0,
+          "xG": 0,
+          "xA": 0,
+          "DC": 6,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 56,
+          "points": 1,
+          "isBlank": false
+        },
+        {
+          "gameweek": 3,
+          "opponent": "BHA",
+          "wasHome": false,
+          "xGI": 0.57,
+          "xG": 0,
+          "xA": 0.57,
+          "DC": 10,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 90,
+          "points": 4,
+          "isBlank": false
+        },
+        {
+          "gameweek": 4,
+          "opponent": "NEW",
+          "wasHome": true,
+          "xGI": 0.05,
+          "xG": 0.05,
+          "xA": 0,
+          "DC": 9,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 90,
+          "points": 2,
+          "isBlank": false
+        }
+      ],
+      "totalMinutes": 236,
+      "seasonXG": 0.05,
+      "seasonXA": 0.57,
+      "seasonGoals": 0,
+      "seasonAssists": 0,
+      "seasonMinutes": 236,
+      "totalPoints": 7,
+      "starts": 2,
+      "matchesPlayed": 3,
+      "defconMatches": 1,
+      "seasonDefCon": 25,
+      "eo10k": "0.1",
       "eoOverall": "0.0",
       "cap10k": "0.0"
     },
@@ -19502,7 +19870,7 @@
           "assists": 0,
           "minutes": 45,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 295,
@@ -19532,7 +19900,7 @@
       "price": 4.9,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 11.1,
+      "selectedBy": 10.9,
       "xG": 0,
       "xA": 0,
       "xGI": 0,
@@ -19594,7 +19962,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -19624,7 +19992,7 @@
       "price": 4.4,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 10.9,
+      "selectedBy": 10.5,
       "xG": 0.02,
       "xA": 0.51,
       "xGI": 0.53,
@@ -19686,7 +20054,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 252,
@@ -19778,7 +20146,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 69,
@@ -19797,6 +20165,98 @@
       "cap10k": "0.0"
     },
     {
+      "id": 461,
+      "name": "Touré",
+      "fullName": "Bazoumana Touré",
+      "code": 611665,
+      "team": "NEW",
+      "teamId": 17,
+      "teamCode": 4,
+      "position": "MID",
+      "price": 5.8,
+      "yellowCards": 0,
+      "redCards": 0,
+      "selectedBy": 0.1,
+      "xG": 0.28,
+      "xA": 0.01,
+      "xGI": 0.29,
+      "DC": 2,
+      "xGIPer90": 0.7676470588235295,
+      "dcPer90": 5.294117647058823,
+      "last6Matches": [
+        {
+          "gameweek": 1,
+          "opponent": "LIV",
+          "wasHome": true,
+          "xGI": 0,
+          "xG": 0,
+          "xA": 0,
+          "DC": 0,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 0,
+          "points": 0,
+          "isBlank": false
+        },
+        {
+          "gameweek": 2,
+          "opponent": "TOT",
+          "wasHome": false,
+          "xGI": 0,
+          "xG": 0,
+          "xA": 0,
+          "DC": 0,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 1,
+          "points": 1,
+          "isBlank": false
+        },
+        {
+          "gameweek": 3,
+          "opponent": "BOU",
+          "wasHome": true,
+          "xGI": 0,
+          "xG": 0,
+          "xA": 0,
+          "DC": 0,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 0,
+          "points": 0,
+          "isBlank": false
+        },
+        {
+          "gameweek": 4,
+          "opponent": "LEE",
+          "wasHome": false,
+          "xGI": 0.29,
+          "xG": 0.28,
+          "xA": 0.01,
+          "DC": 2,
+          "goals": 1,
+          "assists": 0,
+          "minutes": 33,
+          "points": 6,
+          "isBlank": false
+        }
+      ],
+      "totalMinutes": 34,
+      "seasonXG": 0.28,
+      "seasonXA": 0.01,
+      "seasonGoals": 1,
+      "seasonAssists": 0,
+      "seasonMinutes": 34,
+      "totalPoints": 7,
+      "starts": 0,
+      "matchesPlayed": 2,
+      "defconMatches": 0,
+      "seasonDefCon": 2,
+      "eo10k": "0.0",
+      "eoOverall": "0.0",
+      "cap10k": "0.0"
+    },
+    {
       "id": 506,
       "name": "Udogie",
       "fullName": "Destiny Udogie",
@@ -19805,7 +20265,7 @@
       "teamId": 19,
       "teamCode": 6,
       "position": "DEF",
-      "price": 4.5,
+      "price": 4.4,
       "yellowCards": 1,
       "redCards": 0,
       "selectedBy": 0.4,
@@ -19870,7 +20330,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 86,
@@ -19962,7 +20422,7 @@
           "assists": 0,
           "minutes": 84,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 236,
@@ -20054,7 +20514,7 @@
           "assists": 0,
           "minutes": 90,
           "points": -2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -20084,7 +20544,7 @@
       "price": 5.8,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 6.4,
+      "selectedBy": 6.2,
       "xG": 0.59,
       "xA": 0.06999999999999999,
       "xGI": 0.6599999999999999,
@@ -20146,7 +20606,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 309,
@@ -20238,7 +20698,7 @@
           "assists": 0,
           "minutes": 30,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 170,
@@ -20330,7 +20790,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 66,
@@ -20357,7 +20817,7 @@
       "teamId": 4,
       "teamCode": 94,
       "position": "MID",
-      "price": 4.9,
+      "price": 4.8,
       "yellowCards": 1,
       "redCards": 0,
       "selectedBy": 0.7,
@@ -20422,7 +20882,7 @@
           "assists": 1,
           "minutes": 59,
           "points": 4,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 148,
@@ -20514,7 +20974,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 192,
@@ -20606,7 +21066,7 @@
           "assists": 0,
           "minutes": 72,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 224,
@@ -20636,7 +21096,7 @@
       "price": 4,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 10.3,
+      "selectedBy": 10.1,
       "xG": 0,
       "xA": 0.3,
       "xGI": 0.3,
@@ -20698,7 +21158,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -20790,7 +21250,7 @@
           "assists": 0,
           "minutes": 17,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 175,
@@ -20882,7 +21342,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -20970,7 +21430,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 4,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 163,
@@ -21062,7 +21522,7 @@
           "assists": 0,
           "minutes": 74,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 173,
@@ -21154,7 +21614,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 249,
@@ -21246,7 +21706,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 50,
@@ -21273,7 +21733,7 @@
       "teamId": 12,
       "teamCode": 40,
       "position": "MID",
-      "price": 5,
+      "price": 4.9,
       "yellowCards": 0,
       "redCards": 0,
       "selectedBy": 0.1,
@@ -21338,7 +21798,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 140,
@@ -21430,7 +21890,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 69,
@@ -21518,7 +21978,7 @@
           "assists": 0,
           "minutes": 27,
           "points": 5,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 51,
@@ -21537,139 +21997,47 @@
       "cap10k": "0.0"
     },
     {
-      "id": 336,
-      "name": "Okafor",
-      "fullName": "Noah Okafor",
-      "code": 435997,
+      "id": 337,
+      "name": "Aaronson",
+      "fullName": "Brenden Aaronson",
+      "code": 427637,
       "team": "LEE",
       "teamId": 13,
       "teamCode": 2,
       "position": "MID",
-      "price": 5.8,
+      "price": 5.4,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 0.3,
-      "xG": 0.08,
-      "xA": 0.18000000000000002,
-      "xGI": 0.26,
-      "DC": 7,
-      "xGIPer90": 0.15294117647058825,
-      "dcPer90": 4.117647058823529,
+      "selectedBy": 0.6,
+      "xG": 0.01,
+      "xA": 0.02,
+      "xGI": 0.03,
+      "DC": 11,
+      "xGIPer90": 0.015697674418604653,
+      "dcPer90": 5.7558139534883725,
       "last6Matches": [
         {
           "gameweek": 1,
           "opponent": "NFO",
           "wasHome": false,
-          "xGI": 0.16,
-          "xG": 0,
-          "xA": 0.16,
-          "DC": 5,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 24,
-          "points": 1,
-          "isBlank": false
-        },
-        {
-          "gameweek": 2,
-          "opponent": "BRE",
-          "wasHome": true,
-          "xGI": 0.09,
-          "xG": 0.08,
+          "xGI": 0.02,
+          "xG": 0.01,
           "xA": 0.01,
-          "DC": 2,
+          "DC": 7,
           "goals": 0,
           "assists": 0,
-          "minutes": 68,
-          "points": 2,
-          "isBlank": false
-        },
-        {
-          "gameweek": 3,
-          "opponent": "BHA",
-          "wasHome": false,
-          "xGI": 0.01,
-          "xG": 0,
-          "xA": 0.01,
-          "DC": 0,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 61,
+          "minutes": 81,
           "points": 3,
           "isBlank": false
         },
         {
-          "gameweek": 4,
-          "opponent": "NEW",
-          "wasHome": true,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 0,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 0,
-          "points": 0,
-          "isBlank": true
-        }
-      ],
-      "totalMinutes": 153,
-      "seasonXG": 0.08,
-      "seasonXA": 0.18,
-      "seasonGoals": 0,
-      "seasonAssists": 0,
-      "seasonMinutes": 153,
-      "totalPoints": 6,
-      "starts": 2,
-      "matchesPlayed": 3,
-      "defconMatches": 0,
-      "seasonDefCon": 7,
-      "eo10k": "0.0",
-      "eoOverall": "0.0",
-      "cap10k": "0.0"
-    },
-    {
-      "id": 345,
-      "name": "Tanaka",
-      "fullName": "Tanaka Ao",
-      "code": 248056,
-      "team": "LEE",
-      "teamId": 13,
-      "teamCode": 2,
-      "position": "MID",
-      "price": 4.9,
-      "yellowCards": 0,
-      "redCards": 0,
-      "selectedBy": 0.2,
-      "xG": 0.53,
-      "xA": 0.02,
-      "xGI": 0.55,
-      "DC": 19,
-      "xGIPer90": 0.42307692307692313,
-      "dcPer90": 14.615384615384617,
-      "last6Matches": [
-        {
-          "gameweek": 1,
-          "opponent": "NFO",
-          "wasHome": false,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 0,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 0,
-          "points": 0,
-          "isBlank": false
-        },
-        {
           "gameweek": 2,
           "opponent": "BRE",
           "wasHome": true,
           "xGI": 0.01,
           "xG": 0,
           "xA": 0.01,
-          "DC": 11,
+          "DC": 3,
           "goals": 0,
           "assists": 0,
           "minutes": 45,
@@ -21680,14 +22048,14 @@
           "gameweek": 3,
           "opponent": "BHA",
           "wasHome": false,
-          "xGI": 0.54,
-          "xG": 0.53,
-          "xA": 0.01,
-          "DC": 8,
+          "xGI": 0,
+          "xG": 0,
+          "xA": 0,
+          "DC": 0,
           "goals": 0,
-          "assists": 1,
-          "minutes": 72,
-          "points": 5,
+          "assists": 0,
+          "minutes": 28,
+          "points": 1,
           "isBlank": false
         },
         {
@@ -21697,25 +22065,117 @@
           "xGI": 0,
           "xG": 0,
           "xA": 0,
+          "DC": 1,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 18,
+          "points": 1,
+          "isBlank": false
+        }
+      ],
+      "totalMinutes": 172,
+      "seasonXG": 0.01,
+      "seasonXA": 0.02,
+      "seasonGoals": 0,
+      "seasonAssists": 0,
+      "seasonMinutes": 172,
+      "totalPoints": 6,
+      "starts": 2,
+      "matchesPlayed": 4,
+      "defconMatches": 0,
+      "seasonDefCon": 11,
+      "eo10k": "0.0",
+      "eoOverall": "0.0",
+      "cap10k": "0.0"
+    },
+    {
+      "id": 347,
+      "name": "Nmecha",
+      "fullName": "Lukas Nmecha",
+      "code": 174594,
+      "team": "LEE",
+      "teamId": 13,
+      "teamCode": 2,
+      "position": "FWD",
+      "price": 5.4,
+      "yellowCards": 0,
+      "redCards": 0,
+      "selectedBy": 0.5,
+      "xG": 0.27,
+      "xA": 0.15000000000000002,
+      "xGI": 0.42000000000000004,
+      "DC": 2,
+      "xGIPer90": 0.7560000000000001,
+      "dcPer90": 3.6,
+      "last6Matches": [
+        {
+          "gameweek": 1,
+          "opponent": "NFO",
+          "wasHome": false,
+          "xGI": 0,
+          "xG": 0,
+          "xA": 0,
           "DC": 0,
           "goals": 0,
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
+        },
+        {
+          "gameweek": 2,
+          "opponent": "BRE",
+          "wasHome": true,
+          "xGI": 0.1,
+          "xG": 0.1,
+          "xA": 0,
+          "DC": 1,
+          "goals": 0,
+          "assists": 1,
+          "minutes": 21,
+          "points": 4,
+          "isBlank": false
+        },
+        {
+          "gameweek": 3,
+          "opponent": "BHA",
+          "wasHome": false,
+          "xGI": 0.31,
+          "xG": 0.17,
+          "xA": 0.14,
+          "DC": 0,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 17,
+          "points": 1,
+          "isBlank": false
+        },
+        {
+          "gameweek": 4,
+          "opponent": "NEW",
+          "wasHome": true,
+          "xGI": 0.01,
+          "xG": 0,
+          "xA": 0.01,
+          "DC": 1,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 12,
+          "points": 1,
+          "isBlank": false
         }
       ],
-      "totalMinutes": 117,
-      "seasonXG": 0.53,
-      "seasonXA": 0.02,
+      "totalMinutes": 50,
+      "seasonXG": 0.27,
+      "seasonXA": 0.15,
       "seasonGoals": 0,
       "seasonAssists": 1,
-      "seasonMinutes": 117,
+      "seasonMinutes": 50,
       "totalPoints": 6,
-      "starts": 1,
-      "matchesPlayed": 2,
+      "starts": 0,
+      "matchesPlayed": 3,
       "defconMatches": 0,
-      "seasonDefCon": 19,
+      "seasonDefCon": 2,
       "eo10k": "0.0",
       "eoOverall": "0.0",
       "cap10k": "0.0"
@@ -21794,7 +22254,7 @@
           "assists": 0,
           "minutes": 30,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 216,
@@ -21886,7 +22346,7 @@
           "assists": 0,
           "minutes": 81,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 181,
@@ -21978,7 +22438,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 4,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 165,
@@ -22070,7 +22530,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 256,
@@ -22162,7 +22622,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 270,
@@ -22192,7 +22652,7 @@
       "price": 7,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 2.2,
+      "selectedBy": 2.1,
       "xG": 0.36000000000000004,
       "xA": 0.11,
       "xGI": 0.47,
@@ -22254,7 +22714,7 @@
           "assists": 0,
           "minutes": 76,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 249,
@@ -22346,7 +22806,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 150,
@@ -22438,7 +22898,7 @@
           "assists": 0,
           "minutes": 62,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 204,
@@ -22528,7 +22988,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 107,
@@ -22620,7 +23080,7 @@
           "assists": 0,
           "minutes": 59,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 187,
@@ -22650,7 +23110,7 @@
       "price": 7.9,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 10,
+      "selectedBy": 9.7,
       "xG": 2.4099999999999997,
       "xA": 0.13,
       "xGI": 2.5400000000000005,
@@ -22712,7 +23172,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 352,
@@ -22804,7 +23264,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -22896,7 +23356,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 202,
@@ -22988,7 +23448,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -23080,7 +23540,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 354,
@@ -23172,7 +23632,7 @@
           "assists": 0,
           "minutes": 17,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 137,
@@ -23264,7 +23724,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 270,
@@ -23283,36 +23743,36 @@
       "cap10k": "0.0"
     },
     {
-      "id": 337,
-      "name": "Aaronson",
-      "fullName": "Brenden Aaronson",
-      "code": 427637,
+      "id": 260,
+      "name": "Wilson",
+      "fullName": "Harry Wilson",
+      "code": 153682,
       "team": "LEE",
       "teamId": 13,
       "teamCode": 2,
       "position": "MID",
-      "price": 5.4,
-      "yellowCards": 0,
+      "price": 6.3,
+      "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 0.6,
+      "selectedBy": 2.5,
       "xG": 0.01,
-      "xA": 0.02,
-      "xGI": 0.03,
-      "DC": 10,
-      "xGIPer90": 0.01753246753246753,
-      "dcPer90": 5.844155844155844,
+      "xA": 0.09,
+      "xGI": 0.1,
+      "DC": 11,
+      "xGIPer90": 0.062068965517241385,
+      "dcPer90": 6.827586206896552,
       "last6Matches": [
         {
           "gameweek": 1,
           "opponent": "NFO",
           "wasHome": false,
           "xGI": 0.02,
-          "xG": 0.01,
-          "xA": 0.01,
-          "DC": 7,
+          "xG": 0,
+          "xA": 0.02,
+          "DC": 2,
           "goals": 0,
           "assists": 0,
-          "minutes": 81,
+          "minutes": 65,
           "points": 3,
           "isBlank": false
         },
@@ -23320,10 +23780,10 @@
           "gameweek": 2,
           "opponent": "BRE",
           "wasHome": true,
-          "xGI": 0.01,
-          "xG": 0,
-          "xA": 0.01,
-          "DC": 3,
+          "xGI": 0.05,
+          "xG": 0.01,
+          "xA": 0.04,
+          "DC": 6,
           "goals": 0,
           "assists": 0,
           "minutes": 45,
@@ -23337,223 +23797,39 @@
           "xGI": 0,
           "xG": 0,
           "xA": 0,
-          "DC": 0,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 28,
-          "points": 1,
-          "isBlank": false
-        },
-        {
-          "gameweek": 4,
-          "opponent": "NEW",
-          "wasHome": true,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 0,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 0,
-          "points": 0,
-          "isBlank": true
-        }
-      ],
-      "totalMinutes": 154,
-      "seasonXG": 0.01,
-      "seasonXA": 0.02,
-      "seasonGoals": 0,
-      "seasonAssists": 0,
-      "seasonMinutes": 154,
-      "totalPoints": 5,
-      "starts": 2,
-      "matchesPlayed": 3,
-      "defconMatches": 0,
-      "seasonDefCon": 10,
-      "eo10k": "0.0",
-      "eoOverall": "0.0",
-      "cap10k": "0.0"
-    },
-    {
-      "id": 347,
-      "name": "Nmecha",
-      "fullName": "Lukas Nmecha",
-      "code": 174594,
-      "team": "LEE",
-      "teamId": 13,
-      "teamCode": 2,
-      "position": "FWD",
-      "price": 5.4,
-      "yellowCards": 0,
-      "redCards": 0,
-      "selectedBy": 0.5,
-      "xG": 0.27,
-      "xA": 0.14,
-      "xGI": 0.41000000000000003,
-      "DC": 1,
-      "xGIPer90": 0.9710526315789475,
-      "dcPer90": 2.3684210526315788,
-      "last6Matches": [
-        {
-          "gameweek": 1,
-          "opponent": "NFO",
-          "wasHome": false,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 0,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 0,
-          "points": 0,
-          "isBlank": false
-        },
-        {
-          "gameweek": 2,
-          "opponent": "BRE",
-          "wasHome": true,
-          "xGI": 0.1,
-          "xG": 0.1,
-          "xA": 0,
           "DC": 1,
-          "goals": 0,
-          "assists": 1,
-          "minutes": 21,
-          "points": 4,
-          "isBlank": false
-        },
-        {
-          "gameweek": 3,
-          "opponent": "BHA",
-          "wasHome": false,
-          "xGI": 0.31,
-          "xG": 0.17,
-          "xA": 0.14,
-          "DC": 0,
           "goals": 0,
           "assists": 0,
           "minutes": 17,
-          "points": 1,
+          "points": 0,
           "isBlank": false
         },
         {
           "gameweek": 4,
           "opponent": "NEW",
           "wasHome": true,
-          "xGI": 0,
+          "xGI": 0.03,
           "xG": 0,
-          "xA": 0,
-          "DC": 0,
+          "xA": 0.03,
+          "DC": 2,
           "goals": 0,
           "assists": 0,
-          "minutes": 0,
-          "points": 0,
-          "isBlank": true
-        }
-      ],
-      "totalMinutes": 38,
-      "seasonXG": 0.27,
-      "seasonXA": 0.14,
-      "seasonGoals": 0,
-      "seasonAssists": 1,
-      "seasonMinutes": 38,
-      "totalPoints": 5,
-      "starts": 0,
-      "matchesPlayed": 2,
-      "defconMatches": 0,
-      "seasonDefCon": 1,
-      "eo10k": "0.0",
-      "eoOverall": "0.0",
-      "cap10k": "0.0"
-    },
-    {
-      "id": 598,
-      "name": "Elvedi",
-      "fullName": "Nico Elvedi",
-      "code": 173774,
-      "team": "LEE",
-      "teamId": 13,
-      "teamCode": 2,
-      "position": "DEF",
-      "price": 4.5,
-      "yellowCards": 0,
-      "redCards": 0,
-      "selectedBy": 0,
-      "xG": 0,
-      "xA": 0.57,
-      "xGI": 0.57,
-      "DC": 16,
-      "xGIPer90": 0.3513698630136986,
-      "dcPer90": 9.863013698630137,
-      "last6Matches": [
-        {
-          "gameweek": 1,
-          "opponent": "NFO",
-          "wasHome": false,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 0,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 0,
-          "points": 0,
-          "isBlank": false
-        },
-        {
-          "gameweek": 2,
-          "opponent": "BRE",
-          "wasHome": true,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 6,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 56,
+          "minutes": 18,
           "points": 1,
           "isBlank": false
-        },
-        {
-          "gameweek": 3,
-          "opponent": "BHA",
-          "wasHome": false,
-          "xGI": 0.57,
-          "xG": 0,
-          "xA": 0.57,
-          "DC": 10,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 90,
-          "points": 4,
-          "isBlank": false
-        },
-        {
-          "gameweek": 4,
-          "opponent": "NEW",
-          "wasHome": true,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 0,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 0,
-          "points": 0,
-          "isBlank": true
         }
       ],
-      "totalMinutes": 146,
-      "seasonXG": 0,
-      "seasonXA": 0.57,
+      "totalMinutes": 145,
+      "seasonXG": 0.01,
+      "seasonXA": 0.09,
       "seasonGoals": 0,
       "seasonAssists": 0,
-      "seasonMinutes": 146,
+      "seasonMinutes": 145,
       "totalPoints": 5,
       "starts": 1,
-      "matchesPlayed": 2,
-      "defconMatches": 1,
-      "seasonDefCon": 16,
+      "matchesPlayed": 4,
+      "defconMatches": 0,
+      "seasonDefCon": 11,
       "eo10k": "0.1",
       "eoOverall": "0.0",
       "cap10k": "0.0"
@@ -23570,7 +23846,7 @@
       "price": 6.4,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 12.8,
+      "selectedBy": 12.5,
       "xG": 0.09000000000000001,
       "xA": 0.43,
       "xGI": 0.52,
@@ -23632,7 +23908,7 @@
           "assists": 0,
           "minutes": 8,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 158,
@@ -23647,6 +23923,190 @@
       "defconMatches": 0,
       "seasonDefCon": 3,
       "eo10k": "0.6",
+      "eoOverall": "0.0",
+      "cap10k": "0.0"
+    },
+    {
+      "id": 405,
+      "name": "N.Gonzalez",
+      "fullName": "Nico González Iglesias",
+      "code": 465694,
+      "team": "NEW",
+      "teamId": 17,
+      "teamCode": 4,
+      "position": "MID",
+      "price": 5.5,
+      "yellowCards": 1,
+      "redCards": 0,
+      "selectedBy": 0.2,
+      "xG": 0,
+      "xA": 0.21000000000000002,
+      "xGI": 0.21000000000000002,
+      "DC": 12,
+      "xGIPer90": 0.1152439024390244,
+      "dcPer90": 6.585365853658536,
+      "last6Matches": [
+        {
+          "gameweek": 1,
+          "opponent": "BOU",
+          "wasHome": true,
+          "xGI": 0,
+          "xG": 0,
+          "xA": 0,
+          "DC": 0,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 0,
+          "points": 0,
+          "isBlank": false
+        },
+        {
+          "gameweek": 2,
+          "opponent": "TOT",
+          "wasHome": false,
+          "xGI": 0.2,
+          "xG": 0,
+          "xA": 0.2,
+          "DC": 4,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 70,
+          "points": 2,
+          "isBlank": false
+        },
+        {
+          "gameweek": 3,
+          "opponent": "BOU",
+          "wasHome": true,
+          "xGI": 0.01,
+          "xG": 0,
+          "xA": 0.01,
+          "DC": 7,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 76,
+          "points": 2,
+          "isBlank": false
+        },
+        {
+          "gameweek": 4,
+          "opponent": "LEE",
+          "wasHome": false,
+          "xGI": 0,
+          "xG": 0,
+          "xA": 0,
+          "DC": 1,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 18,
+          "points": 1,
+          "isBlank": false
+        }
+      ],
+      "totalMinutes": 164,
+      "seasonXG": 0,
+      "seasonXA": 0.21,
+      "seasonGoals": 0,
+      "seasonAssists": 0,
+      "seasonMinutes": 164,
+      "totalPoints": 5,
+      "starts": 3,
+      "matchesPlayed": 3,
+      "defconMatches": 0,
+      "seasonDefCon": 12,
+      "eo10k": "0.0",
+      "eoOverall": "0.0",
+      "cap10k": "0.0"
+    },
+    {
+      "id": 462,
+      "name": "Steur",
+      "fullName": "Sean Steur",
+      "code": 636852,
+      "team": "NEW",
+      "teamId": 17,
+      "teamCode": 4,
+      "position": "MID",
+      "price": 4.9,
+      "yellowCards": 0,
+      "redCards": 0,
+      "selectedBy": 0.1,
+      "xG": 0,
+      "xA": 0.03,
+      "xGI": 0.03,
+      "DC": 14,
+      "xGIPer90": 0.01708860759493671,
+      "dcPer90": 7.974683544303797,
+      "last6Matches": [
+        {
+          "gameweek": 1,
+          "opponent": "LIV",
+          "wasHome": true,
+          "xGI": 0,
+          "xG": 0,
+          "xA": 0,
+          "DC": 2,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 55,
+          "points": 1,
+          "isBlank": false
+        },
+        {
+          "gameweek": 2,
+          "opponent": "TOT",
+          "wasHome": false,
+          "xGI": 0,
+          "xG": 0,
+          "xA": 0,
+          "DC": 3,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 19,
+          "points": 1,
+          "isBlank": false
+        },
+        {
+          "gameweek": 3,
+          "opponent": "BOU",
+          "wasHome": true,
+          "xGI": 0,
+          "xG": 0,
+          "xA": 0,
+          "DC": 2,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 13,
+          "points": 1,
+          "isBlank": false
+        },
+        {
+          "gameweek": 4,
+          "opponent": "LEE",
+          "wasHome": false,
+          "xGI": 0.03,
+          "xG": 0,
+          "xA": 0.03,
+          "DC": 7,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 71,
+          "points": 2,
+          "isBlank": false
+        }
+      ],
+      "totalMinutes": 158,
+      "seasonXG": 0,
+      "seasonXA": 0.03,
+      "seasonGoals": 0,
+      "seasonAssists": 0,
+      "seasonMinutes": 158,
+      "totalPoints": 5,
+      "starts": 1,
+      "matchesPlayed": 4,
+      "defconMatches": 0,
+      "seasonDefCon": 14,
+      "eo10k": "0.0",
       "eoOverall": "0.0",
       "cap10k": "0.0"
     },
@@ -23724,7 +24184,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 4,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 91,
@@ -23751,7 +24211,7 @@
       "teamId": 19,
       "teamCode": 6,
       "position": "FWD",
-      "price": 5.9,
+      "price": 5.8,
       "yellowCards": 0,
       "redCards": 0,
       "selectedBy": 0.9,
@@ -23816,7 +24276,7 @@
           "assists": 0,
           "minutes": 62,
           "points": 2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 105,
@@ -23908,7 +24368,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 28,
@@ -24000,7 +24460,7 @@
           "assists": 0,
           "minutes": 9,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 59,
@@ -24030,7 +24490,7 @@
       "price": 6.5,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 1.3,
+      "selectedBy": 1.2,
       "xG": 0.24,
       "xA": 0.5800000000000001,
       "xGI": 0.8200000000000001,
@@ -24092,7 +24552,7 @@
           "assists": 0,
           "minutes": 45,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 199,
@@ -24184,7 +24644,7 @@
           "assists": 0,
           "minutes": 70,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 131,
@@ -24272,7 +24732,7 @@
           "assists": 1,
           "minutes": 25,
           "points": 4,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 25,
@@ -24364,7 +24824,7 @@
           "assists": 0,
           "minutes": 77,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 272,
@@ -24456,7 +24916,7 @@
           "assists": 0,
           "minutes": 85,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 242,
@@ -24548,7 +25008,7 @@
           "assists": 0,
           "minutes": 45,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 118,
@@ -24640,7 +25100,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 360,
@@ -24732,7 +25192,7 @@
           "assists": 0,
           "minutes": 59,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 186,
@@ -24824,7 +25284,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 166,
@@ -24916,7 +25376,7 @@
           "assists": 0,
           "minutes": 31,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 107,
@@ -25008,7 +25468,7 @@
           "assists": 0,
           "minutes": 2,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 41,
@@ -25023,98 +25483,6 @@
       "defconMatches": 0,
       "seasonDefCon": 3,
       "eo10k": "0.0",
-      "eoOverall": "0.0",
-      "cap10k": "0.0"
-    },
-    {
-      "id": 260,
-      "name": "Wilson",
-      "fullName": "Harry Wilson",
-      "code": 153682,
-      "team": "LEE",
-      "teamId": 13,
-      "teamCode": 2,
-      "position": "MID",
-      "price": 6.3,
-      "yellowCards": 1,
-      "redCards": 0,
-      "selectedBy": 2.6,
-      "xG": 0.01,
-      "xA": 0.06,
-      "xGI": 0.07,
-      "DC": 9,
-      "xGIPer90": 0.049606299212598425,
-      "dcPer90": 6.377952755905512,
-      "last6Matches": [
-        {
-          "gameweek": 1,
-          "opponent": "NFO",
-          "wasHome": false,
-          "xGI": 0.02,
-          "xG": 0,
-          "xA": 0.02,
-          "DC": 2,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 65,
-          "points": 3,
-          "isBlank": false
-        },
-        {
-          "gameweek": 2,
-          "opponent": "BRE",
-          "wasHome": true,
-          "xGI": 0.05,
-          "xG": 0.01,
-          "xA": 0.04,
-          "DC": 6,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 45,
-          "points": 1,
-          "isBlank": false
-        },
-        {
-          "gameweek": 3,
-          "opponent": "BHA",
-          "wasHome": false,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 1,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 17,
-          "points": 0,
-          "isBlank": false
-        },
-        {
-          "gameweek": 4,
-          "opponent": "NEW",
-          "wasHome": true,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 0,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 0,
-          "points": 0,
-          "isBlank": true
-        }
-      ],
-      "totalMinutes": 127,
-      "seasonXG": 0.01,
-      "seasonXA": 0.06,
-      "seasonGoals": 0,
-      "seasonAssists": 0,
-      "seasonMinutes": 127,
-      "totalPoints": 4,
-      "starts": 1,
-      "matchesPlayed": 3,
-      "defconMatches": 0,
-      "seasonDefCon": 9,
-      "eo10k": "0.1",
       "eoOverall": "0.0",
       "cap10k": "0.0"
     },
@@ -25192,7 +25560,7 @@
           "assists": 0,
           "minutes": 18,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 99,
@@ -25280,7 +25648,7 @@
           "assists": 0,
           "minutes": 71,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 97,
@@ -25310,7 +25678,7 @@
       "price": 4.8,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 0.7,
+      "selectedBy": 0.6,
       "xG": 0,
       "xA": 0.24000000000000002,
       "xGI": 0.24000000000000002,
@@ -25372,7 +25740,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 82,
@@ -25391,28 +25759,28 @@
       "cap10k": "0.0"
     },
     {
-      "id": 405,
-      "name": "N.Gonzalez",
-      "fullName": "Nico González Iglesias",
-      "code": 465694,
+      "id": 450,
+      "name": "Livramento",
+      "fullName": "Tino Livramento",
+      "code": 441191,
       "team": "NEW",
       "teamId": 17,
       "teamCode": 4,
-      "position": "MID",
-      "price": 5.5,
+      "position": "DEF",
+      "price": 4.9,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 0.3,
+      "selectedBy": 0.1,
       "xG": 0,
-      "xA": 0.21000000000000002,
-      "xGI": 0.21000000000000002,
-      "DC": 11,
-      "xGIPer90": 0.12945205479452054,
-      "dcPer90": 6.780821917808219,
+      "xA": 0.01,
+      "xGI": 0.01,
+      "DC": 3,
+      "xGIPer90": 0.02727272727272727,
+      "dcPer90": 8.181818181818182,
       "last6Matches": [
         {
           "gameweek": 1,
-          "opponent": "BOU",
+          "opponent": "LIV",
           "wasHome": true,
           "xGI": 0,
           "xG": 0,
@@ -25428,34 +25796,6 @@
           "gameweek": 2,
           "opponent": "TOT",
           "wasHome": false,
-          "xGI": 0.2,
-          "xG": 0,
-          "xA": 0.2,
-          "DC": 4,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 70,
-          "points": 2,
-          "isBlank": false
-        },
-        {
-          "gameweek": 3,
-          "opponent": "BOU",
-          "wasHome": true,
-          "xGI": 0.01,
-          "xG": 0,
-          "xA": 0.01,
-          "DC": 7,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 76,
-          "points": 2,
-          "isBlank": false
-        },
-        {
-          "gameweek": 4,
-          "opponent": "LEE",
-          "wasHome": false,
           "xGI": 0,
           "xG": 0,
           "xA": 0,
@@ -25464,20 +25804,48 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
+        },
+        {
+          "gameweek": 3,
+          "opponent": "BOU",
+          "wasHome": true,
+          "xGI": 0,
+          "xG": 0,
+          "xA": 0,
+          "DC": 0,
+          "goals": 0,
+          "assists": 0,
+          "minutes": 1,
+          "points": 1,
+          "isBlank": false
+        },
+        {
+          "gameweek": 4,
+          "opponent": "LEE",
+          "wasHome": false,
+          "xGI": 0.01,
+          "xG": 0,
+          "xA": 0.01,
+          "DC": 3,
+          "goals": 0,
+          "assists": 1,
+          "minutes": 32,
+          "points": 3,
+          "isBlank": false
         }
       ],
-      "totalMinutes": 146,
+      "totalMinutes": 33,
       "seasonXG": 0,
-      "seasonXA": 0.21,
+      "seasonXA": 0.01,
       "seasonGoals": 0,
-      "seasonAssists": 0,
-      "seasonMinutes": 146,
+      "seasonAssists": 1,
+      "seasonMinutes": 33,
       "totalPoints": 4,
-      "starts": 2,
+      "starts": 0,
       "matchesPlayed": 2,
       "defconMatches": 0,
-      "seasonDefCon": 11,
+      "seasonDefCon": 3,
       "eo10k": "0.0",
       "eoOverall": "0.0",
       "cap10k": "0.0"
@@ -25556,7 +25924,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 19,
@@ -25648,7 +26016,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 55,
@@ -25740,7 +26108,7 @@
           "assists": 0,
           "minutes": 9,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 68,
@@ -25832,7 +26200,7 @@
           "assists": 0,
           "minutes": 5,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 51,
@@ -25924,7 +26292,7 @@
           "assists": 0,
           "minutes": 24,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 187,
@@ -26016,7 +26384,7 @@
           "assists": 0,
           "minutes": 45,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 69,
@@ -26046,7 +26414,7 @@
       "price": 5.8,
       "yellowCards": 0,
       "redCards": 0,
-      "selectedBy": 0.4,
+      "selectedBy": 0.3,
       "xG": 0,
       "xA": 0,
       "xGI": 0,
@@ -26108,7 +26476,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 31,
@@ -26200,7 +26568,7 @@
           "assists": 0,
           "minutes": 8,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 10,
@@ -26292,7 +26660,7 @@
           "assists": 0,
           "minutes": 24,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 28,
@@ -26384,7 +26752,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 13,
@@ -26476,7 +26844,7 @@
           "assists": 0,
           "minutes": 6,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 54,
@@ -26568,7 +26936,7 @@
           "assists": 0,
           "minutes": 12,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 40,
@@ -26598,7 +26966,7 @@
       "price": 5.4,
       "yellowCards": 1,
       "redCards": 0,
-      "selectedBy": 7.4,
+      "selectedBy": 7.3,
       "xG": 0.33,
       "xA": 0.26,
       "xGI": 0.5900000000000001,
@@ -26660,7 +27028,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 292,
@@ -26752,7 +27120,7 @@
           "assists": 0,
           "minutes": 4,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 20,
@@ -26844,7 +27212,7 @@
           "assists": 0,
           "minutes": 6,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 53,
@@ -26936,7 +27304,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 88,
@@ -27028,7 +27396,7 @@
           "assists": 0,
           "minutes": 52,
           "points": -2,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 232,
@@ -27120,7 +27488,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 32,
@@ -27212,7 +27580,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 84,
@@ -27300,7 +27668,7 @@
           "assists": 0,
           "minutes": 90,
           "points": 3,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -27392,7 +27760,7 @@
           "assists": 0,
           "minutes": 25,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 57,
@@ -27484,7 +27852,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 90,
@@ -27576,7 +27944,7 @@
           "assists": 0,
           "minutes": 13,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 38,
@@ -27668,7 +28036,7 @@
           "assists": 0,
           "minutes": 18,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 42,
@@ -27760,7 +28128,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 50,
@@ -27852,7 +28220,7 @@
           "assists": 0,
           "minutes": 13,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 28,
@@ -27944,7 +28312,7 @@
           "assists": 0,
           "minutes": 68,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 158,
@@ -28036,7 +28404,7 @@
           "assists": 0,
           "minutes": 0,
           "points": 0,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 126,
@@ -28126,7 +28494,7 @@
           "assists": 0,
           "minutes": 30,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 45,
@@ -28218,7 +28586,7 @@
           "assists": 0,
           "minutes": 87,
           "points": 1,
-          "isBlank": true
+          "isBlank": false
         }
       ],
       "totalMinutes": 357,
@@ -28235,376 +28603,8 @@
       "eo10k": "0.0",
       "eoOverall": "0.0",
       "cap10k": "0.0"
-    },
-    {
-      "id": 323,
-      "name": "McAteer",
-      "fullName": "Kasey McAteer",
-      "code": 461587,
-      "team": "IPS",
-      "teamId": 12,
-      "teamCode": 40,
-      "position": "MID",
-      "price": 4.5,
-      "yellowCards": 0,
-      "redCards": 0,
-      "selectedBy": 1.2,
-      "xG": 0.05,
-      "xA": 0,
-      "xGI": 0.05,
-      "DC": 5,
-      "xGIPer90": 0.10714285714285715,
-      "dcPer90": 10.714285714285714,
-      "last6Matches": [
-        {
-          "gameweek": 1,
-          "opponent": "SUN",
-          "wasHome": true,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 3,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 24,
-          "points": 1,
-          "isBlank": false
-        },
-        {
-          "gameweek": 2,
-          "opponent": "MUN",
-          "wasHome": false,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 1,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 7,
-          "points": 1,
-          "isBlank": false
-        },
-        {
-          "gameweek": 3,
-          "opponent": "LIV",
-          "wasHome": true,
-          "xGI": 0.05,
-          "xG": 0.05,
-          "xA": 0,
-          "DC": 1,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 11,
-          "points": 1,
-          "isBlank": false
-        },
-        {
-          "gameweek": 4,
-          "opponent": "CRY",
-          "wasHome": false,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 0,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 0,
-          "points": 0,
-          "isBlank": true
-        }
-      ],
-      "totalMinutes": 42,
-      "seasonXG": 0.05,
-      "seasonXA": 0,
-      "seasonGoals": 0,
-      "seasonAssists": 0,
-      "seasonMinutes": 42,
-      "totalPoints": 3,
-      "starts": 0,
-      "matchesPlayed": 3,
-      "defconMatches": 0,
-      "seasonDefCon": 5,
-      "eo10k": "0.0",
-      "eoOverall": "0.0",
-      "cap10k": "0.0"
-    },
-    {
-      "id": 422,
-      "name": "Mazraoui",
-      "fullName": "Noussair Mazraoui",
-      "code": 230001,
-      "team": "MUN",
-      "teamId": 16,
-      "teamCode": 1,
-      "position": "DEF",
-      "price": 4.4,
-      "yellowCards": 0,
-      "redCards": 0,
-      "selectedBy": 0.6,
-      "xG": 0.22,
-      "xA": 0.060000000000000005,
-      "xGI": 0.28,
-      "DC": 6,
-      "xGIPer90": 0.2597938144329897,
-      "dcPer90": 5.56701030927835,
-      "last6Matches": [
-        {
-          "gameweek": 1,
-          "opponent": "HUL",
-          "wasHome": false,
-          "xGI": 0.27,
-          "xG": 0.22,
-          "xA": 0.05,
-          "DC": 5,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 79,
-          "points": 1,
-          "isBlank": false
-        },
-        {
-          "gameweek": 2,
-          "opponent": "IPS",
-          "wasHome": true,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 0,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 17,
-          "points": 1,
-          "isBlank": false
-        },
-        {
-          "gameweek": 3,
-          "opponent": "EVE",
-          "wasHome": false,
-          "xGI": 0.01,
-          "xG": 0,
-          "xA": 0.01,
-          "DC": 1,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 1,
-          "points": 1,
-          "isBlank": false
-        },
-        {
-          "gameweek": 4,
-          "opponent": "MCI",
-          "wasHome": true,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 0,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 0,
-          "points": 0,
-          "isBlank": true
-        }
-      ],
-      "totalMinutes": 97,
-      "seasonXG": 0.22,
-      "seasonXA": 0.06,
-      "seasonGoals": 0,
-      "seasonAssists": 0,
-      "seasonMinutes": 97,
-      "totalPoints": 3,
-      "starts": 1,
-      "matchesPlayed": 3,
-      "defconMatches": 0,
-      "seasonDefCon": 6,
-      "eo10k": "0.0",
-      "eoOverall": "0.0",
-      "cap10k": "0.0"
-    },
-    {
-      "id": 462,
-      "name": "Steur",
-      "fullName": "Sean Steur",
-      "code": 636852,
-      "team": "NEW",
-      "teamId": 17,
-      "teamCode": 4,
-      "position": "MID",
-      "price": 4.9,
-      "yellowCards": 0,
-      "redCards": 0,
-      "selectedBy": 0.1,
-      "xG": 0,
-      "xA": 0,
-      "xGI": 0,
-      "DC": 7,
-      "xGIPer90": 0,
-      "dcPer90": 7.241379310344827,
-      "last6Matches": [
-        {
-          "gameweek": 1,
-          "opponent": "LIV",
-          "wasHome": true,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 2,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 55,
-          "points": 1,
-          "isBlank": false
-        },
-        {
-          "gameweek": 2,
-          "opponent": "TOT",
-          "wasHome": false,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 3,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 19,
-          "points": 1,
-          "isBlank": false
-        },
-        {
-          "gameweek": 3,
-          "opponent": "BOU",
-          "wasHome": true,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 2,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 13,
-          "points": 1,
-          "isBlank": false
-        },
-        {
-          "gameweek": 4,
-          "opponent": "LEE",
-          "wasHome": false,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 0,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 0,
-          "points": 0,
-          "isBlank": true
-        }
-      ],
-      "totalMinutes": 87,
-      "seasonXG": 0,
-      "seasonXA": 0,
-      "seasonGoals": 0,
-      "seasonAssists": 0,
-      "seasonMinutes": 87,
-      "totalPoints": 3,
-      "starts": 1,
-      "matchesPlayed": 3,
-      "defconMatches": 0,
-      "seasonDefCon": 7,
-      "eo10k": "0.0",
-      "eoOverall": "0.0",
-      "cap10k": "0.0"
-    },
-    {
-      "id": 201,
-      "name": "Muñoz",
-      "fullName": "Daniel Muñoz Mejía",
-      "code": 247348,
-      "team": "NFO",
-      "teamId": 18,
-      "teamCode": 17,
-      "position": "DEF",
-      "price": 5.4,
-      "yellowCards": 0,
-      "redCards": 0,
-      "selectedBy": 5.5,
-      "xG": 0.48,
-      "xA": 0.19,
-      "xGI": 0.67,
-      "DC": 12,
-      "xGIPer90": 0.3445714285714286,
-      "dcPer90": 6.171428571428572,
-      "last6Matches": [
-        {
-          "gameweek": 1,
-          "opponent": "EVE",
-          "wasHome": false,
-          "xGI": 0.24,
-          "xG": 0.23,
-          "xA": 0.01,
-          "DC": 4,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 54,
-          "points": 0,
-          "isBlank": false
-        },
-        {
-          "gameweek": 2,
-          "opponent": "MCI",
-          "wasHome": true,
-          "xGI": 0,
-          "xG": 0,
-          "xA": 0,
-          "DC": 0,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 0,
-          "points": 0,
-          "isBlank": false
-        },
-        {
-          "gameweek": 3,
-          "opponent": "TOT",
-          "wasHome": true,
-          "xGI": 0.03,
-          "xG": 0.03,
-          "xA": 0,
-          "DC": 1,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 31,
-          "points": 1,
-          "isBlank": false
-        },
-        {
-          "gameweek": 4,
-          "opponent": "AVL",
-          "wasHome": false,
-          "xGI": 0.4,
-          "xG": 0.22,
-          "xA": 0.18,
-          "DC": 7,
-          "goals": 0,
-          "assists": 0,
-          "minutes": 90,
-          "points": 2,
-          "isBlank": true
-        }
-      ],
-      "totalMinutes": 175,
-      "seasonXG": 0.48,
-      "seasonXA": 0.19,
-      "seasonGoals": 0,
-      "seasonAssists": 0,
-      "seasonMinutes": 175,
-      "totalPoints": 3,
-      "starts": 2,
-      "matchesPlayed": 3,
-      "defconMatches": 0,
-      "seasonDefCon": 12,
-      "eo10k": "0.2",
-      "eoOverall": "0.0",
-      "cap10k": "0.0"
     }
   ],
   "currentGameweek": 4,
-  "updatedAt": "2026-09-14T10:02:49.983Z"
+  "updatedAt": "2026-09-15T09:32:21.331Z"
 }
